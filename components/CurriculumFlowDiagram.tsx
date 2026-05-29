@@ -575,10 +575,7 @@ export function CurriculumFlowDiagram({
       </div>
 
       {/* Flow Canvas */}
-      <div
-        className="relative bg-slate-50 dark:bg-navy-950"
-        style={{ height: "700px" }}
-      >
+      <div className="relative bg-slate-50 dark:bg-navy-950 h-[60vh] min-h-[500px] lg:h-[700px] w-full">
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -588,9 +585,12 @@ export function CurriculumFlowDiagram({
           fitViewOptions={{ padding: 0.2 }}
           minZoom={0.2}
           maxZoom={2}
+          panOnScroll={true}
+          preventScrolling={false}
           proOptions={{ hideAttribution: true }}
           key={layoutDir} // Force ReactFlow to re-initialize and auto-fitView when layout changes
         >
+
           <Background color={theme === "dark" ? "#94a3b8" : "#cbd5e1"} gap={20} size={1} />
           <Controls className="dark:bg-navy-800 dark:fill-white dark:border-navy-700" />
           <MiniMap

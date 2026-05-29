@@ -95,7 +95,7 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="py-2 text-sm text-slate-700 dark:text-slate-200"
+                className="block py-3 px-4 text-base border-b border-slate-100 dark:border-navy-800 last:border-0 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-navy-800 transition-colors"
               >
                 {t(item.k)}
               </Link>

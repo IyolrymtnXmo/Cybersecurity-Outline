@@ -42,7 +42,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: LANG_INIT_SCRIPT }} />
       </head>
-      <body className="min-h-screen flex flex-col bg-[var(--color-bg)] text-[var(--color-fg)]">
+      <body className="min-h-screen flex flex-col bg-[var(--color-bg)] text-[var(--color-fg)] overflow-x-hidden">
         <ThemeProvider>
           <LanguageProvider>
             <Navbar />

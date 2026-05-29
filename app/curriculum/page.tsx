@@ -28,48 +28,8 @@ export default function CurriculumPage() {
         <p className="mt-2 max-w-3xl text-slate-600">{t("curriculum.desc")}</p>
       </header>
 
-      <div className="hidden lg:block">
+      <div className="block w-full">
         <CurriculumFlowDiagram onSelect={(c) => setSelected(c)} />
-      </div>
-
-      <div className="lg:hidden">
-        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900 mb-4 flex gap-2">
-          <AlertTriangle className="h-4 w-4 shrink-0 mt-0.5" />
-          {t("curriculum.mobileHint")}
-        </div>
-        <div className="space-y-3">
-          {fallbackTerms.map((term, idx) => (
-            <details
-              key={`${term.year}-${term.semester}-${idx}`}
-              className="card overflow-hidden"
-              open={idx < 2}
-            >
-              <summary className="cursor-pointer list-none px-4 py-3 flex items-center justify-between bg-slate-50">
-                <div>
-                  <p className="font-semibold text-navy-900">{term.label}</p>
-                  <p className="text-xs text-slate-500">
-                    {term.totalCredits} {t("common.credits")} ·{" "}
-                    {term.cumulative ?? "-"}
-                  </p>
-                </div>
-              </summary>
-              <div className="p-4 grid gap-2">
-                {term.courses.map((cid) => {
-                  const c = getCourse(cid);
-                  if (!c) return null;
-                  return (
-                    <CourseCard
-                      key={cid}
-                      course={c}
-                      compact
-                      onClick={(co) => setSelected(co)}
-                    />
-                  );
-                })}
-              </div>
-            </details>
-          ))}
-        </div>
       </div>
 
       <div className="mt-6 flex flex-wrap gap-2 no-print">
