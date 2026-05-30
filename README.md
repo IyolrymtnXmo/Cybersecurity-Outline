@@ -1,4 +1,5 @@
 # CY Curriculum Outline
+https://lyolrymtn.github.io/Cybersecurity-Outline
 
 ระบบนำทางหลักสูตร **วิทยาศาสตรบัณฑิต สาขาวิชาความมั่นคงปลอดภัยไซเบอร์ /
 Bachelor of Science Program in Cybersecurity** แบบ interactive — ไม่ใช่
