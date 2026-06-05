@@ -244,12 +244,31 @@ body {
   border-color: rgba(217, 70, 239, 0.35);
 }
 
+/* Print-only blocks (e.g. the clean timetable) are hidden on screen. */
+.print-only {
+  display: none;
+}
+
 @media print {
   .no-print {
     display: none !important;
   }
+  html,
   body {
-    background: white;
-    color: black;
+    background: #fff;
+    color: #000;
+  }
+  .print-only {
+    display: block !important;
+  }
+  /* Keep course-block colours when printing. */
+  .print-area,
+  .print-area * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  @page {
+    size: A4 landscape;
+    margin: 10mm;
   }
 }

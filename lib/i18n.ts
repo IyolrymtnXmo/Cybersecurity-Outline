@@ -17,6 +17,7 @@ export const dict: Record<string, Entry> = {
   "nav.advisor": { th: "คำแนะนำ", en: "Advisor" },
   "nav.electives": { th: "วิชาเลือก", en: "Electives" },
   "nav.gradeCalculator": { th: "คำนวณเกรด", en: "Grade Calculator" },
+  "nav.schedule": { th: "จัดตารางเรียน", en: "Schedule Planner" },
   "nav.brand.tagline": { th: "B.Sc. Cybersecurity", en: "B.Sc. Cybersecurity" },
 
   // -------------------------------------------------------- shared chrome
@@ -367,6 +368,106 @@ export const dict: Record<string, Entry> = {
   "drawer.disclaimer": {
     th: "ข้อมูลนี้จัดทำเพื่อช่วยวางแผนเบื้องต้น โปรดตรวจสอบกับอาจารย์ที่ปรึกษาและประกาศของหลักสูตรก่อนลงทะเบียนจริง",
     en: "Preliminary planning info — confirm with your advisor and official announcements before registering.",
+  },
+
+  // ------------------------------------------------------ schedule planner
+  "schedule.title": { th: "จัดตารางเรียน", en: "Course Schedule Planner" },
+  "schedule.desc": {
+    th: "วางแผนตารางเรียน ค้นหารายวิชา ลากวาง ปรับเวลา และส่งออกเป็น PDF ได้อย่างยืดหยุ่น",
+    en: "Plan your timetable — search courses, drag & drop, adjust times, and export to PDF.",
+  },
+  "schedule.guideline": {
+    th: "หมายเหตุ: ข้อมูลตัวอย่างในตารางสร้างจากภาพตารางเรียนแบบ Traditional ที่ผู้ใช้อัปโหลด เพื่อใช้เป็น guideline เท่านั้น ควรแทนที่ด้วยข้อมูลจริงจากระบบรายวิชา",
+    en: "Note: Sample blocks are reconstructed from the uploaded traditional timetable images for guideline/demo only — replace with real course-registration data.",
+  },
+  "schedule.add": { th: "เพิ่ม", en: "Add" },
+  "schedule.edit": { th: "แก้ไข", en: "Edit" },
+  "schedule.delete": { th: "ลบ", en: "Delete" },
+  "schedule.save": { th: "บันทึก", en: "Save" },
+  "schedule.cancel": { th: "ยกเลิก", en: "Cancel" },
+  "schedule.close": { th: "ปิด", en: "Close" },
+  "schedule.conflictBadge": { th: "ชนกัน", en: "Conflict" },
+
+  "schedule.empty.title": { th: "ยังไม่มีรายวิชาในตาราง", en: "No courses on the schedule yet" },
+  "schedule.empty.desc": {
+    th: "ค้นหารายวิชาจากแผงด้านซ้าย แล้วกด ‘เพิ่ม’ หรือลากวิชามาวางในตารางเพื่อเริ่มต้น",
+    en: "Search courses in the panel, then click ‘Add’ or drag a course onto the grid to begin.",
+  },
+
+  "schedule.edit.title": { th: "แก้ไขรายวิชาในตาราง", en: "Edit schedule item" },
+  "schedule.field.code": { th: "รหัสวิชา", en: "Course code" },
+  "schedule.field.section": { th: "กลุ่ม", en: "Group" },
+  "schedule.field.title": { th: "ชื่อวิชา", en: "Title" },
+  "schedule.field.day": { th: "วัน", en: "Day" },
+  "schedule.field.start": { th: "เวลาเริ่ม", en: "Start" },
+  "schedule.field.end": { th: "เวลาสิ้นสุด", en: "End" },
+  "schedule.field.room": { th: "ห้องเรียน", en: "Room" },
+  "schedule.field.building": { th: "อาคาร", en: "Building" },
+  "schedule.field.credits": { th: "หน่วยกิต", en: "Credits" },
+  "schedule.field.instructor": { th: "อาจารย์ผู้สอน", en: "Instructor" },
+  "schedule.field.color": { th: "สีประจำวิชา", en: "Colour" },
+  "schedule.field.note": { th: "หมายเหตุ", en: "Note" },
+  "schedule.field.year": { th: "ปีการศึกษา", en: "Academic year" },
+  "schedule.field.dateRange": { th: "ช่วงวันที่เรียน", en: "Date range" },
+
+  "schedule.search.title": { th: "ค้นหารายวิชา", en: "Search courses" },
+  "schedule.search.label": { th: "ค้นหารายวิชา", en: "Search courses" },
+  "schedule.search.placeholder": {
+    th: "รหัสวิชา ชื่อวิชา หมวด อาจารย์ ห้อง...",
+    en: "Code, name, category, instructor, room...",
+  },
+  "schedule.search.clear": { th: "ล้างคำค้น", en: "Clear search" },
+  "schedule.search.count": { th: "พบ {n} รายการ", en: "{n} results" },
+  "schedule.search.hint": { th: "กด ‘เพิ่ม’ หรือลากเข้าตาราง", en: "Click ‘Add’ or drag onto the grid" },
+  "schedule.search.empty": { th: "ไม่พบรายวิชาที่ตรงกับคำค้น", en: "No courses match your search" },
+
+  "schedule.tool.search": { th: "ค้นหา", en: "Search" },
+  "schedule.tool.scale": { th: "ช่อง", en: "Scale" },
+  "schedule.tool.endTime": { th: "สิ้นสุด", en: "End" },
+  "schedule.tool.view": { th: "มุมมอง", en: "View" },
+  "schedule.tool.undo": { th: "ย้อนกลับ (Undo)", en: "Undo" },
+  "schedule.tool.redo": { th: "ทำซ้ำ (Redo)", en: "Redo" },
+  "schedule.tool.clear": { th: "ล้างตาราง", en: "Clear schedule" },
+  "schedule.tool.save": { th: "บันทึกฉบับร่าง", en: "Save draft" },
+  "schedule.tool.load": { th: "โหลดที่บันทึกไว้", en: "Load saved" },
+  "schedule.tool.exportJson": { th: "ส่งออก JSON", en: "Export JSON" },
+  "schedule.tool.print": { th: "พิมพ์", en: "Print" },
+  "schedule.tool.exportPdf": { th: "ส่งออก PDF", en: "Export PDF" },
+  "schedule.tool.exportPdfHint": {
+    th: "เปิดหน้าต่างพิมพ์ แล้วเลือก ‘บันทึกเป็น PDF’",
+    en: "Opens the print dialog — choose ‘Save as PDF’",
+  },
+
+  "schedule.view.traditional": { th: "ตารางดั้งเดิม", en: "Traditional" },
+  "schedule.view.modern": { th: "การ์ดสมัยใหม่", en: "Modern Card" },
+  "schedule.view.compact": { th: "กระชับ", en: "Compact" },
+
+  "schedule.stat.courses": { th: "รายวิชา", en: "Courses" },
+  "schedule.stat.credits": { th: "หน่วยกิต", en: "Credits" },
+  "schedule.stat.hours": { th: "ชม./สัปดาห์", en: "Hrs/week" },
+  "schedule.stat.conflicts": { th: "เวลาชนกัน", en: "Conflicts" },
+
+  "schedule.conflict.found": {
+    th: "พบวิชาเวลาชนกัน {n} คู่ — ตรวจสอบรายการที่มีกรอบสีแดง",
+    en: "Found {n} time conflict(s) — check the red-outlined blocks",
+  },
+  "schedule.conflict.none": {
+    th: "ไม่มีเวลาชนกัน ✓ ตารางเรียบร้อย",
+    en: "No time conflicts ✓ Schedule looks good",
+  },
+
+  "schedule.confirm.clear": {
+    th: "ต้องการล้างรายวิชาทั้งหมดในเทอมนี้หรือไม่? (กด Undo เพื่อเรียกคืนได้)",
+    en: "Clear all courses for this term? (You can Undo afterwards.)",
+  },
+  "schedule.toast.saved": { th: "บันทึกฉบับร่างแล้ว", en: "Draft saved" },
+  "schedule.toast.saveErr": { th: "บันทึกไม่สำเร็จ", en: "Could not save" },
+  "schedule.toast.noSaved": { th: "ไม่พบฉบับร่างที่บันทึกไว้", en: "No saved draft found" },
+  "schedule.toast.loaded": { th: "โหลดตารางที่บันทึกไว้แล้ว", en: "Loaded saved schedule" },
+  "schedule.toast.exportErr": { th: "ส่งออก JSON ไม่สำเร็จ", en: "Could not export JSON" },
+  "schedule.toast.printErr": {
+    th: "ไม่สามารถเปิดหน้าต่างพิมพ์ได้ ลองใช้เมนูพิมพ์ของเบราว์เซอร์",
+    en: "Couldn't open print dialog — use your browser's Print menu",
   },
 };
 
