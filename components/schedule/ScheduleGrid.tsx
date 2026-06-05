@@ -39,6 +39,7 @@ type Props = {
   onBlockEdit: (item: ScheduleItem) => void;
   onBlockDelete: (item: ScheduleItem) => void;
   onBlockKeyDown: (item: ScheduleItem, e: React.KeyboardEvent) => void;
+  onLoadMockup?: () => void;
   t: (k: string) => string;
 };
 
@@ -56,6 +57,7 @@ export function ScheduleGrid({
   onBlockEdit,
   onBlockDelete,
   onBlockKeyDown,
+  onLoadMockup,
   t,
 }: Props) {
   const width = trackWidth(geometry);
@@ -85,29 +87,32 @@ export function ScheduleGrid({
   const px = geometry.pxPerMinute;
 
   return (
-    <div className="card overflow-hidden">
-      <div className="scroll-fade overflow-x-auto">
-        <div style={{ minWidth: DAY_LABEL_WIDTH + width }}>
+    <div className="card flex h-full flex-col overflow-hidden">
+      <div className="scroll-fade flex-1 overflow-x-auto">
+        <div className="flex h-full min-w-max flex-col" style={{ minWidth: DAY_LABEL_WIDTH + width }}>
           {/* time header */}
-          <div className="flex border-b border-slate-200 bg-slate-50/80 dark:border-navy-700 dark:bg-navy-900/60">
+          <div className="flex flex-none border-b border-slate-200 bg-slate-50/80 dark:border-navy-700 dark:bg-navy-900/60">
             <div
               className="sticky left-0 z-20 shrink-0 border-r border-slate-200 bg-slate-50/95 px-2 py-2 text-[10px] font-semibold uppercase tracking-wider text-slate-500 backdrop-blur dark:border-navy-700 dark:bg-navy-900/95 dark:text-slate-400"
               style={{ width: DAY_LABEL_WIDTH }}
             >
               {locale === "th" ? "วัน \\ เวลา" : "Day \\ Time"}
             </div>
-            <div className="relative h-9" style={{ width }}>
-              {hours.map((m) => (
-                <div
-                  key={m}
-                  className="absolute top-0 flex h-full items-center"
-                  style={{ left: (m - geometry.startMin) * px }}
-                >
-                  <span className="-translate-x-1/2 font-mono text-[11px] font-medium text-slate-500 dark:text-slate-400">
-                    {toTime(m)}
-                  </span>
-                </div>
-              ))}
+            <div className="relative h-9 flex-1" style={{ width }}>
+              {hours.map((m) => {
+                if (geometry.endMin - m < 40 && m !== geometry.startMin) return null;
+                return (
+                  <div
+                    key={m}
+                    className="absolute top-0 flex h-full items-center"
+                    style={{ left: (m - geometry.startMin) * px }}
+                  >
+                    <span className={`${m === geometry.startMin ? "translate-x-2" : "-translate-x-1/2"} font-mono text-[11px] font-medium text-slate-500 dark:text-slate-400`}>
+                      {toTime(m)}
+                    </span>
+                  </div>
+                );
+              })}
               {/* end label */}
               <div
                 className="absolute top-0 flex h-full items-center"
@@ -127,7 +132,7 @@ export function ScheduleGrid({
             return (
               <div
                 key={day}
-                className={`flex border-b border-slate-200 last:border-b-0 dark:border-navy-700 ${
+                className={`flex flex-1 border-b border-slate-200 last:border-b-0 dark:border-navy-700 ${
                   rowIdx % 2 === 1 ? "bg-slate-50/40 dark:bg-navy-900/20" : ""
                 }`}
               >
@@ -153,8 +158,8 @@ export function ScheduleGrid({
                 <div
                   ref={(el) => registerTrack(day, el)}
                   data-day={day}
-                  className="relative"
-                  style={{ width, height: entry.rowHeight + LANE_GAP, minHeight: geometry.laneHeight }}
+                  className="relative flex-1"
+                  style={{ width, minHeight: Math.max(geometry.laneHeight, entry.rowHeight + LANE_GAP) }}
                 >
                   {/* slot gridlines */}
                   {slots.map((m) => {
@@ -230,6 +235,15 @@ export function ScheduleGrid({
           <p className="max-w-md text-xs text-slate-500 dark:text-slate-400">
             {t("schedule.empty.desc")}
           </p>
+          {onLoadMockup && (
+            <button
+              type="button"
+              onClick={onLoadMockup}
+              className="mt-3 btn-outline px-4 py-2 text-xs font-semibold"
+            >
+              {locale === "th" ? "โหลดตารางตัวอย่าง (Mock-up)" : "Load Mock-up"}
+            </button>
+          )}
         </div>
       )}
     </div>

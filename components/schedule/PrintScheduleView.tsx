@@ -12,17 +12,16 @@ import {
 import { buildHourMarks, placeDayItems, toMinutes, toTime } from "@/lib/schedule/utils";
 import type { Locale } from "@/lib/i18n";
 
-/** Solid hex palette for print — independent of light/dark theme classes. */
 const PRINT_COLORS: Record<BlockColorKey, { bg: string; border: string; text: string }> = {
-  sky: { bg: "#e0f2fe", border: "#0ea5e9", text: "#0c4a6e" },
-  violet: { bg: "#ede9fe", border: "#8b5cf6", text: "#4c1d95" },
-  amber: { bg: "#fef3c7", border: "#f59e0b", text: "#78350f" },
-  emerald: { bg: "#d1fae5", border: "#10b981", text: "#064e3b" },
-  rose: { bg: "#ffe4e6", border: "#f43f5e", text: "#881337" },
-  cyan: { bg: "#cffafe", border: "#06b6d4", text: "#164e63" },
-  indigo: { bg: "#e0e7ff", border: "#6366f1", text: "#312e81" },
-  teal: { bg: "#ccfbf1", border: "#14b8a6", text: "#134e4a" },
-  slate: { bg: "#e2e8f0", border: "#64748b", text: "#1e293b" },
+  sky: { bg: "#ffffff", border: "#0ea5e9", text: "#0c4a6e" },
+  violet: { bg: "#ffffff", border: "#8b5cf6", text: "#4c1d95" },
+  amber: { bg: "#ffffff", border: "#f59e0b", text: "#78350f" },
+  emerald: { bg: "#ffffff", border: "#10b981", text: "#064e3b" },
+  rose: { bg: "#ffffff", border: "#f43f5e", text: "#881337" },
+  cyan: { bg: "#ffffff", border: "#06b6d4", text: "#164e63" },
+  indigo: { bg: "#ffffff", border: "#6366f1", text: "#312e81" },
+  teal: { bg: "#ffffff", border: "#14b8a6", text: "#134e4a" },
+  slate: { bg: "#ffffff", border: "#64748b", text: "#1e293b" },
 };
 
 const PRINT_PX = 1.28; // px per minute, tuned for A4 landscape
@@ -64,8 +63,8 @@ export function PrintScheduleView({
   ) as BlockColorKey[];
 
   return (
-    <div className="print-only print-area" aria-hidden>
-      <div style={{ fontFamily: "Prompt, sans-serif", color: "#0f172a" }}>
+    <div className="print-only print-area" aria-hidden style={{ background: "#ffffff", margin: 0, padding: 0 }}>
+      <div style={{ fontFamily: "Prompt, sans-serif", color: "#0f172a", background: "#ffffff", padding: "20px" }}>
         {/* header */}
         <div style={{ marginBottom: 10, borderBottom: "2px solid #0e1f3f", paddingBottom: 8 }}>
           <h1 style={{ fontSize: 18, fontWeight: 700, margin: 0 }}>
@@ -164,8 +163,8 @@ export function PrintScheduleView({
                           top: p.lane * slotH + 2,
                           height: slotH - 4,
                           background: c.bg,
-                          borderLeft: `3px solid ${c.border}`,
-                          border: `1px solid ${c.border}`,
+                          border: `2px solid ${c.border}`,
+                          borderLeft: `6px solid ${c.border}`,
                           borderRadius: 4,
                           padding: "2px 4px",
                           overflow: "hidden",

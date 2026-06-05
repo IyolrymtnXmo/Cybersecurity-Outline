@@ -8,7 +8,7 @@ import {
   type ScheduleItem,
   type Semester,
   type ViewMode,
-  DAY_KEYS,
+  ALL_DAY_KEYS,
 } from "@/lib/schedule/types";
 import {
   clamp,
@@ -59,7 +59,7 @@ type ActiveDrag = {
   started: boolean;
 };
 
-const DAYS: DayKey[] = [...DAY_KEYS];
+const DAYS: DayKey[] = [...ALL_DAY_KEYS];
 
 export function SchedulePlanner() {
   const { t, locale } = useLang();
@@ -553,6 +553,11 @@ export function SchedulePlanner() {
     [removeItemById, updateItemById],
   );
 
+  const handleLoadMockup = useCallback(() => {
+    applyDoc(buildSampleSchedule());
+    showToast(t("schedule.toast.loaded"), "ok");
+  }, [applyDoc, showToast, t]);
+
   /* --------------------------------------------------------------- render */
   const searchPanel = (
     <CourseSearchPanel
@@ -645,23 +650,26 @@ export function SchedulePlanner() {
           </div>
         </aside>
 
-        <section className="min-w-0">
-          <ScheduleGrid
-            items={items}
-            geometry={geometry}
-            viewMode={viewMode}
-            locale={locale}
-            days={DAYS}
-            draggingItemId={draggingItemId}
-            dragPreview={dragPreview}
-            registerTrack={registerTrack}
-            onBlockMoveStart={startMove}
-            onBlockResizeStart={startResize}
-            onBlockEdit={setEditing}
-            onBlockDelete={(item) => removeItemById(item.id)}
-            onBlockKeyDown={onBlockKeyDown}
-            t={t}
-          />
+        <section className="min-w-0 flex h-full flex-col">
+          <div className="flex-1">
+            <ScheduleGrid
+              items={items}
+              geometry={geometry}
+              viewMode={viewMode}
+              locale={locale}
+              days={DAYS}
+              draggingItemId={draggingItemId}
+              dragPreview={dragPreview}
+              registerTrack={registerTrack}
+              onBlockMoveStart={startMove}
+              onBlockResizeStart={startResize}
+              onBlockEdit={setEditing}
+              onBlockDelete={(item) => removeItemById(item.id)}
+              onBlockKeyDown={onBlockKeyDown}
+              onLoadMockup={handleLoadMockup}
+              t={t}
+            />
+          </div>
           <p className="mt-2 px-1 text-[11px] leading-relaxed text-slate-400 dark:text-slate-500">
             {t("schedule.guideline")}
           </p>

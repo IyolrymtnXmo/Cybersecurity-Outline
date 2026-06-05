@@ -255,8 +255,8 @@ body {
   }
   html,
   body {
-    background: #fff;
-    color: #000;
+    background: #fff !important;
+    color: #000 !important;
   }
   .print-only {
     display: block !important;

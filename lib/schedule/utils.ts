@@ -11,6 +11,7 @@ import {
   type Semester,
   type ViewMode,
   DAY_KEYS,
+  ALL_DAY_KEYS,
 } from "./types";
 
 /* --------------------------------------------------------------- time math */
@@ -213,14 +214,14 @@ export function totalCredits(items: ScheduleItem[]): number {
 /** Total contact hours per day (minutes → hours). */
 export function dailyHours(items: ScheduleItem[]): Record<DayKey, number> {
   const out = {} as Record<DayKey, number>;
-  for (const d of DAY_KEYS) out[d] = 0;
+  for (const d of ALL_DAY_KEYS) out[d] = 0;
   for (const it of items) {
     const mins = durationMinutes(it);
     if (!Number.isNaN(mins) && mins > 0) {
       out[it.day] = (out[it.day] ?? 0) + mins;
     }
   }
-  for (const d of DAY_KEYS) out[d] = Math.round((out[d] / 60) * 10) / 10;
+  for (const d of ALL_DAY_KEYS) out[d] = Math.round((out[d] / 60) * 10) / 10;
   return out;
 }
 

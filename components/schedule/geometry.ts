@@ -46,7 +46,7 @@ export const LANE_HEIGHT: Record<ViewMode, number> = {
 export const LANE_GAP = 4;
 
 /** Width of the sticky day-label column. */
-export const DAY_LABEL_WIDTH = 76;
+export const DAY_LABEL_WIDTH = 90;
 
 export type GridGeometry = {
   startMin: number;
