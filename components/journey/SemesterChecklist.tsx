@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { CheckCircle2, Circle, RotateCcw } from "lucide-react";
 import { useLang } from "@/components/LanguageProvider";
-import type { ChecklistItem, ChecklistCategory } from "@/lib/journey";
+import { loc, type ChecklistItem, type ChecklistCategory } from "@/lib/journey";
 
 const CATEGORY_DOT: Record<ChecklistCategory, string> = {
   academic: "bg-sky-500",
@@ -23,7 +23,7 @@ export function SemesterChecklist({
   termId: string;
   items: ChecklistItem[];
 }) {
-  const { t } = useLang();
+  const { t, locale } = useLang();
   const storageKey = `cy-journey-checklist-${termId}`;
   const [checked, setChecked] = useState<Record<string, boolean>>({});
   const [ready, setReady] = useState(false);
@@ -100,7 +100,7 @@ export function SemesterChecklist({
                         : "text-slate-700 dark:text-slate-200"
                     }`}
                   >
-                    {item.text}
+                    {loc(item.text, locale)}
                   </span>
                   <span className="mt-1 flex items-center gap-2">
                     <span className={`h-1.5 w-1.5 rounded-full ${CATEGORY_DOT[item.category]}`} />

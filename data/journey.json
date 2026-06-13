@@ -8,87 +8,51 @@
     "theme": "Foundation & University Adaptation",
     "themeThai": "ปรับตัว วางรากฐาน และรู้จักวิชาชีพไซเบอร์",
     "accent": "emerald",
-    "shortDescription": "เทอมแรกของชีวิตมหาวิทยาลัย — ปรับตัวเข้ากับการเรียนแบบใหม่ วางพื้นฐานการเขียนโปรแกรม และเริ่มเข้าใจว่าอาชีพด้าน Cybersecurity ทำอะไรบ้าง",
+    "shortDescription": {
+      "th": "เทอมแรกของชีวิตมหาวิทยาลัย — ปรับตัวเข้ากับการเรียนแบบใหม่ วางพื้นฐานการเขียนโปรแกรม และเริ่มเข้าใจว่าอาชีพด้าน Cybersecurity ทำอะไรบ้าง",
+      "en": "Your first university term — adapt to a new way of learning, build programming fundamentals, and start to understand what a career in cybersecurity really involves."
+    },
     "academicFocus": [
-      "ปรับตัวเข้าสู่ระบบการเรียนระดับมหาวิทยาลัยและการเรียนรู้ด้วยตนเอง",
-      "พื้นฐานการเขียนโปรแกรมเชิงโครงสร้าง (Structured Programming)",
-      "เข้าใจกฎหมายและจริยธรรมด้านความมั่นคงปลอดภัยไซเบอร์ตั้งแต่ต้น",
-      "เห็นภาพรวมเส้นทางอาชีพและแรงบันดาลใจในสายไซเบอร์",
-      "วางพื้นฐานคณิตศาสตร์ (แคลคูลัส สถิติ) และภาษาอังกฤษ"
+      { "th": "ปรับตัวเข้าสู่ระบบการเรียนระดับมหาวิทยาลัยและการเรียนรู้ด้วยตนเอง", "en": "Adjust to university-level study and self-directed learning" },
+      { "th": "พื้นฐานการเขียนโปรแกรมเชิงโครงสร้าง (Structured Programming)", "en": "Fundamentals of structured programming" },
+      { "th": "เข้าใจกฎหมายและจริยธรรมด้านความมั่นคงปลอดภัยไซเบอร์ตั้งแต่ต้น", "en": "Understand cybersecurity law and ethics from the start" },
+      { "th": "เห็นภาพรวมเส้นทางอาชีพและแรงบันดาลใจในสายไซเบอร์", "en": "See the big picture of cybersecurity careers and inspiration" },
+      { "th": "วางพื้นฐานคณิตศาสตร์ (แคลคูลัส สถิติ) และภาษาอังกฤษ", "en": "Lay the math (calculus, statistics) and English foundations" }
     ],
-    "courseIds": [
-      "CP421021",
-      "CP421011",
-      "CP422001",
-      "GE341511",
-      "SC401201",
-      "SC602005",
-      "LI101001",
-      "GE151144"
-    ],
+    "courseIds": ["CP421021", "CP421011", "CP422001", "GE341511", "SC401201", "SC602005", "LI101001", "GE151144"],
     "skills": [
-      {
-        "id": "y1s1-prog",
-        "name": "พื้นฐานการเขียนโปรแกรม",
-        "category": "programming",
-        "level": "foundation",
-        "description": "ตัวแปร เงื่อนไข ลูป ฟังก์ชัน — คิดเป็นขั้นตอนแบบโปรแกรมเมอร์"
-      },
-      {
-        "id": "y1s1-linux",
-        "name": "Command Line & Linux เบื้องต้น",
-        "category": "system",
-        "level": "foundation",
-        "description": "ใช้ terminal นำทางไฟล์ และรู้จัก Linux ซึ่งเป็นเครื่องมือหลักของสายไซเบอร์"
-      },
-      {
-        "id": "y1s1-git",
-        "name": "Git & GitHub",
-        "category": "programming",
-        "level": "foundation",
-        "description": "เก็บโค้ดด้วย version control และเริ่มสร้างตัวตนบน GitHub"
-      },
-      {
-        "id": "y1s1-ethics",
-        "name": "จริยธรรมและกฎหมายไซเบอร์",
-        "category": "governance",
-        "level": "foundation",
-        "description": "เข้าใจขอบเขตทางกฎหมายของการทดสอบความปลอดภัย — แฮกอย่างมีจริยธรรม"
-      },
-      {
-        "id": "y1s1-selflearn",
-        "name": "การเรียนรู้ด้วยตนเอง",
-        "category": "soft-skill",
-        "level": "foundation",
-        "description": "จดโน้ต ค้นคว้า และบริหารเวลา — ทักษะที่อยู่กับเราไปตลอด 4 ปี"
-      }
+      { "id": "y1s1-prog", "name": { "th": "พื้นฐานการเขียนโปรแกรม", "en": "Programming basics" }, "category": "programming", "level": "foundation", "description": { "th": "ตัวแปร เงื่อนไข ลูป ฟังก์ชัน — คิดเป็นขั้นตอนแบบโปรแกรมเมอร์", "en": "Variables, conditionals, loops, functions — thinking in steps like a programmer." } },
+      { "id": "y1s1-linux", "name": { "th": "Command Line & Linux เบื้องต้น", "en": "Command line & intro Linux" }, "category": "system", "level": "foundation", "description": { "th": "ใช้ terminal นำทางไฟล์ และรู้จัก Linux ซึ่งเป็นเครื่องมือหลักของสายไซเบอร์", "en": "Navigate files in the terminal and get to know Linux — a core tool in cybersecurity." } },
+      { "id": "y1s1-git", "name": "Git & GitHub", "category": "programming", "level": "foundation", "description": { "th": "เก็บโค้ดด้วย version control และเริ่มสร้างตัวตนบน GitHub", "en": "Track code with version control and start building your GitHub presence." } },
+      { "id": "y1s1-ethics", "name": { "th": "จริยธรรมและกฎหมายไซเบอร์", "en": "Cyber ethics & law" }, "category": "governance", "level": "foundation", "description": { "th": "เข้าใจขอบเขตทางกฎหมายของการทดสอบความปลอดภัย — แฮกอย่างมีจริยธรรม", "en": "Understand the legal boundaries of security testing — hacking ethically." } },
+      { "id": "y1s1-selflearn", "name": { "th": "การเรียนรู้ด้วยตนเอง", "en": "Self-directed learning" }, "category": "soft-skill", "level": "foundation", "description": { "th": "จดโน้ต ค้นคว้า และบริหารเวลา — ทักษะที่อยู่กับเราไปตลอด 4 ปี", "en": "Note-taking, research, and time management — skills you keep for all four years." } }
     ],
     "portfolioGoals": [
-      "สร้างบัญชี GitHub และตั้งค่าโปรไฟล์ให้เรียบร้อย",
-      "อัปโหลด mini project แรก (เช่น โปรแกรมเล็ก ๆ จากวิชา Programming)",
-      "เริ่มทำโน้ต/บล็อกสรุปสิ่งที่เรียนในแต่ละสัปดาห์"
+      { "th": "สร้างบัญชี GitHub และตั้งค่าโปรไฟล์ให้เรียบร้อย", "en": "Create a GitHub account and set up a clean profile" },
+      { "th": "อัปโหลด mini project แรก (เช่น โปรแกรมเล็ก ๆ จากวิชา Programming)", "en": "Upload your first mini project (e.g. a small program from your programming class)" },
+      { "th": "เริ่มทำโน้ต/บล็อกสรุปสิ่งที่เรียนในแต่ละสัปดาห์", "en": "Start a note/blog summarizing what you learn each week" }
     ],
     "checklist": [
-      { "id": "y1s1-c1", "text": "ลงทะเบียนเรียนครบและตรวจสอบตารางเรียนเทอมแรก", "category": "academic", "required": true },
-      { "id": "y1s1-c2", "text": "เข้ากลุ่ม/ช่องทางสื่อสารของรุ่นและของหลักสูตร", "category": "other" },
-      { "id": "y1s1-c3", "text": "ติดตั้งเครื่องมือพื้นฐาน: VS Code, Git, และลองใช้ Linux (เช่น WSL/VM)", "category": "skill" },
-      { "id": "y1s1-c4", "text": "สร้างบัญชี GitHub และฝึก push โค้ดครั้งแรก", "category": "portfolio" },
-      { "id": "y1s1-c5", "text": "รู้จักอาจารย์ที่ปรึกษาและช่องทางติดต่อ", "category": "advisor" },
-      { "id": "y1s1-c6", "text": "ลองทำโจทย์ CTF ระดับเริ่มต้น (เช่น picoCTF, OverTheWire) เพื่อรู้บรรยากาศ", "category": "competition" },
-      { "id": "y1s1-c7", "text": "ตรวจสอบเกณฑ์ GPA และเงื่อนไขทุน/สถานภาพนักศึกษา", "category": "academic" }
+      { "id": "y1s1-c1", "text": { "th": "ลงทะเบียนเรียนครบและตรวจสอบตารางเรียนเทอมแรก", "en": "Complete registration and check your first-term timetable" }, "category": "academic", "required": true },
+      { "id": "y1s1-c2", "text": { "th": "เข้ากลุ่ม/ช่องทางสื่อสารของรุ่นและของหลักสูตร", "en": "Join your cohort's and the program's communication channels" }, "category": "other" },
+      { "id": "y1s1-c3", "text": { "th": "ติดตั้งเครื่องมือพื้นฐาน: VS Code, Git, และลองใช้ Linux (เช่น WSL/VM)", "en": "Install the basics: VS Code, Git, and try Linux (e.g. WSL/VM)" }, "category": "skill" },
+      { "id": "y1s1-c4", "text": { "th": "สร้างบัญชี GitHub และฝึก push โค้ดครั้งแรก", "en": "Create a GitHub account and push code for the first time" }, "category": "portfolio" },
+      { "id": "y1s1-c5", "text": { "th": "รู้จักอาจารย์ที่ปรึกษาและช่องทางติดต่อ", "en": "Get to know your academic advisor and how to reach them" }, "category": "advisor" },
+      { "id": "y1s1-c6", "text": { "th": "ลองทำโจทย์ CTF ระดับเริ่มต้น (เช่น picoCTF, OverTheWire) เพื่อรู้บรรยากาศ", "en": "Try a beginner CTF (e.g. picoCTF, OverTheWire) to feel the vibe" }, "category": "competition" },
+      { "id": "y1s1-c7", "text": { "th": "ตรวจสอบเกณฑ์ GPA และเงื่อนไขทุน/สถานภาพนักศึกษา", "en": "Check GPA criteria and scholarship/student-status conditions" }, "category": "academic" }
     ],
     "warnings": [
-      "อย่าปล่อยให้วิชาเขียนโปรแกรมหลุดมือ — เป็นวิชาที่สะสมต่อเนื่อง ตามไม่ทันแล้วจะลำบากทั้งสาย",
-      "การปรับตัวช่วงแรกอาจทำให้ละเลยการเข้าเรียน ระวังการขาดเรียนสะสม"
+      { "th": "อย่าปล่อยให้วิชาเขียนโปรแกรมหลุดมือ — เป็นวิชาที่สะสมต่อเนื่อง ตามไม่ทันแล้วจะลำบากทั้งสาย", "en": "Don't let programming slip — it builds cumulatively; falling behind hurts the whole track." },
+      { "th": "การปรับตัวช่วงแรกอาจทำให้ละเลยการเข้าเรียน ระวังการขาดเรียนสะสม", "en": "Early adjustment can lead to skipping class — watch out for accumulated absences." }
     ],
     "advisorNotes": [
-      "เทอมนี้เน้น 'ปรับพื้นฐานให้แน่น' มากกว่าการรีบวิ่งเข้าหาเรื่องแฮกขั้นสูง",
-      "ถ้าพื้นฐานเขียนโปรแกรมยังไม่แข็ง ให้รีบขอคำแนะนำหรือติวเสริมตั้งแต่ต้นเทอม"
+      { "th": "เทอมนี้เน้น 'ปรับพื้นฐานให้แน่น' มากกว่าการรีบวิ่งเข้าหาเรื่องแฮกขั้นสูง", "en": "This term is about a solid foundation, not rushing into advanced hacking." },
+      { "th": "ถ้าพื้นฐานเขียนโปรแกรมยังไม่แข็ง ให้รีบขอคำแนะนำหรือติวเสริมตั้งแต่ต้นเทอม", "en": "If your programming base is shaky, seek help or tutoring early in the term." }
     ],
     "studentTips": [
-      "ลองเข้าชมรม/ค่ายที่เกี่ยวกับคอมพิวเตอร์เพื่อหาเพื่อนที่สนใจเหมือนกัน",
-      "ฝึกพิมพ์สัมผัสและคุ้นเคยกับ keyboard shortcut จะช่วยให้ทำงานเร็วขึ้นมาก",
-      "เก็บทุกงานที่ทำไว้ใน GitHub ตั้งแต่วันนี้ อนาคตจะขอบคุณตัวเอง"
+      { "th": "ลองเข้าชมรม/ค่ายที่เกี่ยวกับคอมพิวเตอร์เพื่อหาเพื่อนที่สนใจเหมือนกัน", "en": "Join a computing club/camp to find friends with the same interests." },
+      { "th": "ฝึกพิมพ์สัมผัสและคุ้นเคยกับ keyboard shortcut จะช่วยให้ทำงานเร็วขึ้นมาก", "en": "Practice touch typing and keyboard shortcuts — it makes you much faster." },
+      { "th": "เก็บทุกงานที่ทำไว้ใน GitHub ตั้งแต่วันนี้ อนาคตจะขอบคุณตัวเอง", "en": "Keep everything on GitHub from day one — future you will thank you." }
     ]
   },
   {
@@ -100,84 +64,49 @@
     "theme": "Computer Science Core Foundation",
     "themeThai": "แกนวิทยาการคอมพิวเตอร์ — OOP, โครงสร้างข้อมูล, สถาปัตยกรรม",
     "accent": "emerald",
-    "shortDescription": "ต่อยอดจากการเขียนโปรแกรมพื้นฐานสู่แนวคิดเชิงวัตถุ โครงสร้างข้อมูล และเข้าใจว่าคอมพิวเตอร์ทำงานอย่างไรในระดับล่าง",
+    "shortDescription": {
+      "th": "ต่อยอดจากการเขียนโปรแกรมพื้นฐานสู่แนวคิดเชิงวัตถุ โครงสร้างข้อมูล และเข้าใจว่าคอมพิวเตอร์ทำงานอย่างไรในระดับล่าง",
+      "en": "Move from basic coding to object-oriented thinking, data structures, and understanding how a computer works at a lower level."
+    },
     "academicFocus": [
-      "การเขียนโปรแกรมเชิงวัตถุ (OOP) — แนวคิดสำคัญต่อทุกวิชาในอนาคต",
-      "ขั้นตอนวิธีและโครงสร้างข้อมูล (Algorithm & Data Structure)",
-      "องค์ประกอบและสถาปัตยกรรมคอมพิวเตอร์",
-      "คณิตศาสตร์เชิงวิยุต (Discrete Math) เป็นรากฐานของการเข้ารหัสและตรรกะ",
-      "ทักษะดิจิทัล ABCD สำหรับทุกวิชาชีพ"
+      { "th": "การเขียนโปรแกรมเชิงวัตถุ (OOP) — แนวคิดสำคัญต่อทุกวิชาในอนาคต", "en": "Object-oriented programming — key to almost every later course" },
+      { "th": "ขั้นตอนวิธีและโครงสร้างข้อมูล (Algorithm & Data Structure)", "en": "Algorithms and data structures" },
+      { "th": "องค์ประกอบและสถาปัตยกรรมคอมพิวเตอร์", "en": "Computer organization and architecture" },
+      { "th": "คณิตศาสตร์เชิงวิยุต (Discrete Math) เป็นรากฐานของการเข้ารหัสและตรรกะ", "en": "Discrete math — the foundation of cryptography and logic" },
+      { "th": "ทักษะดิจิทัล ABCD สำหรับทุกวิชาชีพ", "en": "ABCD digital skills for every profession" }
     ],
-    "courseIds": [
-      "CP421024",
-      "CP421023",
-      "CP421022",
-      "SC402401",
-      "CP001001",
-      "SC002104",
-      "LI101002"
-    ],
+    "courseIds": ["CP421024", "CP421023", "CP421022", "SC402401", "CP001001", "SC002104", "LI101002"],
     "skills": [
-      {
-        "id": "y1s2-oop",
-        "name": "Object-Oriented Programming",
-        "category": "programming",
-        "level": "developing",
-        "description": "class, object, inheritance, polymorphism — ออกแบบโปรแกรมที่ขยายต่อได้"
-      },
-      {
-        "id": "y1s2-ds",
-        "name": "โครงสร้างข้อมูลและอัลกอริทึม",
-        "category": "programming",
-        "level": "developing",
-        "description": "array, list, stack, queue, tree และการวิเคราะห์ประสิทธิภาพเบื้องต้น"
-      },
-      {
-        "id": "y1s2-arch",
-        "name": "เข้าใจการทำงานของคอมพิวเตอร์",
-        "category": "system",
-        "level": "foundation",
-        "description": "หน่วยความจำ CPU เลขฐาน — พื้นฐานที่ช่วยเข้าใจช่องโหว่ระดับล่างในอนาคต"
-      },
-      {
-        "id": "y1s2-logic",
-        "name": "ตรรกะและคณิตศาสตร์เชิงวิยุต",
-        "category": "research",
-        "level": "foundation",
-        "description": "เซต ตรรกะ กราฟ — รากฐานของ cryptography และการพิสูจน์"
-      },
-      {
-        "id": "y1s2-problem",
-        "name": "การแก้ปัญหาเชิงอัลกอริทึม",
-        "category": "programming",
-        "level": "developing",
-        "description": "ฝึกแก้โจทย์อย่างเป็นระบบบนแพลตฟอร์มเช่น LeetCode/HackerRank"
-      }
+      { "id": "y1s2-oop", "name": "Object-Oriented Programming", "category": "programming", "level": "developing", "description": { "th": "class, object, inheritance, polymorphism — ออกแบบโปรแกรมที่ขยายต่อได้", "en": "Class, object, inheritance, polymorphism — design programs that scale." } },
+      { "id": "y1s2-ds", "name": { "th": "โครงสร้างข้อมูลและอัลกอริทึม", "en": "Data structures & algorithms" }, "category": "programming", "level": "developing", "description": { "th": "array, list, stack, queue, tree และการวิเคราะห์ประสิทธิภาพเบื้องต้น", "en": "Array, list, stack, queue, tree, and basic complexity analysis." } },
+      { "id": "y1s2-arch", "name": { "th": "เข้าใจการทำงานของคอมพิวเตอร์", "en": "How computers work" }, "category": "system", "level": "foundation", "description": { "th": "หน่วยความจำ CPU เลขฐาน — พื้นฐานที่ช่วยเข้าใจช่องโหว่ระดับล่างในอนาคต", "en": "Memory, CPU, number systems — groundwork for understanding low-level flaws later." } },
+      { "id": "y1s2-logic", "name": { "th": "ตรรกะและคณิตศาสตร์เชิงวิยุต", "en": "Logic & discrete math" }, "category": "research", "level": "foundation", "description": { "th": "เซต ตรรกะ กราฟ — รากฐานของ cryptography และการพิสูจน์", "en": "Sets, logic, graphs — the basis of cryptography and proofs." } },
+      { "id": "y1s2-problem", "name": { "th": "การแก้ปัญหาเชิงอัลกอริทึม", "en": "Algorithmic problem solving" }, "category": "programming", "level": "developing", "description": { "th": "ฝึกแก้โจทย์อย่างเป็นระบบบนแพลตฟอร์มเช่น LeetCode/HackerRank", "en": "Practice systematic problem solving on platforms like LeetCode/HackerRank." } }
     ],
     "portfolioGoals": [
-      "ทำ mini project ที่ใช้แนวคิด OOP (เช่น เกมเล็ก ๆ หรือระบบจัดการข้อมูล)",
-      "บันทึก log การฝึกอัลกอริทึม (จำนวนข้อ/หัวข้อที่ทำได้)",
-      "เขียน write-up สั้น ๆ อธิบายวิธีแก้โจทย์ที่ภูมิใจ"
+      { "th": "ทำ mini project ที่ใช้แนวคิด OOP (เช่น เกมเล็ก ๆ หรือระบบจัดการข้อมูล)", "en": "Build a mini project using OOP (e.g. a small game or a data-management app)" },
+      { "th": "บันทึก log การฝึกอัลกอริทึม (จำนวนข้อ/หัวข้อที่ทำได้)", "en": "Keep an algorithm-practice log (problems/topics solved)" },
+      { "th": "เขียน write-up สั้น ๆ อธิบายวิธีแก้โจทย์ที่ภูมิใจ", "en": "Write a short write-up explaining a solution you're proud of" }
     ],
     "checklist": [
-      { "id": "y1s2-c1", "text": "ทบทวน OOP ให้เข้าใจจริง ไม่ใช่แค่ท่องจำ syntax", "category": "skill", "required": true },
-      { "id": "y1s2-c2", "text": "ฝึกโจทย์อัลกอริทึมสม่ำเสมอ (ตั้งเป้าสัปดาห์ละ X ข้อ)", "category": "skill" },
-      { "id": "y1s2-c3", "text": "ลองเข้าแข่ง Programming Contest ระดับเริ่มต้นในหรือนอกมหาวิทยาลัย", "category": "competition" },
-      { "id": "y1s2-c4", "text": "ทำ CTF หมวด Web/Crypto ระดับ basic เพิ่มขึ้น", "category": "competition" },
-      { "id": "y1s2-c5", "text": "จัดระเบียบ repo บน GitHub ให้มี README ทุกโปรเจกต์", "category": "portfolio" },
-      { "id": "y1s2-c6", "text": "ตรวจ GPA เทอม 1 และวางแผนปรับปรุงถ้าจำเป็น", "category": "academic" }
+      { "id": "y1s2-c1", "text": { "th": "ทบทวน OOP ให้เข้าใจจริง ไม่ใช่แค่ท่องจำ syntax", "en": "Truly understand OOP — not just memorize syntax" }, "category": "skill", "required": true },
+      { "id": "y1s2-c2", "text": { "th": "ฝึกโจทย์อัลกอริทึมสม่ำเสมอ (ตั้งเป้าสัปดาห์ละ X ข้อ)", "en": "Practice algorithm problems regularly (set a weekly target)" }, "category": "skill" },
+      { "id": "y1s2-c3", "text": { "th": "ลองเข้าแข่ง Programming Contest ระดับเริ่มต้นในหรือนอกมหาวิทยาลัย", "en": "Try a beginner programming contest, on or off campus" }, "category": "competition" },
+      { "id": "y1s2-c4", "text": { "th": "ทำ CTF หมวด Web/Crypto ระดับ basic เพิ่มขึ้น", "en": "Do more basic Web/Crypto CTF challenges" }, "category": "competition" },
+      { "id": "y1s2-c5", "text": { "th": "จัดระเบียบ repo บน GitHub ให้มี README ทุกโปรเจกต์", "en": "Tidy your GitHub repos — add a README to every project" }, "category": "portfolio" },
+      { "id": "y1s2-c6", "text": { "th": "ตรวจ GPA เทอม 1 และวางแผนปรับปรุงถ้าจำเป็น", "en": "Review your term-1 GPA and plan improvements if needed" }, "category": "academic" }
     ],
     "warnings": [
-      "OOP และ Data Structure เป็น prerequisite ทางความรู้ของวิชาปีสูง — ถ้าผ่านแบบไม่เข้าใจจะสะสมปัญหา",
-      "ระวังการลอกงาน/แชร์โค้ดที่ผิดระเบียบ ซึ่งขัดกับจริยธรรมวิชาชีพ"
+      { "th": "OOP และ Data Structure เป็น prerequisite ทางความรู้ของวิชาปีสูง — ถ้าผ่านแบบไม่เข้าใจจะสะสมปัญหา", "en": "OOP and data structures underpin later courses — passing without understanding stores up trouble." },
+      { "th": "ระวังการลอกงาน/แชร์โค้ดที่ผิดระเบียบ ซึ่งขัดกับจริยธรรมวิชาชีพ", "en": "Avoid plagiarism / improper code sharing — it breaches professional ethics." }
     ],
     "advisorNotes": [
-      "วัดความเข้าใจ OOP ด้วยการลองสร้างโปรเจกต์เล็ก ๆ ด้วยตัวเอง ไม่ใช่แค่ทำการบ้านส่ง",
-      "เริ่มสังเกตว่าตัวเองชอบสายไหน (เขียนโปรแกรม / ระบบ / เครือข่าย) เพื่อวางแผนวิชาเลือกล่วงหน้า"
+      { "th": "วัดความเข้าใจ OOP ด้วยการลองสร้างโปรเจกต์เล็ก ๆ ด้วยตัวเอง ไม่ใช่แค่ทำการบ้านส่ง", "en": "Test your OOP understanding by building a small project yourself, not just doing homework." },
+      { "th": "เริ่มสังเกตว่าตัวเองชอบสายไหน (เขียนโปรแกรม / ระบบ / เครือข่าย) เพื่อวางแผนวิชาเลือกล่วงหน้า", "en": "Notice which area you enjoy (coding/systems/networking) to plan electives ahead." }
     ],
     "studentTips": [
-      "จับกลุ่มติวกับเพื่อน อธิบายให้กันฟังคือวิธีเช็กว่าตัวเองเข้าใจจริงหรือไม่",
-      "ลองอ่านโค้ดของคนอื่นบน GitHub เพื่อเรียนรู้สไตล์การเขียนที่ดี"
+      { "th": "จับกลุ่มติวกับเพื่อน อธิบายให้กันฟังคือวิธีเช็กว่าตัวเองเข้าใจจริงหรือไม่", "en": "Study in groups — explaining to others is how you check you truly get it." },
+      { "th": "ลองอ่านโค้ดของคนอื่นบน GitHub เพื่อเรียนรู้สไตล์การเขียนที่ดี", "en": "Read others' code on GitHub to learn good style." }
     ]
   },
   {
@@ -189,84 +118,49 @@
     "theme": "System, Web, Database & Security Foundation",
     "themeThai": "ระบบ เว็บ ฐานข้อมูล และการเชื่อมความรู้สู่ความปลอดภัย",
     "accent": "sky",
-    "shortDescription": "เริ่มเห็นภาพรวมของระบบจริง — ระบบปฏิบัติการ เครือข่าย เว็บ และฐานข้อมูล ซึ่งเป็น 'พื้นผิว' ที่ความปลอดภัยไซเบอร์ต้องปกป้อง",
+    "shortDescription": {
+      "th": "เริ่มเห็นภาพรวมของระบบจริง — ระบบปฏิบัติการ เครือข่าย เว็บ และฐานข้อมูล ซึ่งเป็น 'พื้นผิว' ที่ความปลอดภัยไซเบอร์ต้องปกป้อง",
+      "en": "Start seeing real systems — operating systems, networks, web, and databases: the very 'attack surface' that cybersecurity must protect."
+    },
     "academicFocus": [
-      "ระบบปฏิบัติการ (Operating System) และการจัดการทรัพยากร",
-      "สถาปัตยกรรมเว็บและโมบายแอปพลิเคชัน",
-      "การออกแบบและวิเคราะห์ฐานข้อมูล",
-      "เครือข่ายคอมพิวเตอร์ขั้นแนะนำ — รากฐานของ network security",
-      "การวิเคราะห์และออกแบบซอฟต์แวร์อย่างเป็นระบบ"
+      { "th": "ระบบปฏิบัติการ (Operating System) และการจัดการทรัพยากร", "en": "Operating systems and resource management" },
+      { "th": "สถาปัตยกรรมเว็บและโมบายแอปพลิเคชัน", "en": "Web and mobile application architecture" },
+      { "th": "การออกแบบและวิเคราะห์ฐานข้อมูล", "en": "Database design and analysis" },
+      { "th": "เครือข่ายคอมพิวเตอร์ขั้นแนะนำ — รากฐานของ network security", "en": "Intro to computer networking — the basis of network security" },
+      { "th": "การวิเคราะห์และออกแบบซอฟต์แวร์อย่างเป็นระบบ", "en": "Systematic software analysis and design" }
     ],
-    "courseIds": [
-      "CP422052",
-      "CP422011",
-      "CP422021",
-      "CP422022",
-      "CP421025",
-      "GE363789",
-      "LI102003"
-    ],
+    "courseIds": ["CP422052", "CP422011", "CP422021", "CP422022", "CP421025", "GE363789", "LI102003"],
     "skills": [
-      {
-        "id": "y2s1-os",
-        "name": "ระบบปฏิบัติการ & Linux ลึกขึ้น",
-        "category": "system",
-        "level": "developing",
-        "description": "process, permission, file system — เข้าใจจุดที่มักถูกโจมตี"
-      },
-      {
-        "id": "y2s1-net",
-        "name": "เครือข่ายคอมพิวเตอร์",
-        "category": "network",
-        "level": "developing",
-        "description": "TCP/IP, OSI model, การสื่อสารข้อมูล — หัวใจของ network security"
-      },
-      {
-        "id": "y2s1-web",
-        "name": "Web Application & สถาปัตยกรรม",
-        "category": "web",
-        "level": "developing",
-        "description": "client/server, HTTP, การพัฒนาเว็บ — เป้าหมายยอดนิยมของการโจมตี"
-      },
-      {
-        "id": "y2s1-db",
-        "name": "ฐานข้อมูลและ SQL",
-        "category": "system",
-        "level": "developing",
-        "description": "ออกแบบ schema และเขียน SQL — เข้าใจ SQL Injection ในเชิงลึก"
-      },
-      {
-        "id": "y2s1-design",
-        "name": "การออกแบบซอฟต์แวร์",
-        "category": "programming",
-        "level": "developing",
-        "description": "วิเคราะห์ความต้องการและออกแบบระบบก่อนลงมือเขียน"
-      }
+      { "id": "y2s1-os", "name": { "th": "ระบบปฏิบัติการ & Linux ลึกขึ้น", "en": "OS & deeper Linux" }, "category": "system", "level": "developing", "description": { "th": "process, permission, file system — เข้าใจจุดที่มักถูกโจมตี", "en": "Processes, permissions, file systems — understand commonly attacked points." } },
+      { "id": "y2s1-net", "name": { "th": "เครือข่ายคอมพิวเตอร์", "en": "Computer networking" }, "category": "network", "level": "developing", "description": { "th": "TCP/IP, OSI model, การสื่อสารข้อมูล — หัวใจของ network security", "en": "TCP/IP, the OSI model, data communication — the heart of network security." } },
+      { "id": "y2s1-web", "name": { "th": "Web Application & สถาปัตยกรรม", "en": "Web apps & architecture" }, "category": "web", "level": "developing", "description": { "th": "client/server, HTTP, การพัฒนาเว็บ — เป้าหมายยอดนิยมของการโจมตี", "en": "Client/server, HTTP, web development — a top attack target." } },
+      { "id": "y2s1-db", "name": { "th": "ฐานข้อมูลและ SQL", "en": "Databases & SQL" }, "category": "system", "level": "developing", "description": { "th": "ออกแบบ schema และเขียน SQL — เข้าใจ SQL Injection ในเชิงลึก", "en": "Design schemas and write SQL — understand SQL injection deeply." } },
+      { "id": "y2s1-design", "name": { "th": "การออกแบบซอฟต์แวร์", "en": "Software design" }, "category": "programming", "level": "developing", "description": { "th": "วิเคราะห์ความต้องการและออกแบบระบบก่อนลงมือเขียน", "en": "Analyze requirements and design a system before coding." } }
     ],
     "portfolioGoals": [
-      "สร้าง web application โปรเจกต์ที่มี frontend + backend + ฐานข้อมูล",
-      "ทำ checklist ความปลอดภัยเบื้องต้นของเว็บที่ตัวเองสร้าง",
-      "เขียน write-up ช่องโหว่เว็บเบื้องต้นที่ได้ลองจาก CTF"
+      { "th": "สร้าง web application โปรเจกต์ที่มี frontend + backend + ฐานข้อมูล", "en": "Build a web app project with frontend + backend + database" },
+      { "th": "ทำ checklist ความปลอดภัยเบื้องต้นของเว็บที่ตัวเองสร้าง", "en": "Make a basic security checklist for the web app you built" },
+      { "th": "เขียน write-up ช่องโหว่เว็บเบื้องต้นที่ได้ลองจาก CTF", "en": "Write up basic web vulnerabilities you tried in CTFs" }
     ],
     "checklist": [
-      { "id": "y2s1-c1", "text": "เชื่อมโยงความรู้ OS/Network/Web เข้าด้วยกัน ไม่มองแยกส่วน", "category": "skill", "required": true },
-      { "id": "y2s1-c2", "text": "ฝึก Web CTF (เช่น OWASP Juice Shop, PortSwigger Academy)", "category": "competition" },
-      { "id": "y2s1-c3", "text": "ทำโปรเจกต์เว็บ 1 ชิ้นและ deploy ให้ใช้งานได้จริง", "category": "portfolio" },
-      { "id": "y2s1-c4", "text": "เริ่มศึกษา prerequisite ของวิชาปี 2 เทอม 2 และปี 3 ล่วงหน้า", "category": "academic" },
-      { "id": "y2s1-c5", "text": "ลองรวมทีมเพื่อนเข้าแข่ง CTF/Hackathon", "category": "competition" },
-      { "id": "y2s1-c6", "text": "ปรึกษาอาจารย์ที่ปรึกษาเรื่องทิศทางวิชาเลือกที่สนใจ", "category": "advisor" }
+      { "id": "y2s1-c1", "text": { "th": "เชื่อมโยงความรู้ OS/Network/Web เข้าด้วยกัน ไม่มองแยกส่วน", "en": "Connect OS/network/web knowledge — don't view them in isolation" }, "category": "skill", "required": true },
+      { "id": "y2s1-c2", "text": { "th": "ฝึก Web CTF (เช่น OWASP Juice Shop, PortSwigger Academy)", "en": "Practice Web CTF (e.g. OWASP Juice Shop, PortSwigger Academy)" }, "category": "competition" },
+      { "id": "y2s1-c3", "text": { "th": "ทำโปรเจกต์เว็บ 1 ชิ้นและ deploy ให้ใช้งานได้จริง", "en": "Build one web project and deploy it for real" }, "category": "portfolio" },
+      { "id": "y2s1-c4", "text": { "th": "เริ่มศึกษา prerequisite ของวิชาปี 2 เทอม 2 และปี 3 ล่วงหน้า", "en": "Look ahead at prerequisites for Y2S2 and Year 3" }, "category": "academic" },
+      { "id": "y2s1-c5", "text": { "th": "ลองรวมทีมเพื่อนเข้าแข่ง CTF/Hackathon", "en": "Team up with friends for a CTF/hackathon" }, "category": "competition" },
+      { "id": "y2s1-c6", "text": { "th": "ปรึกษาอาจารย์ที่ปรึกษาเรื่องทิศทางวิชาเลือกที่สนใจ", "en": "Consult your advisor about elective directions you like" }, "category": "advisor" }
     ],
     "warnings": [
-      "วิชาเครือข่ายขั้นแนะนำเป็นจุดเสี่ยงสำคัญ — เป็นพื้นฐานของวิชาความปลอดภัยหลายตัว ควรทำให้แน่น",
-      "อย่าเรียนเว็บ/ฐานข้อมูลแบบผิวเผิน เพราะช่องโหว่ส่วนใหญ่ในโลกจริงอยู่ตรงนี้"
+      { "th": "วิชาเครือข่ายขั้นแนะนำเป็นจุดเสี่ยงสำคัญ — เป็นพื้นฐานของวิชาความปลอดภัยหลายตัว ควรทำให้แน่น", "en": "Intro networking is a key risk point — it underpins many security courses, so master it." },
+      { "th": "อย่าเรียนเว็บ/ฐานข้อมูลแบบผิวเผิน เพราะช่องโหว่ส่วนใหญ่ในโลกจริงอยู่ตรงนี้", "en": "Don't learn web/databases superficially — most real-world vulnerabilities live here." }
     ],
     "advisorNotes": [
-      "ปีนี้เป็นช่วง 'เชื่อมจุด' — พยายามมองว่าความรู้แต่ละวิชาไปประกอบกันเป็นระบบอย่างไร",
-      "เริ่มเลือกแพลตฟอร์มฝึก (TryHackMe / HackTheBox) ที่จะใช้สม่ำเสมอ"
+      { "th": "ปีนี้เป็นช่วง 'เชื่อมจุด' — พยายามมองว่าความรู้แต่ละวิชาไปประกอบกันเป็นระบบอย่างไร", "en": "This year is about 'connecting the dots' — see how each course assembles into a system." },
+      { "th": "เริ่มเลือกแพลตฟอร์มฝึก (TryHackMe / HackTheBox) ที่จะใช้สม่ำเสมอ", "en": "Pick a practice platform (TryHackMe/Hack The Box) and use it consistently." }
     ],
     "studentTips": [
-      "ลองตั้ง home lab ด้วย VM เพื่อทดลองโจมตี/ป้องกันในสภาพแวดล้อมที่ถูกกฎหมาย",
-      "อ่าน write-up ของคนอื่นหลังจบการแข่ง CTF ทุกครั้ง จะได้เทคนิคเยอะมาก"
+      { "th": "ลองตั้ง home lab ด้วย VM เพื่อทดลองโจมตี/ป้องกันในสภาพแวดล้อมที่ถูกกฎหมาย", "en": "Set up a home lab with VMs to practice attack/defense legally." },
+      { "th": "อ่าน write-up ของคนอื่นหลังจบการแข่ง CTF ทุกครั้ง จะได้เทคนิคเยอะมาก", "en": "Read others' write-ups after every CTF — you'll pick up many techniques." }
     ]
   },
   {
@@ -278,83 +172,49 @@
     "theme": "Applied Cybersecurity & Infrastructure",
     "themeThai": "เข้าสู่ไซเบอร์เต็มตัว — ระบบ คลาวด์ ไร้สาย AI และการตอบสนอง",
     "accent": "sky",
-    "shortDescription": "เทอมที่ได้เจอวิชา 'Introduction to Cybersecurity' เต็มตัว พร้อมโครงสร้างพื้นฐานยุคใหม่ทั้งคลาวด์ ไร้สาย/IoT และ AI ในงานความปลอดภัย",
+    "shortDescription": {
+      "th": "เทอมที่ได้เจอวิชา 'Introduction to Cybersecurity' เต็มตัว พร้อมโครงสร้างพื้นฐานยุคใหม่ทั้งคลาวด์ ไร้สาย/IoT และ AI ในงานความปลอดภัย",
+      "en": "The term you meet 'Introduction to Cybersecurity' head-on, alongside modern infrastructure — cloud, wireless/IoT, and AI in security work."
+    },
     "academicFocus": [
-      "ความมั่นคงปลอดภัยไซเบอร์ขั้นแนะนำ — ภาพรวมศาสตร์ทั้งสาย",
-      "การประมวลผลบนคลาวด์และการประยุกต์",
-      "เครือข่ายไร้สาย เคลื่อนที่ และ IoT",
-      "ปัญญาประดิษฐ์ในการรักษาความมั่นคงปลอดภัยไซเบอร์",
-      "พื้นฐานวิศวกรรมระบบคอมพิวเตอร์ — เตรียมเข้าสู่สายเฉพาะทาง"
+      { "th": "ความมั่นคงปลอดภัยไซเบอร์ขั้นแนะนำ — ภาพรวมศาสตร์ทั้งสาย", "en": "Introduction to cybersecurity — an overview of the whole field" },
+      { "th": "การประมวลผลบนคลาวด์และการประยุกต์", "en": "Cloud computing and its applications" },
+      { "th": "เครือข่ายไร้สาย เคลื่อนที่ และ IoT", "en": "Wireless, mobile networks, and IoT" },
+      { "th": "ปัญญาประดิษฐ์ในการรักษาความมั่นคงปลอดภัยไซเบอร์", "en": "Artificial intelligence in cybersecurity" },
+      { "th": "พื้นฐานวิศวกรรมระบบคอมพิวเตอร์ — เตรียมเข้าสู่สายเฉพาะทาง", "en": "Computer-system engineering basics — prep for specialization" }
     ],
-    "courseIds": [
-      "CP422031",
-      "CP422032",
-      "CP422012",
-      "CP422641",
-      "CP422013",
-      "LI102004"
-    ],
+    "courseIds": ["CP422031", "CP422032", "CP422012", "CP422641", "CP422013", "LI102004"],
     "skills": [
-      {
-        "id": "y2s2-secfund",
-        "name": "พื้นฐานความมั่นคงปลอดภัยไซเบอร์",
-        "category": "security",
-        "level": "developing",
-        "description": "CIA triad, threat, vulnerability, การประเมินความเสี่ยงเบื้องต้น"
-      },
-      {
-        "id": "y2s2-cloud",
-        "name": "Cloud Computing",
-        "category": "cloud",
-        "level": "developing",
-        "description": "บริการคลาวด์และโมเดลการ deploy — พื้นฐานสู่ cloud security"
-      },
-      {
-        "id": "y2s2-wireless",
-        "name": "Wireless / IoT",
-        "category": "network",
-        "level": "developing",
-        "description": "ความเสี่ยงเฉพาะของเครือข่ายไร้สายและอุปกรณ์ IoT"
-      },
-      {
-        "id": "y2s2-ai",
-        "name": "AI ในงานความปลอดภัย",
-        "category": "research",
-        "level": "developing",
-        "description": "การใช้ ML ตรวจจับภัยคุกคามและข้อจำกัดของมัน"
-      },
-      {
-        "id": "y2s2-ir",
-        "name": "แนวคิดการตอบสนองเหตุการณ์",
-        "category": "security",
-        "level": "foundation",
-        "description": "รู้จักกระบวนการ incident response และบทบาท blue team เบื้องต้น"
-      }
+      { "id": "y2s2-secfund", "name": { "th": "พื้นฐานความมั่นคงปลอดภัยไซเบอร์", "en": "Cybersecurity fundamentals" }, "category": "security", "level": "developing", "description": { "th": "CIA triad, threat, vulnerability, การประเมินความเสี่ยงเบื้องต้น", "en": "CIA triad, threats, vulnerabilities, and basic risk assessment." } },
+      { "id": "y2s2-cloud", "name": "Cloud Computing", "category": "cloud", "level": "developing", "description": { "th": "บริการคลาวด์และโมเดลการ deploy — พื้นฐานสู่ cloud security", "en": "Cloud services and deployment models — a path into cloud security." } },
+      { "id": "y2s2-wireless", "name": "Wireless / IoT", "category": "network", "level": "developing", "description": { "th": "ความเสี่ยงเฉพาะของเครือข่ายไร้สายและอุปกรณ์ IoT", "en": "Risks specific to wireless networks and IoT devices." } },
+      { "id": "y2s2-ai", "name": { "th": "AI ในงานความปลอดภัย", "en": "AI in security" }, "category": "research", "level": "developing", "description": { "th": "การใช้ ML ตรวจจับภัยคุกคามและข้อจำกัดของมัน", "en": "Using ML to detect threats — and its limitations." } },
+      { "id": "y2s2-ir", "name": { "th": "แนวคิดการตอบสนองเหตุการณ์", "en": "Incident-response concepts" }, "category": "security", "level": "foundation", "description": { "th": "รู้จักกระบวนการ incident response และบทบาท blue team เบื้องต้น", "en": "Learn the incident-response process and the basics of the blue-team role." } }
     ],
     "portfolioGoals": [
-      "บันทึกผลการทำ lab เครือข่าย/คลาวด์เป็นเอกสารมีภาพประกอบ",
-      "ทดลอง deploy บริการบนคลาวด์และตั้งค่าความปลอดภัยพื้นฐาน",
-      "เขียน incident write-up จากการจำลองเหตุการณ์ใน CTF/แล็บ"
+      { "th": "บันทึกผลการทำ lab เครือข่าย/คลาวด์เป็นเอกสารมีภาพประกอบ", "en": "Document network/cloud labs with screenshots" },
+      { "th": "ทดลอง deploy บริการบนคลาวด์และตั้งค่าความปลอดภัยพื้นฐาน", "en": "Deploy a cloud service and apply basic security settings" },
+      { "th": "เขียน incident write-up จากการจำลองเหตุการณ์ใน CTF/แล็บ", "en": "Write an incident write-up from a simulated CTF/lab scenario" }
     ],
     "checklist": [
-      { "id": "y2s2-c1", "text": "สรุปภาพรวมศาสตร์ไซเบอร์เพื่อรู้ว่าตัวเองอยากลึกสายไหน", "category": "career", "required": true },
-      { "id": "y2s2-c2", "text": "ทำ CTF ระดับ intermediate และลองหมวด network/forensics", "category": "competition" },
-      { "id": "y2s2-c3", "text": "เริ่มศึกษา certification ที่เหมาะกับมือใหม่ (เช่น CompTIA Security+/Network+)", "category": "career" },
-      { "id": "y2s2-c4", "text": "วางแผนเลือกวิชา elective ของปี 3 ตามสายที่สนใจ", "category": "academic" },
-      { "id": "y2s2-c5", "text": "หาประสบการณ์ทีม เช่น เข้าแข่ง CTF แบบทีมหรือ blue team simulation", "category": "competition" },
-      { "id": "y2s2-c6", "text": "ทบทวนพื้นฐานเครือข่ายให้พร้อมก่อนขึ้นวิชาเฉพาะทาง", "category": "skill" }
+      { "id": "y2s2-c1", "text": { "th": "สรุปภาพรวมศาสตร์ไซเบอร์เพื่อรู้ว่าตัวเองอยากลึกสายไหน", "en": "Map out the cyber field to decide which area to go deep in" }, "category": "career", "required": true },
+      { "id": "y2s2-c2", "text": { "th": "ทำ CTF ระดับ intermediate และลองหมวด network/forensics", "en": "Do intermediate CTFs and try network/forensics categories" }, "category": "competition" },
+      { "id": "y2s2-c3", "text": { "th": "เริ่มศึกษา certification ที่เหมาะกับมือใหม่ (เช่น CompTIA Security+/Network+)", "en": "Look into beginner-friendly certs (e.g. CompTIA Security+/Network+)" }, "category": "career" },
+      { "id": "y2s2-c4", "text": { "th": "วางแผนเลือกวิชา elective ของปี 3 ตามสายที่สนใจ", "en": "Plan your Year-3 electives around your interest" }, "category": "academic" },
+      { "id": "y2s2-c5", "text": { "th": "หาประสบการณ์ทีม เช่น เข้าแข่ง CTF แบบทีมหรือ blue team simulation", "en": "Gain team experience — team CTFs or blue-team simulations" }, "category": "competition" },
+      { "id": "y2s2-c6", "text": { "th": "ทบทวนพื้นฐานเครือข่ายให้พร้อมก่อนขึ้นวิชาเฉพาะทาง", "en": "Review networking basics before moving to specialized courses" }, "category": "skill" }
     ],
     "warnings": [
-      "เนื้อหาเริ่มกว้างและลึกพร้อมกัน — บริหารเวลาให้ดี อย่าทิ้งวิชาพื้นฐานวิศวกรรมระบบ",
-      "การเลือกสายควรอิงความชอบ + โอกาสงาน ไม่ใช่ตามกระแสอย่างเดียว"
+      { "th": "เนื้อหาเริ่มกว้างและลึกพร้อมกัน — บริหารเวลาให้ดี อย่าทิ้งวิชาพื้นฐานวิศวกรรมระบบ", "en": "Content gets broad and deep at once — manage time and don't neglect systems-engineering basics." },
+      { "th": "การเลือกสายควรอิงความชอบ + โอกาสงาน ไม่ใช่ตามกระแสอย่างเดียว", "en": "Choose a track by interest + job prospects, not just hype." }
     ],
     "advisorNotes": [
-      "ปลายปี 2 คือจุดเริ่มตัดสินใจสายเฉพาะทาง ลองคุยกับรุ่นพี่แต่ละสายก่อนเลือก",
-      "ถ้าสนใจสาย offensive ให้เน้นแล็บ hands-on; สาย defensive ให้เน้น log/monitoring"
+      { "th": "ปลายปี 2 คือจุดเริ่มตัดสินใจสายเฉพาะทาง ลองคุยกับรุ่นพี่แต่ละสายก่อนเลือก", "en": "Late Year 2 is when track decisions begin — talk to seniors in each area first." },
+      { "th": "ถ้าสนใจสาย offensive ให้เน้นแล็บ hands-on; สาย defensive ให้เน้น log/monitoring", "en": "For offensive, focus on hands-on labs; for defensive, focus on logs/monitoring." }
     ],
     "studentTips": [
-      "เริ่มสะสม certification ตัวแรกช่วงปิดเทอมยาวจะคุ้มมาก",
-      "ติดตามข่าวภัยคุกคามจริง (เช่นจาก ThaiCERT/วงการ) เพื่อเห็นภาพการใช้งานจริง"
+      { "th": "เริ่มสะสม certification ตัวแรกช่วงปิดเทอมยาวจะคุ้มมาก", "en": "Earning your first cert over the long break pays off." },
+      { "th": "ติดตามข่าวภัยคุกคามจริง (เช่นจาก ThaiCERT/วงการ) เพื่อเห็นภาพการใช้งานจริง", "en": "Follow real threat news (e.g. ThaiCERT/industry) to see real-world relevance." }
     ]
   },
   {
@@ -366,77 +226,50 @@
     "theme": "Specialization & Track Decision",
     "themeThai": "เลือกสายเฉพาะทาง และเริ่มสร้างพอร์ตจริงจัง",
     "accent": "violet",
-    "shortDescription": "เริ่มเรียนวิชาเลือกตามสายที่ถนัด (เจาะระบบ / ป้องกัน / คลาวด์ / ฟอเรนสิก / ธรรมาภิบาล) และเตรียมตัดสินใจเส้นทางปี 4 ระหว่าง Project / Co-op / WIL",
+    "shortDescription": {
+      "th": "เริ่มเรียนวิชาเลือกตามสายที่ถนัด (เจาะระบบ / ป้องกัน / คลาวด์ / ฟอเรนสิก / ธรรมาภิบาล) และเตรียมตัดสินใจเส้นทางปี 4 ระหว่าง Project / Co-op / WIL",
+      "en": "Begin electives in your chosen track (pentest / defense / cloud / forensics / governance) and get ready to choose a Year-4 path: Project / Co-op / WIL."
+    },
     "academicFocus": [
-      "เริ่มเรียนวิชาเลือกเฉพาะทาง (Elective) ตามสายที่สนใจ",
-      "ตัดสินใจเส้นทางปี 4: Project / Co-op / WIL",
-      "เตรียมความพร้อมก่อนออกปฏิบัติงาน (Pre Co-op / โมดูล)",
-      "สร้าง portfolio และ resume เวอร์ชันแรกอย่างจริงจัง",
-      "เลือกแนวสายงาน เช่น pentest, blue team, cloud security, GRC, forensics"
+      { "th": "เริ่มเรียนวิชาเลือกเฉพาะทาง (Elective) ตามสายที่สนใจ", "en": "Start specialized electives in your area of interest" },
+      { "th": "ตัดสินใจเส้นทางปี 4: Project / Co-op / WIL", "en": "Decide your Year-4 path: Project / Co-op / WIL" },
+      { "th": "เตรียมความพร้อมก่อนออกปฏิบัติงาน (Pre Co-op / โมดูล)", "en": "Prepare before fieldwork (Pre Co-op / module courses)" },
+      { "th": "สร้าง portfolio และ resume เวอร์ชันแรกอย่างจริงจัง", "en": "Build a real first version of your portfolio and resume" },
+      { "th": "เลือกสายงาน เช่น pentest, blue team, cloud security, governance, forensics", "en": "Pick a career lane: pentest, blue team, cloud security, governance, forensics" }
     ],
-    "courseIds": [
-      "CP423200",
-      "CP423433",
-      "CP423432",
-      "CP423436",
-      "CP423326"
-    ],
+    "courseIds": ["CP423200", "CP423433", "CP423432", "CP423436", "CP423326"],
     "skills": [
-      {
-        "id": "y3s1-spec",
-        "name": "ทักษะเฉพาะทางตามสาย",
-        "category": "security",
-        "level": "applied",
-        "description": "เจาะลึกสายที่เลือก เช่น pentest, defense, cloud, forensics, GRC"
-      },
-      {
-        "id": "y3s1-portfolio",
-        "name": "การสร้าง Portfolio",
-        "category": "career",
-        "level": "developing",
-        "description": "จัดระเบียบผลงาน เขียน write-up และนำเสนอทักษะให้คนนอกเข้าใจ"
-      },
-      {
-        "id": "y3s1-resume",
-        "name": "การเขียน Resume / CV",
-        "category": "career",
-        "level": "developing",
-        "description": "ร้อยเรียงประสบการณ์ ทักษะ และผลงานให้ตรงกับสายงานเป้าหมาย"
-      },
-      {
-        "id": "y3s1-team",
-        "name": "การทำงานเป็นทีม",
-        "category": "soft-skill",
-        "level": "applied",
-        "description": "แบ่งงาน สื่อสาร และทำงานร่วมกันในโปรเจกต์/การแข่งขัน"
-      }
+      { "id": "y3s1-spec", "name": { "th": "ทักษะเฉพาะทางตามสาย", "en": "Track-specific skills" }, "category": "security", "level": "applied", "description": { "th": "เจาะลึกสายที่เลือก เช่น pentest, defense, cloud, forensics, GRC", "en": "Go deep in your chosen lane: pentest, defense, cloud, forensics, GRC." } },
+      { "id": "y3s1-portfolio", "name": { "th": "การสร้าง Portfolio", "en": "Building a portfolio" }, "category": "career", "level": "developing", "description": { "th": "จัดระเบียบผลงาน เขียน write-up และนำเสนอทักษะให้คนนอกเข้าใจ", "en": "Organize work, write write-ups, and present your skills clearly to outsiders." } },
+      { "id": "y3s1-resume", "name": { "th": "การเขียน Resume / CV", "en": "Resume / CV writing" }, "category": "career", "level": "developing", "description": { "th": "ร้อยเรียงประสบการณ์ ทักษะ และผลงานให้ตรงกับสายงานเป้าหมาย", "en": "Weave experience, skills, and projects to match your target role." } },
+      { "id": "y3s1-team", "name": { "th": "การทำงานเป็นทีม", "en": "Teamwork" }, "category": "soft-skill", "level": "applied", "description": { "th": "แบ่งงาน สื่อสาร และทำงานร่วมกันในโปรเจกต์/การแข่งขัน", "en": "Split work, communicate, and collaborate in projects/competitions." } }
     ],
     "portfolioGoals": [
-      "ทำ specialization project 1 ชิ้นที่สะท้อนสายที่เลือก",
-      "จัด GitHub portfolio ให้มีโปรเจกต์เด่น 2-3 ชิ้นพร้อม README ดี ๆ",
-      "เขียน CTF write-up อย่างน้อย 2-3 ชิ้น",
-      "ทำ resume เวอร์ชัน 1 พร้อมให้รุ่นพี่/อาจารย์ช่วยรีวิว"
+      { "th": "ทำ specialization project 1 ชิ้นที่สะท้อนสายที่เลือก", "en": "Build one specialization project reflecting your chosen track" },
+      { "th": "จัด GitHub portfolio ให้มีโปรเจกต์เด่น 2-3 ชิ้นพร้อม README ดี ๆ", "en": "Curate a GitHub portfolio with 2-3 standout projects and good READMEs" },
+      { "th": "เขียน CTF write-up อย่างน้อย 2-3 ชิ้น", "en": "Write at least 2-3 CTF write-ups" },
+      { "th": "ทำ resume เวอร์ชัน 1 พร้อมให้รุ่นพี่/อาจารย์ช่วยรีวิว", "en": "Make a v1 resume and have seniors/advisors review it" }
     ],
     "checklist": [
-      { "id": "y3s1-c1", "text": "ตัดสินใจเส้นทางปี 4 (Project/Co-op/WIL) และตรวจเงื่อนไขของแต่ละแผน", "category": "academic", "required": true },
-      { "id": "y3s1-c2", "text": "เลือกวิชา elective ให้สอดคล้องกับสายงานเป้าหมาย", "category": "academic", "required": true },
-      { "id": "y3s1-c3", "text": "ทำ resume เวอร์ชันแรกและขอ feedback", "category": "career" },
-      { "id": "y3s1-c4", "text": "เข้าแข่ง CTF/Hackathon แบบทีมเพื่อเก็บผลงาน", "category": "competition" },
-      { "id": "y3s1-c5", "text": "เริ่มหาข้อมูลบริษัท/หน่วยงานสำหรับ Co-op/ฝึกงาน", "category": "career" },
-      { "id": "y3s1-c6", "text": "ปรึกษาอาจารย์ที่ปรึกษาเรื่องหัวข้อ project/สถานที่ co-op", "category": "advisor", "required": true }
+      { "id": "y3s1-c1", "text": { "th": "ตัดสินใจเส้นทางปี 4 (Project/Co-op/WIL) และตรวจเงื่อนไขของแต่ละแผน", "en": "Decide your Year-4 path (Project/Co-op/WIL) and check each plan's conditions" }, "category": "academic", "required": true },
+      { "id": "y3s1-c2", "text": { "th": "เลือกวิชา elective ให้สอดคล้องกับสายงานเป้าหมาย", "en": "Pick electives that align with your target career" }, "category": "academic", "required": true },
+      { "id": "y3s1-c3", "text": { "th": "ทำ resume เวอร์ชันแรกและขอ feedback", "en": "Draft a first-version resume and ask for feedback" }, "category": "career" },
+      { "id": "y3s1-c4", "text": { "th": "เข้าแข่ง CTF/Hackathon แบบทีมเพื่อเก็บผลงาน", "en": "Enter team CTFs/hackathons to collect achievements" }, "category": "competition" },
+      { "id": "y3s1-c5", "text": { "th": "เริ่มหาข้อมูลบริษัท/หน่วยงานสำหรับ Co-op/ฝึกงาน", "en": "Start researching companies/orgs for co-op/internship" }, "category": "career" },
+      { "id": "y3s1-c6", "text": { "th": "ปรึกษาอาจารย์ที่ปรึกษาเรื่องหัวข้อ project/สถานที่ co-op", "en": "Consult your advisor about project topics / co-op placements" }, "category": "advisor", "required": true }
     ],
     "warnings": [
-      "การเลือกเส้นทางปี 4 มีผลต่อรายวิชาและตารางทั้งปี — ศึกษาเงื่อนไขให้ครบก่อนตัดสินใจ",
-      "อย่าเลือก elective แบบกระจัดกระจาย ควรเลือกให้เป็นเรื่องเดียวกันเพื่อสร้างความเชี่ยวชาญ",
-      "Co-op/ฝึกงานที่ดีมักต้องสมัครล่วงหน้าหลายเดือน — เริ่มช้าอาจพลาดที่ที่อยากไป"
+      { "th": "การเลือกเส้นทางปี 4 มีผลต่อรายวิชาและตารางทั้งปี — ศึกษาเงื่อนไขให้ครบก่อนตัดสินใจ", "en": "Your Year-4 path shapes courses and the whole year's schedule — study the conditions before deciding." },
+      { "th": "อย่าเลือก elective แบบกระจัดกระจาย ควรเลือกให้เป็นเรื่องเดียวกันเพื่อสร้างความเชี่ยวชาญ", "en": "Don't scatter your electives — keep them coherent to build real expertise." },
+      { "th": "Co-op/ฝึกงานที่ดีมักต้องสมัครล่วงหน้าหลายเดือน — เริ่มช้าอาจพลาดที่ที่อยากไป", "en": "Good co-op/internships often require applying months ahead — start late and you may miss out." }
     ],
     "advisorNotes": [
-      "เลือกสายจากสิ่งที่ทำแล้วมีความสุขและทำได้ดี ไม่ใช่แค่เงินเดือนปลายทาง",
-      "หัวข้อ project/co-op ควรเชื่อมกับ portfolio ที่อยากมีตอนสมัครงาน"
+      { "th": "เลือกสายจากสิ่งที่ทำแล้วมีความสุขและทำได้ดี ไม่ใช่แค่เงินเดือนปลายทาง", "en": "Choose a track from what you enjoy and do well, not just the end salary." },
+      { "th": "หัวข้อ project/co-op ควรเชื่อมกับ portfolio ที่อยากมีตอนสมัครงาน", "en": "Your project/co-op topic should feed the portfolio you'll want when job-hunting." }
     ],
     "studentTips": [
-      "เริ่มสร้างโปรไฟล์ LinkedIn และเชื่อมกับ GitHub portfolio",
-      "เก็บผลงานทุกการแข่งขัน (อันดับ, ทีม, สิ่งที่ทำ) ไว้เป็นหลักฐานในเรซูเม่"
+      { "th": "เริ่มสร้างโปรไฟล์ LinkedIn และเชื่อมกับ GitHub portfolio", "en": "Start a LinkedIn profile and link it to your GitHub portfolio." },
+      { "th": "เก็บผลงานทุกการแข่งขัน (อันดับ, ทีม, สิ่งที่ทำ) ไว้เป็นหลักฐานในเรซูเม่", "en": "Keep records of every competition (rank, team, what you did) as resume evidence." }
     ]
   },
   {
@@ -448,75 +281,49 @@
     "theme": "Advanced Practice & Career Preparation",
     "themeThai": "มาตรฐานวิชาชีพ งานวิจัย และเตรียมออกสู่สนามจริง",
     "accent": "violet",
-    "shortDescription": "ยกระดับสู่มาตรฐานวิชาชีพและระเบียบวิธีวิจัย พร้อมเตรียมเอกสารและความพร้อมก่อนออกฝึกงาน/สหกิจ/WIL และทำ certification",
+    "shortDescription": {
+      "th": "ยกระดับสู่มาตรฐานวิชาชีพและระเบียบวิธีวิจัย พร้อมเตรียมเอกสารและความพร้อมก่อนออกฝึกงาน/สหกิจ/WIL และทำ certification",
+      "en": "Step up to professional standards and research methodology, and prepare documents and readiness before internship/co-op/WIL — plus certifications."
+    },
     "academicFocus": [
-      "มาตรฐานวิชาชีพด้านวิทยาการคำนวณและความมั่นคงปลอดภัยไซเบอร์",
-      "ระเบียบวิธีวิจัยและสัมมนาเชิงปฏิบัติการ",
-      "วิชาเลือกขั้นสูงตามสายที่เลือก",
-      "เตรียมเอกสารและความพร้อมก่อนออกฝึกงาน/สหกิจ/WIL",
-      "วางแผน certification roadmap"
+      { "th": "มาตรฐานวิชาชีพด้านวิทยาการคำนวณและความมั่นคงปลอดภัยไซเบอร์", "en": "Professional standards in computing and cybersecurity" },
+      { "th": "ระเบียบวิธีวิจัยและสัมมนาเชิงปฏิบัติการ", "en": "Research methodology and workshop seminars" },
+      { "th": "วิชาเลือกขั้นสูงตามสายที่เลือก", "en": "Advanced electives in your chosen track" },
+      { "th": "เตรียมเอกสารและความพร้อมก่อนออกฝึกงาน/สหกิจ/WIL", "en": "Prepare documents and readiness before internship/co-op/WIL" },
+      { "th": "วางแผน certification roadmap", "en": "Plan a certification roadmap" }
     ],
-    "courseIds": [
-      "CP423131",
-      "CP423132",
-      "CP423151",
-      "CP423741"
-    ],
+    "courseIds": ["CP423131", "CP423132", "CP423151", "CP423741"],
     "skills": [
-      {
-        "id": "y3s2-standard",
-        "name": "มาตรฐานวิชาชีพไซเบอร์",
-        "category": "governance",
-        "level": "applied",
-        "description": "เข้าใจกรอบมาตรฐานและการทำงานอย่างมืออาชีพในวงการ"
-      },
-      {
-        "id": "y3s2-research",
-        "name": "ระเบียบวิธีวิจัย",
-        "category": "research",
-        "level": "applied",
-        "description": "ตั้งคำถามวิจัย ทบทวนวรรณกรรม และนำเสนอผลอย่างเป็นระบบ"
-      },
-      {
-        "id": "y3s2-advanced",
-        "name": "ทักษะเฉพาะทางขั้นสูง",
-        "category": "security",
-        "level": "applied",
-        "description": "เจาะลึกเครื่องมือและเทคนิคขั้นสูงในสายที่เลือก"
-      },
-      {
-        "id": "y3s2-comm",
-        "name": "การสื่อสารเชิงวิชาชีพ",
-        "category": "soft-skill",
-        "level": "applied",
-        "description": "เขียนรายงานและนำเสนอให้ทั้งสายเทคนิคและผู้บริหารเข้าใจ"
-      }
+      { "id": "y3s2-standard", "name": { "th": "มาตรฐานวิชาชีพไซเบอร์", "en": "Professional cyber standards" }, "category": "governance", "level": "applied", "description": { "th": "เข้าใจกรอบมาตรฐานและการทำงานอย่างมืออาชีพในวงการ", "en": "Understand standards frameworks and working professionally in the field." } },
+      { "id": "y3s2-research", "name": { "th": "ระเบียบวิธีวิจัย", "en": "Research methodology" }, "category": "research", "level": "applied", "description": { "th": "ตั้งคำถามวิจัย ทบทวนวรรณกรรม และนำเสนอผลอย่างเป็นระบบ", "en": "Pose research questions, review literature, and present results systematically." } },
+      { "id": "y3s2-advanced", "name": { "th": "ทักษะเฉพาะทางขั้นสูง", "en": "Advanced specialist skills" }, "category": "security", "level": "applied", "description": { "th": "เจาะลึกเครื่องมือและเทคนิคขั้นสูงในสายที่เลือก", "en": "Go deep on advanced tools and techniques in your track." } },
+      { "id": "y3s2-comm", "name": { "th": "การสื่อสารเชิงวิชาชีพ", "en": "Professional communication" }, "category": "soft-skill", "level": "applied", "description": { "th": "เขียนรายงานและนำเสนอให้ทั้งสายเทคนิคและผู้บริหารเข้าใจ", "en": "Write reports and present so both technical and executive audiences get it." } }
     ],
     "portfolioGoals": [
-      "เขียน proposal หัวข้อ project/หัวข้อวิจัยเบื้องต้น",
-      "ทำ advanced write-up หรือ technical report 1 ชิ้น",
-      "อัปเดต resume เป็นเวอร์ชัน 2 และจัด LinkedIn/GitHub ให้พร้อมสมัครงาน",
-      "ได้ certification อย่างน้อย 1 ใบตาม roadmap (ถ้าเป็นไปได้)"
+      { "th": "เขียน proposal หัวข้อ project/หัวข้อวิจัยเบื้องต้น", "en": "Draft a project/research-topic proposal" },
+      { "th": "ทำ advanced write-up หรือ technical report 1 ชิ้น", "en": "Produce one advanced write-up or technical report" },
+      { "th": "อัปเดต resume เป็นเวอร์ชัน 2 และจัด LinkedIn/GitHub ให้พร้อมสมัครงาน", "en": "Update to a v2 resume and polish LinkedIn/GitHub for job applications" },
+      { "th": "ได้ certification อย่างน้อย 1 ใบตาม roadmap (ถ้าเป็นไปได้)", "en": "Earn at least one certification on your roadmap (if possible)" }
     ],
     "checklist": [
-      { "id": "y3s2-c1", "text": "เตรียมเอกสารสมัครฝึกงาน/สหกิจ/WIL ให้ครบตามกำหนด", "category": "document", "required": true },
-      { "id": "y3s2-c2", "text": "ยืนยันสถานที่ Co-op/ฝึกงานและติดต่อประสานงานล่วงหน้า", "category": "career", "required": true },
-      { "id": "y3s2-c3", "text": "ทำ certification roadmap และเริ่มสอบใบแรก", "category": "career" },
-      { "id": "y3s2-c4", "text": "ฝึก CTF ระดับ advanced / Cyber Range เพื่อเก็บผลงาน", "category": "competition" },
-      { "id": "y3s2-c5", "text": "ขอให้อาจารย์/รุ่นพี่ช่วยรีวิว resume และ portfolio", "category": "advisor" },
-      { "id": "y3s2-c6", "text": "ซ้อมสัมภาษณ์และเตรียมเล่าผลงานของตัวเอง", "category": "career" }
+      { "id": "y3s2-c1", "text": { "th": "เตรียมเอกสารสมัครฝึกงาน/สหกิจ/WIL ให้ครบตามกำหนด", "en": "Prepare internship/co-op/WIL application documents on time" }, "category": "document", "required": true },
+      { "id": "y3s2-c2", "text": { "th": "ยืนยันสถานที่ Co-op/ฝึกงานและติดต่อประสานงานล่วงหน้า", "en": "Confirm your co-op/internship placement and coordinate ahead" }, "category": "career", "required": true },
+      { "id": "y3s2-c3", "text": { "th": "ทำ certification roadmap และเริ่มสอบใบแรก", "en": "Make a certification roadmap and sit your first exam" }, "category": "career" },
+      { "id": "y3s2-c4", "text": { "th": "ฝึก CTF ระดับ advanced / Cyber Range เพื่อเก็บผลงาน", "en": "Practice advanced CTF / Cyber Range to collect achievements" }, "category": "competition" },
+      { "id": "y3s2-c5", "text": { "th": "ขอให้อาจารย์/รุ่นพี่ช่วยรีวิว resume และ portfolio", "en": "Ask advisors/seniors to review your resume and portfolio" }, "category": "advisor" },
+      { "id": "y3s2-c6", "text": { "th": "ซ้อมสัมภาษณ์และเตรียมเล่าผลงานของตัวเอง", "en": "Practice interviews and prepare to talk about your work" }, "category": "career" }
     ],
     "warnings": [
-      "เอกสารสหกิจ/WIL มักมีกำหนดส่งล่วงหน้าหลายเดือน — พลาด deadline อาจกระทบทั้งแผนปี 4",
-      "อย่ารอทำ portfolio ตอนใกล้สมัครงาน ของดีต้องสะสมตั้งแต่ตอนนี้"
+      { "th": "เอกสารสหกิจ/WIL มักมีกำหนดส่งล่วงหน้าหลายเดือน — พลาด deadline อาจกระทบทั้งแผนปี 4", "en": "Co-op/WIL paperwork often has deadlines months ahead — missing them can derail your whole Year 4." },
+      { "th": "อย่ารอทำ portfolio ตอนใกล้สมัครงาน ของดีต้องสะสมตั้งแต่ตอนนี้", "en": "Don't leave the portfolio until job-hunting season — good work must accumulate now." }
     ],
     "advisorNotes": [
-      "ตรวจสอบเงื่อนไขหน่วยกิตและคุณสมบัติก่อนออกสหกิจ/WIL กับหลักสูตรให้ชัดเจน",
-      "เลือกสถานที่ฝึกที่ได้ลงมือทำจริง มากกว่าที่แค่ดูชื่อดี"
+      { "th": "ตรวจสอบเงื่อนไขหน่วยกิตและคุณสมบัติก่อนออกสหกิจ/WIL กับหลักสูตรให้ชัดเจน", "en": "Confirm credit and eligibility conditions with the program before co-op/WIL." },
+      { "th": "เลือกสถานที่ฝึกที่ได้ลงมือทำจริง มากกว่าที่แค่ดูชื่อดี", "en": "Choose a placement where you'll do real work, not just one with a big name." }
     ],
     "studentTips": [
-      "เก็บงานทุกชิ้นระหว่างเรียนวิช standards ไว้ใช้ต่อยอดเป็น portfolio",
-      "เริ่ม network กับศิษย์เก่าและคนในวงการผ่านงานสัมมนา/มีตอัป"
+      { "th": "เก็บงานทุกชิ้นระหว่างเรียนวิช standards ไว้ใช้ต่อยอดเป็น portfolio", "en": "Keep everything from the standards courses to grow your portfolio." },
+      { "th": "เริ่ม network กับศิษย์เก่าและคนในวงการผ่านงานสัมมนา/มีตอัป", "en": "Network with alumni and pros via seminars/meetups." }
     ]
   },
   {
@@ -528,74 +335,49 @@
     "theme": "Project, Co-op, WIL & Industry Readiness",
     "themeThai": "ลงสนามจริง — โครงงาน สหกิจ หรือ WIL",
     "accent": "amber",
-    "shortDescription": "เริ่มทำ Cybersecurity Project I หรือออกสหกิจ/WIL ตามเส้นทางที่เลือก ทำงานกับโจทย์จริงและสร้างผลงานที่นำไปนำเสนอได้",
+    "shortDescription": {
+      "th": "เริ่มทำ Cybersecurity Project I หรือออกสหกิจ/WIL ตามเส้นทางที่เลือก ทำงานกับโจทย์จริงและสร้างผลงานที่นำไปนำเสนอได้",
+      "en": "Start Cybersecurity Project I or go out for co-op/WIL on your chosen path — work on real problems and create presentable results."
+    },
     "academicFocus": [
-      "ทำ Cybersecurity Project I หรือออก Co-op / WIL ตามเส้นทาง",
-      "ทำงานกับโจทย์จริงในระดับมืออาชีพ",
-      "สื่อสารและรายงานผลเชิงวิชาชีพ",
-      "สร้างผลงานที่ใช้ในการสมัครงานและนำเสนอได้",
-      "บริหารโครงการและจัดการเวลากับผู้เกี่ยวข้องจริง"
+      { "th": "ทำ Cybersecurity Project I หรือออก Co-op / WIL ตามเส้นทาง", "en": "Do Cybersecurity Project I or go on Co-op / WIL per your track" },
+      { "th": "ทำงานกับโจทย์จริงในระดับมืออาชีพ", "en": "Work on real problems at a professional level" },
+      { "th": "สื่อสารและรายงานผลเชิงวิชาชีพ", "en": "Communicate and report results professionally" },
+      { "th": "สร้างผลงานที่ใช้ในการสมัครงานและนำเสนอได้", "en": "Create work you can use for job applications and presentations" },
+      { "th": "บริหารโครงการและจัดการเวลากับผู้เกี่ยวข้องจริง", "en": "Manage the project and your time with real stakeholders" }
     ],
-    "courseIds": [
-      "CP424731",
-      "CP002001",
-      "CP423401"
-    ],
+    "courseIds": ["CP424731", "CP002001", "CP423401"],
     "skills": [
-      {
-        "id": "y4s1-project",
-        "name": "การทำโครงงาน/งานจริง",
-        "category": "career",
-        "level": "advanced",
-        "description": "วางขอบเขต ลงมือทำ และส่งมอบผลงานที่ใช้งานได้จริง"
-      },
-      {
-        "id": "y4s1-pro",
-        "name": "การทำงานในองค์กร",
-        "category": "soft-skill",
-        "level": "advanced",
-        "description": "ทำงานร่วมกับทีม รับ feedback และปรับตัวกับวัฒนธรรมองค์กร"
-      },
-      {
-        "id": "y4s1-report",
-        "name": "การเขียนรายงาน & นำเสนอ",
-        "category": "soft-skill",
-        "level": "advanced",
-        "description": "ทำรายงาน เดโม และสไลด์นำเสนอผลงานอย่างมืออาชีพ"
-      },
-      {
-        "id": "y4s1-apply",
-        "name": "ประยุกต์ความรู้รวบยอด",
-        "category": "security",
-        "level": "advanced",
-        "description": "นำความรู้ตลอด 3 ปีมาใช้แก้ปัญหาจริงแบบ end-to-end"
-      }
+      { "id": "y4s1-project", "name": { "th": "การทำโครงงาน/งานจริง", "en": "Real project delivery" }, "category": "career", "level": "advanced", "description": { "th": "วางขอบเขต ลงมือทำ และส่งมอบผลงานที่ใช้งานได้จริง", "en": "Scope, build, and deliver work that actually functions." } },
+      { "id": "y4s1-pro", "name": { "th": "การทำงานในองค์กร", "en": "Working in an organization" }, "category": "soft-skill", "level": "advanced", "description": { "th": "ทำงานร่วมกับทีม รับ feedback และปรับตัวกับวัฒนธรรมองค์กร", "en": "Collaborate, take feedback, and adapt to an organization's culture." } },
+      { "id": "y4s1-report", "name": { "th": "การเขียนรายงาน & นำเสนอ", "en": "Reporting & presenting" }, "category": "soft-skill", "level": "advanced", "description": { "th": "ทำรายงาน เดโม และสไลด์นำเสนอผลงานอย่างมืออาชีพ", "en": "Produce reports, demos, and slide decks professionally." } },
+      { "id": "y4s1-apply", "name": { "th": "ประยุกต์ความรู้รวบยอด", "en": "Applying it all together" }, "category": "security", "level": "advanced", "description": { "th": "นำความรู้ตลอด 3 ปีมาใช้แก้ปัญหาจริงแบบ end-to-end", "en": "Bring three years of knowledge to solve a real problem end-to-end." } }
     ],
     "portfolioGoals": [
-      "ทำเอกสารโครงงาน/รายงานสหกิจให้สมบูรณ์",
-      "ถ่าย demo video หรือเตรียม live demo ของผลงาน",
-      "จัดทำ technical report และสไลด์นำเสนอ",
-      "อัปเดต portfolio/LinkedIn ด้วยผลงานล่าสุด"
+      { "th": "ทำเอกสารโครงงาน/รายงานสหกิจให้สมบูรณ์", "en": "Complete your project/co-op report" },
+      { "th": "ถ่าย demo video หรือเตรียม live demo ของผลงาน", "en": "Record a demo video or prepare a live demo" },
+      { "th": "จัดทำ technical report และสไลด์นำเสนอ", "en": "Produce a technical report and presentation slides" },
+      { "th": "อัปเดต portfolio/LinkedIn ด้วยผลงานล่าสุด", "en": "Update your portfolio/LinkedIn with the latest work" }
     ],
     "checklist": [
-      { "id": "y4s1-c1", "text": "ทำตามแผนโครงงาน/สหกิจ และพบที่ปรึกษาตามกำหนดสม่ำเสมอ", "category": "academic", "required": true },
-      { "id": "y4s1-c2", "text": "เก็บหลักฐานการทำงาน (log, ภาพ, โค้ด) ระหว่างทาง", "category": "portfolio" },
-      { "id": "y4s1-c3", "text": "ส่งเอกสาร/รายงานความก้าวหน้าตามกำหนดของหลักสูตร", "category": "document", "required": true },
-      { "id": "y4s1-c4", "text": "เริ่มสมัครงาน/หางานควบคู่ (job fair, career page)", "category": "career" },
-      { "id": "y4s1-c5", "text": "ขอ feedback จากที่ปรึกษา/พี่เลี้ยงเพื่อพัฒนาผลงาน", "category": "advisor" },
-      { "id": "y4s1-c6", "text": "ตรวจสอบหน่วยกิตคงเหลือเพื่อให้จบตามแผน", "category": "academic", "required": true }
+      { "id": "y4s1-c1", "text": { "th": "ทำตามแผนโครงงาน/สหกิจ และพบที่ปรึกษาตามกำหนดสม่ำเสมอ", "en": "Follow the project/co-op plan and meet your advisor on schedule" }, "category": "academic", "required": true },
+      { "id": "y4s1-c2", "text": { "th": "เก็บหลักฐานการทำงาน (log, ภาพ, โค้ด) ระหว่างทาง", "en": "Keep evidence of your work (logs, screenshots, code) along the way" }, "category": "portfolio" },
+      { "id": "y4s1-c3", "text": { "th": "ส่งเอกสาร/รายงานความก้าวหน้าตามกำหนดของหลักสูตร", "en": "Submit documents/progress reports per program deadlines" }, "category": "document", "required": true },
+      { "id": "y4s1-c4", "text": { "th": "เริ่มสมัครงาน/หางานควบคู่ (job fair, career page)", "en": "Start applying for jobs in parallel (job fairs, career pages)" }, "category": "career" },
+      { "id": "y4s1-c5", "text": { "th": "ขอ feedback จากที่ปรึกษา/พี่เลี้ยงเพื่อพัฒนาผลงาน", "en": "Get feedback from advisors/mentors to improve your work" }, "category": "advisor" },
+      { "id": "y4s1-c6", "text": { "th": "ตรวจสอบหน่วยกิตคงเหลือเพื่อให้จบตามแผน", "en": "Check remaining credits to graduate on plan" }, "category": "academic", "required": true }
     ],
     "warnings": [
-      "รายวิชาปี 4 ขึ้นกับเส้นทางที่เลือก (Project/Co-op/WIL) — ตรวจสอบรายวิชาจริงกับหลักสูตร",
-      "อย่าผัดวันทำเอกสาร เพราะเอกสารปี 4 มักผูกกับกำหนดจบการศึกษา"
+      { "th": "รายวิชาปี 4 ขึ้นกับเส้นทางที่เลือก (Project/Co-op/WIL) — ตรวจสอบรายวิชาจริงกับหลักสูตร", "en": "Year-4 courses depend on your path (Project/Co-op/WIL) — confirm the actual courses with the program." },
+      { "th": "อย่าผัดวันทำเอกสาร เพราะเอกสารปี 4 มักผูกกับกำหนดจบการศึกษา", "en": "Don't procrastinate on paperwork — Year-4 documents are tied to graduation deadlines." }
     ],
     "advisorNotes": [
-      "นัดพบที่ปรึกษาสม่ำเสมอช่วยให้โครงงาน/สหกิจไม่หลุดเป้าและจบทันเวลา",
-      "ใช้โอกาสนี้สร้างผลงานชิ้นเด่นที่สุดของพอร์ต — มันคือสิ่งที่บริษัทถามถึง"
+      { "th": "นัดพบที่ปรึกษาสม่ำเสมอช่วยให้โครงงาน/สหกิจไม่หลุดเป้าและจบทันเวลา", "en": "Regular advisor meetings keep your project/co-op on target and on time." },
+      { "th": "ใช้โอกาสนี้สร้างผลงานชิ้นเด่นที่สุดของพอร์ต — มันคือสิ่งที่บริษัทถามถึง", "en": "Use this chance to build your portfolio's flagship — it's what companies ask about." }
     ],
     "studentTips": [
-      "ทำเดโมให้เล่าเป็นเรื่องได้ภายใน 3-5 นาที จะมีประโยชน์ทั้งตอนสอบและตอนสัมภาษณ์งาน",
-      "เก็บ contact ของพี่เลี้ยง/เพื่อนร่วมงานไว้ อาจกลายเป็นช่องทางงานในอนาคต"
+      { "th": "ทำเดโมให้เล่าเป็นเรื่องได้ภายใน 3-5 นาที จะมีประโยชน์ทั้งตอนสอบและตอนสัมภาษณ์งาน", "en": "Make a demo you can tell as a 3-5 minute story — useful in both defenses and interviews." },
+      { "th": "เก็บ contact ของพี่เลี้ยง/เพื่อนร่วมงานไว้ อาจกลายเป็นช่องทางงานในอนาคต", "en": "Keep your mentors'/colleagues' contacts — they can become future job leads." }
     ]
   },
   {
@@ -607,75 +389,49 @@
     "theme": "Graduation & Career Launch",
     "themeThai": "ปิดเล่ม สรุปพอร์ต และก้าวสู่โลกการทำงาน",
     "accent": "amber",
-    "shortDescription": "เทอมสุดท้าย — ทำ Project II / สหกิจให้จบ สรุป portfolio เตรียมสมัครงานและสัมภาษณ์ และสรุปตัวตนทางวิชาชีพของตัวเอง",
+    "shortDescription": {
+      "th": "เทอมสุดท้าย — ทำ Project II / สหกิจให้จบ สรุป portfolio เตรียมสมัครงานและสัมภาษณ์ และสรุปตัวตนทางวิชาชีพของตัวเอง",
+      "en": "The final term — finish Project II / co-op, finalize your portfolio, prepare for job applications and interviews, and define your professional identity."
+    },
     "academicFocus": [
-      "ทำ Cybersecurity Project II / สหกิจ / WIL ให้สำเร็จ",
-      "สรุปและขัดเกลา portfolio ฉบับสมบูรณ์",
-      "เตรียมสมัครงานและสัมภาษณ์อย่างจริงจัง",
-      "สรุป skill profile และตัวตนทางวิชาชีพของตนเอง",
-      "ตรวจสอบเงื่อนไขสำเร็จการศึกษาให้ครบถ้วน"
+      { "th": "ทำ Cybersecurity Project II / สหกิจ / WIL ให้สำเร็จ", "en": "Complete Cybersecurity Project II / co-op / WIL" },
+      { "th": "สรุปและขัดเกลา portfolio ฉบับสมบูรณ์", "en": "Finalize and polish your complete portfolio" },
+      { "th": "เตรียมสมัครงานและสัมภาษณ์อย่างจริงจัง", "en": "Seriously prepare for job applications and interviews" },
+      { "th": "สรุป skill profile และตัวตนทางวิชาชีพของตนเอง", "en": "Define your skill profile and professional identity" },
+      { "th": "ตรวจสอบเงื่อนไขสำเร็จการศึกษาให้ครบถ้วน", "en": "Verify all graduation requirements are met" }
     ],
-    "courseIds": [
-      "CP424732",
-      "CP424785",
-      "CP423402",
-      "CP423403"
-    ],
+    "courseIds": ["CP424732", "CP424785", "CP423402", "CP423403"],
     "skills": [
-      {
-        "id": "y4s2-capstone",
-        "name": "ส่งมอบผลงานรวบยอด",
-        "category": "career",
-        "level": "advanced",
-        "description": "ปิดโครงงาน/สหกิจให้สมบูรณ์และนำเสนอได้อย่างมั่นใจ"
-      },
-      {
-        "id": "y4s2-interview",
-        "name": "การสัมภาษณ์งาน",
-        "category": "career",
-        "level": "advanced",
-        "description": "เตรียมตอบคำถามเทคนิคและพฤติกรรม เล่าผลงานให้โดดเด่น"
-      },
-      {
-        "id": "y4s2-brand",
-        "name": "Personal Branding",
-        "category": "career",
-        "level": "advanced",
-        "description": "พอร์ตเว็บไซต์ LinkedIn GitHub และ technical blog ที่สอดคล้องกัน"
-      },
-      {
-        "id": "y4s2-reflect",
-        "name": "สรุปตัวตนทางวิชาชีพ",
-        "category": "career",
-        "level": "advanced",
-        "description": "รู้จุดแข็งของตัวเองและสายงานที่ใช่ พร้อมเป้าหมายระยะถัดไป"
-      }
+      { "id": "y4s2-capstone", "name": { "th": "ส่งมอบผลงานรวบยอด", "en": "Capstone delivery" }, "category": "career", "level": "advanced", "description": { "th": "ปิดโครงงาน/สหกิจให้สมบูรณ์และนำเสนอได้อย่างมั่นใจ", "en": "Close out the project/co-op and present it with confidence." } },
+      { "id": "y4s2-interview", "name": { "th": "การสัมภาษณ์งาน", "en": "Job interviewing" }, "category": "career", "level": "advanced", "description": { "th": "เตรียมตอบคำถามเทคนิคและพฤติกรรม เล่าผลงานให้โดดเด่น", "en": "Prepare for technical and behavioral questions; tell your story well." } },
+      { "id": "y4s2-brand", "name": "Personal Branding", "category": "career", "level": "advanced", "description": { "th": "พอร์ตเว็บไซต์ LinkedIn GitHub และ technical blog ที่สอดคล้องกัน", "en": "A consistent portfolio website, LinkedIn, GitHub, and technical blog." } },
+      { "id": "y4s2-reflect", "name": { "th": "สรุปตัวตนทางวิชาชีพ", "en": "Defining your identity" }, "category": "career", "level": "advanced", "description": { "th": "รู้จุดแข็งของตัวเองและสายงานที่ใช่ พร้อมเป้าหมายระยะถัดไป", "en": "Know your strengths and the right lane, with next-step goals." } }
     ],
     "portfolioGoals": [
-      "ทำ final project ให้สมบูรณ์พร้อมเอกสาร",
-      "เผยแพร่ portfolio website / สรุปผลงานทั้งหมด",
-      "ปรับ resume ฉบับสุดท้ายให้ตรงกับงานที่สมัคร",
-      "เขียน technical blog / write-up ปิดท้ายอย่างน้อย 1 ชิ้น"
+      { "th": "ทำ final project ให้สมบูรณ์พร้อมเอกสาร", "en": "Complete the final project with documentation" },
+      { "th": "เผยแพร่ portfolio website / สรุปผลงานทั้งหมด", "en": "Publish a portfolio website / summary of all your work" },
+      { "th": "ปรับ resume ฉบับสุดท้ายให้ตรงกับงานที่สมัคร", "en": "Tailor a final resume to the jobs you apply for" },
+      { "th": "เขียน technical blog / write-up ปิดท้ายอย่างน้อย 1 ชิ้น", "en": "Write at least one closing technical blog / write-up" }
     ],
     "checklist": [
-      { "id": "y4s2-c1", "text": "ส่งมอบและสอบโครงงาน/สหกิจให้ผ่านตามเกณฑ์", "category": "academic", "required": true },
-      { "id": "y4s2-c2", "text": "ตรวจสอบรายการสำเร็จการศึกษาและยื่นเอกสารจบให้ครบ", "category": "document", "required": true },
-      { "id": "y4s2-c3", "text": "สรุป portfolio ฉบับสมบูรณ์และเผยแพร่", "category": "portfolio", "required": true },
-      { "id": "y4s2-c4", "text": "สมัครงานเป้าหมายและติดตามผล", "category": "career" },
-      { "id": "y4s2-c5", "text": "ซ้อมสัมภาษณ์ทั้งสายเทคนิคและ HR", "category": "career" },
-      { "id": "y4s2-c6", "text": "เชื่อมต่อกับเครือข่ายศิษย์เก่าและชุมชนวิชาชีพ", "category": "career" }
+      { "id": "y4s2-c1", "text": { "th": "ส่งมอบและสอบโครงงาน/สหกิจให้ผ่านตามเกณฑ์", "en": "Deliver and pass your project/co-op defense per the criteria" }, "category": "academic", "required": true },
+      { "id": "y4s2-c2", "text": { "th": "ตรวจสอบรายการสำเร็จการศึกษาและยื่นเอกสารจบให้ครบ", "en": "Check the graduation checklist and submit all completion documents" }, "category": "document", "required": true },
+      { "id": "y4s2-c3", "text": { "th": "สรุป portfolio ฉบับสมบูรณ์และเผยแพร่", "en": "Finalize and publish your complete portfolio" }, "category": "portfolio", "required": true },
+      { "id": "y4s2-c4", "text": { "th": "สมัครงานเป้าหมายและติดตามผล", "en": "Apply to target jobs and follow up" }, "category": "career" },
+      { "id": "y4s2-c5", "text": { "th": "ซ้อมสัมภาษณ์ทั้งสายเทคนิคและ HR", "en": "Practice both technical and HR interviews" }, "category": "career" },
+      { "id": "y4s2-c6", "text": { "th": "เชื่อมต่อกับเครือข่ายศิษย์เก่าและชุมชนวิชาชีพ", "en": "Connect with alumni networks and professional communities" }, "category": "career" }
     ],
     "warnings": [
-      "ตรวจสอบเงื่อนไขจบ (หน่วยกิต/กิจกรรม/เอกสาร) ให้ครบ อย่าให้ตกหล่นในเทอมสุดท้าย",
-      "ระวังหลุมพรางการสมัครงานนาทีสุดท้าย — เริ่มสมัครตั้งแต่เทอมก่อนหน้า"
+      { "th": "ตรวจสอบเงื่อนไขจบ (หน่วยกิต/กิจกรรม/เอกสาร) ให้ครบ อย่าให้ตกหล่นในเทอมสุดท้าย", "en": "Verify all graduation conditions (credits/activities/documents) — don't let anything slip in the final term." },
+      { "th": "ระวังหลุมพรางการสมัครงานนาทีสุดท้าย — เริ่มสมัครตั้งแต่เทอมก่อนหน้า", "en": "Beware last-minute job hunting — start applying the previous term." }
     ],
     "advisorNotes": [
-      "ปรึกษาอาจารย์เรื่องเส้นทางต่อยอด (ทำงาน/เรียนต่อ/certification ขั้นสูง)",
-      "ขอจดหมายรับรอง/recommendation จากอาจารย์หรือพี่เลี้ยงตั้งแต่เนิ่น ๆ"
+      { "th": "ปรึกษาอาจารย์เรื่องเส้นทางต่อยอด (ทำงาน/เรียนต่อ/certification ขั้นสูง)", "en": "Consult advisors on next steps (work / further study / advanced certs)." },
+      { "th": "ขอจดหมายรับรอง/recommendation จากอาจารย์หรือพี่เลี้ยงตั้งแต่เนิ่น ๆ", "en": "Request recommendation letters from advisors or mentors early." }
     ],
     "studentTips": [
-      "ก่อนเรียนจบ รวบรวมไฟล์งาน เอกสาร และ contact สำคัญทั้งหมดเก็บไว้ให้ดี",
-      "อย่ามองว่าจบแล้วหยุดเรียนรู้ — สายไซเบอร์ต้องอัปเดตตัวเองตลอดชีวิต"
+      { "th": "ก่อนเรียนจบ รวบรวมไฟล์งาน เอกสาร และ contact สำคัญทั้งหมดเก็บไว้ให้ดี", "en": "Before graduating, gather all your work files, documents, and key contacts." },
+      { "th": "อย่ามองว่าจบแล้วหยุดเรียนรู้ — สายไซเบอร์ต้องอัปเดตตัวเองตลอดชีวิต", "en": "Graduation isn't the end of learning — cybersecurity demands lifelong updating." }
     ]
   }
 ]

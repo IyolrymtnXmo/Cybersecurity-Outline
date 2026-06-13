@@ -144,8 +144,12 @@ export default function HomePage() {
                       {jy.year}
                     </span>
                   </div>
-                  <p className="mt-3 text-sm font-medium leading-snug">{jy.themeThai}</p>
-                  <p className="mt-1 text-xs text-slate-400">{jy.theme}</p>
+                  <p className="mt-3 text-sm font-medium leading-snug">
+                    {locale === "en" ? jy.theme : jy.themeThai}
+                  </p>
+                  {locale !== "en" && (
+                    <p className="mt-1 text-xs text-slate-400">{jy.theme}</p>
+                  )}
                 </Link>
               ))}
             </div>

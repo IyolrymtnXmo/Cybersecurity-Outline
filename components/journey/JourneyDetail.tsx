@@ -24,6 +24,8 @@ import {
   journeyTerms,
   getResourcesForTerm,
   getOpportunitiesForTerm,
+  loc,
+  termHeadline,
   type JourneyTerm,
 } from "@/lib/journey";
 import { Disclaimer } from "@/components/Disclaimer";
@@ -34,7 +36,7 @@ import { PortfolioGoalCard } from "./PortfolioGoalCard";
 import { SemesterChecklist } from "./SemesterChecklist";
 
 export function JourneyDetail({ term }: { term: JourneyTerm }) {
-  const { t, courseName } = useLang();
+  const { t, courseName, locale } = useLang();
   const a = ACCENT_STYLES[term.accent];
 
   const idx = journeyTerms.findIndex((tm) => tm.id === term.id);
@@ -60,9 +62,9 @@ export function JourneyDetail({ term }: { term: JourneyTerm }) {
           <p className="text-sm font-medium opacity-90">
             {t("journey.year")} {term.year} · {t("journey.term")} {term.semester} · {term.theme}
           </p>
-          <h1 className="mt-1 text-2xl md:text-3xl font-bold">{term.themeThai}</h1>
+          <h1 className="mt-1 text-2xl md:text-3xl font-bold">{termHeadline(term, locale)}</h1>
           <p className="mt-3 max-w-3xl text-sm md:text-base opacity-95 leading-relaxed">
-            {term.shortDescription}
+            {loc(term.shortDescription, locale)}
           </p>
         </div>
       </header>
@@ -93,7 +95,7 @@ export function JourneyDetail({ term }: { term: JourneyTerm }) {
               {term.academicFocus.map((f, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
                   <span className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${a.dot}`} />
-                  {f}
+                  {loc(f, locale)}
                 </li>
               ))}
             </ul>
@@ -150,7 +152,7 @@ export function JourneyDetail({ term }: { term: JourneyTerm }) {
           <Section icon={<Target className="h-5 w-5" />} title={t("journey.section.portfolio")} accent={a.text}>
             <div className="grid gap-3 sm:grid-cols-2">
               {term.portfolioGoals.map((g, i) => (
-                <PortfolioGoalCard key={i} goal={g} index={i} />
+                <PortfolioGoalCard key={i} goal={loc(g, locale)} index={i} />
               ))}
             </div>
           </Section>
@@ -170,7 +172,7 @@ export function JourneyDetail({ term }: { term: JourneyTerm }) {
               icon={<AlertTriangle className="h-5 w-5" />}
               title={t("journey.section.warnings")}
               tone="amber"
-              items={term.warnings}
+              items={term.warnings.map((w) => loc(w, locale))}
             />
           )}
           {term.advisorNotes.length > 0 && (
@@ -178,7 +180,7 @@ export function JourneyDetail({ term }: { term: JourneyTerm }) {
               icon={<GraduationCap className="h-5 w-5" />}
               title={t("journey.section.advisor")}
               tone="sky"
-              items={term.advisorNotes}
+              items={term.advisorNotes.map((n) => loc(n, locale))}
             />
           )}
           {term.studentTips.length > 0 && (
@@ -186,7 +188,7 @@ export function JourneyDetail({ term }: { term: JourneyTerm }) {
               icon={<Lightbulb className="h-5 w-5" />}
               title={t("journey.section.tips")}
               tone="emerald"
-              items={term.studentTips}
+              items={term.studentTips.map((tip) => loc(tip, locale))}
             />
           )}
         </aside>

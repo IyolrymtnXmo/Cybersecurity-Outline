@@ -20,10 +20,11 @@ import {
 } from "lucide-react";
 import { useLang } from "@/components/LanguageProvider";
 import { asset } from "@/lib/asset";
-import type {
-  ResourceItem,
-  ResourceCategory,
-  ResourceStatus,
+import {
+  loc,
+  type ResourceItem,
+  type ResourceCategory,
+  type ResourceStatus,
 } from "@/lib/journey";
 
 const CATEGORY_ICON: Record<ResourceCategory, React.ComponentType<{ className?: string }>> = {
@@ -50,7 +51,7 @@ const STATUS_STYLE: Record<ResourceStatus, string> = {
 };
 
 export function ResourceCard({ resource }: { resource: ResourceItem }) {
-  const { t } = useLang();
+  const { t, locale } = useLang();
   const Icon = CATEGORY_ICON[resource.category] ?? FileText;
 
   const href = resource.externalUrl ?? (resource.fileUrl ? asset(resource.fileUrl) : undefined);
@@ -79,13 +80,13 @@ export function ResourceCard({ resource }: { resource: ResourceItem }) {
             )}
           </div>
           <h3 className="mt-1.5 font-semibold text-navy-900 dark:text-white leading-snug">
-            {resource.title}
+            {loc(resource.title, locale)}
           </h3>
         </div>
       </div>
 
       <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed flex-1">
-        {resource.description}
+        {loc(resource.description, locale)}
       </p>
 
       <div className="flex flex-wrap items-center gap-1.5 text-[11px] text-slate-500">

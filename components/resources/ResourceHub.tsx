@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import Fuse from "fuse.js";
 import { FileQuestion } from "lucide-react";
 import { useLang } from "@/components/LanguageProvider";
-import { resources, RESOURCE_CATEGORY_ORDER, type ResourceItem } from "@/lib/journey";
+import { resources, searchText, RESOURCE_CATEGORY_ORDER, type ResourceItem } from "@/lib/journey";
 import { ResourceCard } from "./ResourceCard";
 import { ResourceFilter, type ResourceFilters } from "./ResourceFilter";
 
@@ -22,7 +22,12 @@ export function ResourceHub() {
   const fuse = useMemo(
     () =>
       new Fuse(resources, {
-        keys: ["title", "description", "tags", "category"],
+        keys: [
+          { name: "title", getFn: (r) => searchText(r.title) },
+          { name: "description", getFn: (r) => searchText(r.description) },
+          { name: "tags", getFn: (r) => r.tags.join(" ") },
+          { name: "category", getFn: (r) => r.category },
+        ],
         threshold: 0.4,
         ignoreLocation: true,
       }),

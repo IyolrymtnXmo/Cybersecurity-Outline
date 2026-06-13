@@ -22,11 +22,12 @@ import {
 } from "lucide-react";
 import { useLang } from "@/components/LanguageProvider";
 import { getCourse } from "@/lib/data";
-import type {
-  OpportunityItem,
-  OpportunityType,
-  OpportunityStatus,
-  OpportunityDifficulty,
+import {
+  loc,
+  type OpportunityItem,
+  type OpportunityType,
+  type OpportunityStatus,
+  type OpportunityDifficulty,
 } from "@/lib/journey";
 
 const TYPE_ICON: Record<OpportunityType, React.ComponentType<{ className?: string }>> = {
@@ -63,7 +64,7 @@ const DIFFICULTY_STYLE: Record<OpportunityDifficulty, string> = {
 };
 
 export function OpportunityCard({ opportunity: o }: { opportunity: OpportunityItem }) {
-  const { t } = useLang();
+  const { t, locale } = useLang();
   const Icon = TYPE_ICON[o.type] ?? Sparkles;
 
   return (
@@ -81,13 +82,13 @@ export function OpportunityCard({ opportunity: o }: { opportunity: OpportunityIt
             </span>
           </div>
           <h3 className="mt-1.5 font-semibold text-navy-900 dark:text-white leading-snug">
-            {o.title}
+            {loc(o.title, locale)}
           </h3>
         </div>
       </div>
 
       <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed flex-1">
-        {o.description}
+        {loc(o.description, locale)}
       </p>
 
       {/* meta */}
@@ -99,7 +100,7 @@ export function OpportunityCard({ opportunity: o }: { opportunity: OpportunityIt
         </div>
         {o.usualPeriod && (
           <p className="flex items-center gap-1.5">
-            <CalendarClock className="h-3.5 w-3.5" /> {t("opps.period")}: {o.usualPeriod}
+            <CalendarClock className="h-3.5 w-3.5" /> {t("opps.period")}: {loc(o.usualPeriod, locale)}
           </p>
         )}
         {o.deadline && (

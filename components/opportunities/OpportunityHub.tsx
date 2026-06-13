@@ -6,6 +6,7 @@ import { SearchX } from "lucide-react";
 import { useLang } from "@/components/LanguageProvider";
 import {
   opportunities,
+  searchText,
   OPPORTUNITY_TYPE_ORDER,
   type OpportunityItem,
 } from "@/lib/journey";
@@ -27,7 +28,13 @@ export function OpportunityHub() {
   const fuse = useMemo(
     () =>
       new Fuse(opportunities, {
-        keys: ["title", "description", "tags", "relatedSkills", "type"],
+        keys: [
+          { name: "title", getFn: (o) => searchText(o.title) },
+          { name: "description", getFn: (o) => searchText(o.description) },
+          { name: "tags", getFn: (o) => o.tags.join(" ") },
+          { name: "relatedSkills", getFn: (o) => (o.relatedSkills ?? []).join(" ") },
+          { name: "type", getFn: (o) => o.type },
+        ],
         threshold: 0.4,
         ignoreLocation: true,
       }),
@@ -49,7 +56,9 @@ export function OpportunityHub() {
 
     // stable sort by canonical type order, then title
     const order = (ty: OpportunityItem["type"]) => OPPORTUNITY_TYPE_ORDER.indexOf(ty);
-    return [...filtered].sort((a, b) => order(a.type) - order(b.type) || a.title.localeCompare(b.title));
+    return [...filtered].sort(
+      (a, b) => order(a.type) - order(b.type) || searchText(a.title).localeCompare(searchText(b.title)),
+    );
   }, [filters, fuse]);
 
   return (

@@ -3,10 +3,10 @@
 import Link from "next/link";
 import { ArrowRight, BookOpen, Sparkles } from "lucide-react";
 import { useLang } from "@/components/LanguageProvider";
-import { ACCENT_STYLES, type JourneyTerm } from "@/lib/journey";
+import { ACCENT_STYLES, loc, termHeadline, type JourneyTerm } from "@/lib/journey";
 
 export function JourneyTermCard({ term }: { term: JourneyTerm }) {
-  const { t } = useLang();
+  const { t, locale } = useLang();
   const a = ACCENT_STYLES[term.accent];
 
   return (
@@ -18,21 +18,18 @@ export function JourneyTermCard({ term }: { term: JourneyTerm }) {
         <p className="text-xs font-medium opacity-90">
           {t("journey.year")} {term.year} · {t("journey.term")} {term.semester}
         </p>
-        <p className="mt-0.5 text-sm font-semibold opacity-95">{term.theme}</p>
+        <p className="mt-0.5 text-sm font-semibold opacity-95">{termHeadline(term, locale)}</p>
       </div>
 
       <div className="flex flex-1 flex-col p-5">
-        <h3 className="font-semibold text-navy-900 dark:text-white leading-snug">
-          {term.themeThai}
-        </h3>
-        <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">
-          {term.shortDescription}
+        <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">
+          {loc(term.shortDescription, locale)}
         </p>
 
         <div className="mt-4 flex flex-wrap gap-1.5">
           {term.skills.slice(0, 3).map((s) => (
             <span key={s.id} className="chip surface-2 text-slate-600 dark:text-slate-300">
-              {s.name}
+              {loc(s.name, locale)}
             </span>
           ))}
           {term.skills.length > 3 && (

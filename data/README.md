@@ -16,6 +16,21 @@
 
 ---
 
+## 🌏 ข้อความ 2 ภาษา (สำคัญ)
+
+เว็บรองรับไทย/อังกฤษ ข้อความที่ผู้ใช้เห็น (ชื่อ, คำอธิบาย, focus, skills, checklist ฯลฯ) ให้ใส่เป็น object 2 ภาษา:
+
+```jsonc
+"title": { "th": "ชื่อภาษาไทย", "en": "English name" }
+```
+
+- ถ้าใส่เป็น **ข้อความธรรมดา** (string เดี่ยว) ระบบจะแสดงข้อความนั้นทั้งสองภาษา — เหมาะกับคำที่ไม่ต้องแปล เช่น `"Git & GitHub"`, `"OWASP"`, ชื่องานสากลอย่าง `"picoCTF"`
+- ถ้าลืมใส่ `en` เว็บจะ fallback ไปแสดงภาษาไทยแทน (ไม่พัง แต่จะหลุดเป็นไทยตอนเลือก EN)
+- ฟิลด์ที่เป็น "list" เช่น `academicFocus`, `portfolioGoals`, `warnings`, `checklist[].text` ก็ใช้รูปแบบ `{ th, en }` ในแต่ละรายการได้เช่นกัน
+- ฟิลด์ `tags` ใช้สำหรับค้นหาเท่านั้น (ไม่แสดงผล) จะใส่ไทย/อังกฤษคละกันก็ได้
+
+---
+
 ## วิธีเพิ่ม "เอกสาร" ใหม่ (`resources.json`)
 
 เพิ่ม object ใหม่เข้าไปใน array โดยมีฟิลด์ดังนี้:
@@ -23,8 +38,8 @@
 ```jsonc
 {
   "id": "res-xxxx",                  // รหัสไม่ซ้ำใคร (ตั้งเองได้)
-  "title": "ชื่อเอกสาร",
-  "description": "คำอธิบายสั้น ๆ",
+  "title": { "th": "ชื่อเอกสาร", "en": "Document name" },
+  "description": { "th": "คำอธิบายสั้น ๆ", "en": "Short description" },
   "category": "coop",               // ดูรายการหมวดด้านล่าง
   "year": 3,                          // 1-4 หรือ "all"
   "semester": 2,                      // 1, 2 หรือ "all"
@@ -61,14 +76,14 @@
 ```jsonc
 {
   "id": "opp-xxxx",
-  "title": "ชื่องาน",
-  "description": "คำอธิบาย",
+  "title": { "th": "ชื่องาน", "en": "Event name" },   // หรือ string เดี่ยวถ้าเป็นชื่อสากล เช่น "picoCTF"
+  "description": { "th": "คำอธิบาย", "en": "Description" },
   "type": "ctf",                     // ดูรายการประเภทด้านล่าง
   "suitableYears": [2, 3, 4],         // ชั้นปีที่เหมาะสม
   "recommendedSemester": "both",      // 1, 2 หรือ "both"
   "difficulty": "intermediate",       // beginner | intermediate | advanced | mixed
   "status": "annual",                // upcoming | open | closed | annual | archived
-  "usualPeriod": "ช่วงเวลาที่มักจัด",
+  "usualPeriod": { "th": "ช่วงเวลาที่มักจัด", "en": "Typical period" },
   "deadline": "2026-09-30",          // ถ้ามีกำหนดแน่นอน (ไม่บังคับ)
   "link": "https://...",             // ลิงก์สมัคร/ข้อมูล (ถ้ามี)
   "relatedCourses": ["CP422031"],    // รหัสวิชาที่เกี่ยวข้อง (ดูได้ใน courses.json)
@@ -91,12 +106,13 @@
 
 แต่ละ object คือหนึ่งเทอม (มี 8 เทอม: `y1s1` … `y4s2`) แก้ได้ที่ฟิลด์:
 
-- `themeThai` / `shortDescription` — หัวข้อและคำโปรยของเทอม
-- `academicFocus` — จุดเน้นการเรียน (array ของข้อความ)
+- `theme` (อังกฤษ) / `themeThai` (ไทย) — หัวข้อหลักของเทอม เว็บจะเลือกแสดงตามภาษาที่ผู้ใช้เลือก
+- `shortDescription` — คำโปรยของเทอม (รูปแบบ `{ th, en }`)
+- `academicFocus` — จุดเน้นการเรียน (array ของ `{ th, en }`)
 - `courseIds` — รหัสวิชาของเทอม (ต้องตรงกับ `id` ใน `courses.json`)
-- `skills` — ทักษะที่ควรได้ (แต่ละตัวมี `name`, `category`, `level`, `description`)
-- `portfolioGoals`, `warnings`, `advisorNotes`, `studentTips` — array ของข้อความ
-- `checklist` — รายการเช็กลิสต์ (มี `text`, `category`, `required`)
+- `skills` — ทักษะที่ควรได้ (แต่ละตัวมี `name`, `category`, `level`, `description` โดย `name`/`description` เป็น `{ th, en }` หรือ string ก็ได้)
+- `portfolioGoals`, `warnings`, `advisorNotes`, `studentTips` — array ของ `{ th, en }`
+- `checklist` — รายการเช็กลิสต์ (มี `text` แบบ `{ th, en }`, `category`, `required`)
 
 > **เอกสารและงานแข่งของแต่ละเทอมไม่ต้องใส่ที่นี่** — ระบบจะดึงจาก `resources.json` / `opportunities.json` ที่ติดแท็กปี/เทอมตรงกันให้อัตโนมัติ เพิ่มครั้งเดียวใช้ได้ทุกที่
 

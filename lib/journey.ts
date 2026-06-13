@@ -17,6 +17,19 @@
 import journeyData from "@/data/journey.json";
 import resourcesData from "@/data/resources.json";
 import opportunitiesData from "@/data/opportunities.json";
+import type { Locale } from "./i18n";
+
+/**
+ * A user-facing string that may be bilingual. Plain strings are returned as-is
+ * (use for language-neutral terms like "Git & GitHub" or "OWASP"); objects pick
+ * the active locale. Resolve with `loc(value, locale)`.
+ */
+export type Localized = string | { th: string; en: string };
+
+export function loc(v: Localized | undefined, locale: Locale): string {
+  if (v == null) return "";
+  return typeof v === "string" ? v : v[locale] ?? v.th;
+}
 
 export type Year = 1 | 2 | 3 | 4;
 export type Semester = 1 | 2;
@@ -39,10 +52,10 @@ export type SkillLevel = "foundation" | "developing" | "applied" | "advanced";
 
 export type SkillItem = {
   id: string;
-  name: string;
+  name: Localized;
   category: SkillCategory;
   level: SkillLevel;
-  description: string;
+  description: Localized;
 };
 
 export type ChecklistCategory =
@@ -57,7 +70,7 @@ export type ChecklistCategory =
 
 export type ChecklistItem = {
   id: string;
-  text: string;
+  text: Localized;
   category: ChecklistCategory;
   required?: boolean;
 };
@@ -68,18 +81,18 @@ export type JourneyTerm = {
   semester: Semester;
   titleThai: string;
   titleEnglish: string;
-  theme: string; // English theme line
-  themeThai: string;
+  theme: string; // English theme headline
+  themeThai: string; // Thai theme headline
   accent: AccentKey;
-  shortDescription: string;
-  academicFocus: string[];
+  shortDescription: Localized;
+  academicFocus: Localized[];
   courseIds: string[];
   skills: SkillItem[];
-  portfolioGoals: string[];
+  portfolioGoals: Localized[];
   checklist: ChecklistItem[];
-  warnings: string[];
-  advisorNotes: string[];
-  studentTips: string[];
+  warnings: Localized[];
+  advisorNotes: Localized[];
+  studentTips: Localized[];
 };
 
 export type ResourceCategory =
@@ -110,8 +123,8 @@ export type ResourceFileType =
 
 export type ResourceItem = {
   id: string;
-  title: string;
-  description: string;
+  title: Localized;
+  description: Localized;
   category: ResourceCategory;
   year?: Year | "all";
   semester?: Semester | "all";
@@ -158,14 +171,14 @@ export type OpportunityDifficulty =
 
 export type OpportunityItem = {
   id: string;
-  title: string;
-  description: string;
+  title: Localized;
+  description: Localized;
   type: OpportunityType;
   suitableYears: Year[];
   recommendedSemester?: Semester | "both";
   difficulty: OpportunityDifficulty;
   status: OpportunityStatus;
-  usualPeriod?: string;
+  usualPeriod?: Localized;
   deadline?: string;
   link?: string;
   relatedCourses?: string[];
@@ -190,6 +203,17 @@ export function getJourneyTerm(id: string): JourneyTerm | undefined {
 
 export function termId(year: Year, semester: Semester): string {
   return `y${year}s${semester}`;
+}
+
+/** The term's main headline in the active language. */
+export function termHeadline(term: JourneyTerm, locale: Locale): string {
+  return locale === "en" ? term.theme : term.themeThai;
+}
+
+/** Flatten a Localized value to a both-languages string for search indexing. */
+export function searchText(v: Localized | undefined): string {
+  if (v == null) return "";
+  return typeof v === "string" ? v : `${v.th} ${v.en}`;
 }
 
 // -------------------------------------------------------------- resources

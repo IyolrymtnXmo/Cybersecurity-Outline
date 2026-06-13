@@ -1,8 +1,14 @@
 [
   {
     "id": "res-curriculum-pdf",
-    "title": "เอกสารหลักสูตร วท.บ. ความมั่นคงปลอดภัยไซเบอร์ (มคอ.2)",
-    "description": "เอกสารหลักสูตรอย่างเป็นทางการ ใช้เป็นแหล่งอ้างอิงหลักของรายวิชา หน่วยกิต และเงื่อนไขทั้งหมด",
+    "title": {
+      "th": "เอกสารหลักสูตร วท.บ. ความมั่นคงปลอดภัยไซเบอร์ (มคอ.2)",
+      "en": "B.Sc. Cybersecurity Curriculum Document (TQF2)"
+    },
+    "description": {
+      "th": "เอกสารหลักสูตรอย่างเป็นทางการ ใช้เป็นแหล่งอ้างอิงหลักของรายวิชา หน่วยกิต และเงื่อนไขทั้งหมด",
+      "en": "The official curriculum document — the primary reference for all courses, credits, and conditions."
+    },
     "category": "curriculum",
     "year": "all",
     "semester": "all",
@@ -10,12 +16,18 @@
     "fileType": "pdf",
     "status": "official",
     "owner": "วิทยาลัยการคอมพิวเตอร์",
-    "tags": ["หลักสูตร", "มคอ.2", "อ้างอิง"]
+    "tags": ["หลักสูตร", "มคอ.2", "curriculum", "reference"]
   },
   {
     "id": "res-courses-page",
-    "title": "รายวิชาที่เปิดสอน — วิทยาลัยการคอมพิวเตอร์",
-    "description": "หน้าเว็บทางการของวิทยาลัยที่รวมรายวิชาในสาขา Cybersecurity",
+    "title": {
+      "th": "รายวิชาที่เปิดสอน — วิทยาลัยการคอมพิวเตอร์",
+      "en": "Courses Offered — College of Computing"
+    },
+    "description": {
+      "th": "หน้าเว็บทางการของวิทยาลัยที่รวมรายวิชาในสาขา Cybersecurity",
+      "en": "The college's official page listing the cybersecurity program's courses."
+    },
     "category": "curriculum",
     "year": "all",
     "semester": "all",
@@ -23,132 +35,198 @@
     "fileType": "link",
     "status": "official",
     "owner": "วิทยาลัยการคอมพิวเตอร์",
-    "tags": ["รายวิชา", "เว็บไซต์"]
+    "tags": ["รายวิชา", "courses", "website"]
   },
   {
     "id": "res-study-plan",
-    "title": "แผนการเรียน 4 ปี (Study Plan)",
-    "description": "ภาพรวมรายวิชาแยกตามชั้นปีและภาคการศึกษา พร้อมหน่วยกิตสะสม — ดูได้ในหน้า Study Plan ของเว็บนี้",
+    "title": {
+      "th": "แผนการเรียน 4 ปี (Study Plan)",
+      "en": "4-Year Study Plan"
+    },
+    "description": {
+      "th": "ภาพรวมรายวิชาแยกตามชั้นปีและภาคการศึกษา พร้อมหน่วยกิตสะสม — ดูได้ในหน้า Study Plan ของเว็บนี้",
+      "en": "Courses by year and semester with cumulative credits — available on this site's Study Plan page."
+    },
     "category": "curriculum",
     "year": "all",
     "semester": "all",
     "externalUrl": "/study-plan",
     "fileType": "link",
     "status": "recommended",
-    "tags": ["แผนการเรียน", "ภายในเว็บ"]
+    "tags": ["แผนการเรียน", "study plan", "internal"]
   },
   {
     "id": "res-reg-guide",
-    "title": "คู่มือลงทะเบียนเรียน (สำนักบริหารฯ มข.)",
-    "description": "ขั้นตอนการลงทะเบียน เพิ่ม-ถอนรายวิชา และปฏิทินการศึกษาผ่านระบบ reg.kku.ac.th",
+    "title": {
+      "th": "คู่มือลงทะเบียนเรียน (สำนักบริหารฯ มข.)",
+      "en": "Course Registration Guide (KKU Registrar)"
+    },
+    "description": {
+      "th": "ขั้นตอนการลงทะเบียน เพิ่ม-ถอนรายวิชา และปฏิทินการศึกษาผ่านระบบ reg.kku.ac.th",
+      "en": "How to register, add/drop courses, and the academic calendar via reg.kku.ac.th."
+    },
     "category": "registration",
     "year": "all",
     "semester": "all",
     "externalUrl": "https://reg.kku.ac.th",
     "fileType": "link",
     "status": "recommended",
-    "tags": ["ลงทะเบียน", "reg", "ปฏิทินการศึกษา"]
+    "tags": ["ลงทะเบียน", "registration", "reg", "calendar"]
   },
   {
     "id": "res-freshman-guide",
-    "title": "คู่มือนักศึกษาใหม่ ปี 1",
-    "description": "แนะนำการปรับตัว การใช้ระบบมหาวิทยาลัย เครื่องมือพื้นฐาน (GitHub, VS Code, Linux) และช่องทางช่วยเหลือ",
+    "title": {
+      "th": "คู่มือนักศึกษาใหม่ ปี 1",
+      "en": "First-Year Student Handbook"
+    },
+    "description": {
+      "th": "แนะนำการปรับตัว การใช้ระบบมหาวิทยาลัย เครื่องมือพื้นฐาน (GitHub, VS Code, Linux) และช่องทางช่วยเหลือ",
+      "en": "Adapting to university, using campus systems, basic tools (GitHub, VS Code, Linux), and where to get help."
+    },
     "category": "activity",
     "year": 1,
     "semester": 1,
     "fileType": "pdf",
     "status": "draft",
     "placeholder": true,
-    "tags": ["ปี 1", "ปฐมนิเทศ", "เริ่มต้น"]
+    "tags": ["ปี 1", "year 1", "orientation", "onboarding"]
   },
   {
     "id": "res-general-form",
-    "title": "แบบฟอร์มคำร้องทั่วไป",
-    "description": "แบบฟอร์มคำร้องสำหรับเรื่องทั่วไป เช่น ลาพัก คำร้องขอเปิดรายวิชา ฯลฯ (รอแนบไฟล์จริงจากหลักสูตร)",
+    "title": {
+      "th": "แบบฟอร์มคำร้องทั่วไป",
+      "en": "General Request Forms"
+    },
+    "description": {
+      "th": "แบบฟอร์มคำร้องสำหรับเรื่องทั่วไป เช่น ลาพัก คำร้องขอเปิดรายวิชา ฯลฯ (รอแนบไฟล์จริงจากหลักสูตร)",
+      "en": "Request forms for general matters such as leave of absence, course-opening requests, etc. (awaiting official files)."
+    },
     "category": "form",
     "year": "all",
     "semester": "all",
     "fileType": "docx",
     "status": "draft",
     "placeholder": true,
-    "tags": ["คำร้อง", "แบบฟอร์ม"]
+    "tags": ["คำร้อง", "form", "request"]
   },
   {
     "id": "res-project-proposal",
-    "title": "เทมเพลตข้อเสนอโครงงาน (Project Proposal)",
-    "description": "โครงร่างสำหรับเขียนข้อเสนอหัวข้อโครงงานทางความมั่นคงปลอดภัยไซเบอร์",
+    "title": {
+      "th": "เทมเพลตข้อเสนอโครงงาน (Project Proposal)",
+      "en": "Project Proposal Template"
+    },
+    "description": {
+      "th": "โครงร่างสำหรับเขียนข้อเสนอหัวข้อโครงงานทางความมั่นคงปลอดภัยไซเบอร์",
+      "en": "An outline for writing a cybersecurity project proposal."
+    },
     "category": "project",
     "year": 3,
     "semester": 1,
     "fileType": "docx",
     "status": "draft",
     "placeholder": true,
-    "tags": ["โครงงาน", "proposal", "เทมเพลต"]
+    "tags": ["โครงงาน", "project", "proposal", "template"]
   },
   {
     "id": "res-project-report",
-    "title": "เทมเพลตรายงานโครงงาน (Project Report)",
-    "description": "รูปแบบรายงานฉบับสมบูรณ์สำหรับ Cybersecurity Project I/II",
+    "title": {
+      "th": "เทมเพลตรายงานโครงงาน (Project Report)",
+      "en": "Project Report Template"
+    },
+    "description": {
+      "th": "รูปแบบรายงานฉบับสมบูรณ์สำหรับ Cybersecurity Project I/II",
+      "en": "The full report format for Cybersecurity Project I/II."
+    },
     "category": "project",
     "year": 4,
     "semester": "all",
     "fileType": "docx",
     "status": "draft",
     "placeholder": true,
-    "tags": ["โครงงาน", "รายงาน", "เทมเพลต"]
+    "tags": ["โครงงาน", "project", "report", "template"]
   },
   {
     "id": "res-coop-prep",
-    "title": "คู่มือเตรียมตัวสหกิจศึกษา (Co-op)",
-    "description": "ขั้นตอน เงื่อนไข และไทม์ไลน์การสมัครสหกิจศึกษา รวมถึงการเตรียมเอกสาร",
+    "title": {
+      "th": "คู่มือเตรียมตัวสหกิจศึกษา (Co-op)",
+      "en": "Co-op Preparation Guide"
+    },
+    "description": {
+      "th": "ขั้นตอน เงื่อนไข และไทม์ไลน์การสมัครสหกิจศึกษา รวมถึงการเตรียมเอกสาร",
+      "en": "Steps, conditions, and the timeline for applying to co-op, including document preparation."
+    },
     "category": "coop",
     "year": 3,
     "semester": 2,
     "fileType": "pdf",
     "status": "draft",
     "placeholder": true,
-    "tags": ["สหกิจ", "co-op", "เตรียมตัว"]
+    "tags": ["สหกิจ", "co-op", "preparation"]
   },
   {
     "id": "res-coop-checklist",
-    "title": "เช็กลิสต์เอกสารสหกิจศึกษา",
-    "description": "รายการเอกสารที่ต้องเตรียมและกำหนดส่งสำหรับนักศึกษาสาย Co-op",
+    "title": {
+      "th": "เช็กลิสต์เอกสารสหกิจศึกษา",
+      "en": "Co-op Document Checklist"
+    },
+    "description": {
+      "th": "รายการเอกสารที่ต้องเตรียมและกำหนดส่งสำหรับนักศึกษาสาย Co-op",
+      "en": "The documents and deadlines co-op students need to prepare."
+    },
     "category": "coop",
     "year": 4,
     "semester": 1,
     "fileType": "pdf",
     "status": "draft",
     "placeholder": true,
-    "tags": ["สหกิจ", "เอกสาร", "เช็กลิสต์"]
+    "tags": ["สหกิจ", "co-op", "document", "checklist"]
   },
   {
     "id": "res-wil-checklist",
-    "title": "เช็กลิสต์เอกสาร WIL",
-    "description": "รายการเอกสารสำหรับเส้นทาง Work-Integrated Learning (ต้องตรวจสอบรายละเอียดกับหลักสูตร)",
+    "title": {
+      "th": "เช็กลิสต์เอกสาร WIL",
+      "en": "WIL Document Checklist"
+    },
+    "description": {
+      "th": "รายการเอกสารสำหรับเส้นทาง Work-Integrated Learning (ต้องตรวจสอบรายละเอียดกับหลักสูตร)",
+      "en": "Documents for the Work-Integrated Learning path (details to be confirmed with the program)."
+    },
     "category": "wil",
     "year": 4,
     "semester": "all",
     "fileType": "pdf",
     "status": "needs-update",
     "placeholder": true,
-    "tags": ["WIL", "เอกสาร", "เช็กลิสต์"]
+    "tags": ["WIL", "document", "checklist"]
   },
   {
     "id": "res-internship-checklist",
-    "title": "เช็กลิสต์เตรียมฝึกงาน (Internship)",
-    "description": "สิ่งที่ควรเตรียมก่อนฝึกงาน: resume, portfolio, การติดต่อสถานประกอบการ",
+    "title": {
+      "th": "เช็กลิสต์เตรียมฝึกงาน (Internship)",
+      "en": "Internship Preparation Checklist"
+    },
+    "description": {
+      "th": "สิ่งที่ควรเตรียมก่อนฝึกงาน: resume, portfolio, การติดต่อสถานประกอบการ",
+      "en": "What to prepare before an internship: resume, portfolio, and contacting employers."
+    },
     "category": "internship",
     "year": 3,
     "semester": 2,
     "fileType": "pdf",
     "status": "recommended",
     "placeholder": true,
-    "tags": ["ฝึกงาน", "internship", "เตรียมตัว"]
+    "tags": ["ฝึกงาน", "internship", "preparation"]
   },
   {
     "id": "res-scholarship-info",
-    "title": "ข้อมูลทุนการศึกษา",
-    "description": "รวมประเภททุนภายในมหาวิทยาลัยและภายนอกที่นักศึกษาไซเบอร์มักสมัครได้ (รอรวบรวมรายการจริง)",
+    "title": {
+      "th": "ข้อมูลทุนการศึกษา",
+      "en": "Scholarship Information"
+    },
+    "description": {
+      "th": "รวมประเภททุนภายในมหาวิทยาลัยและภายนอกที่นักศึกษาไซเบอร์มักสมัครได้ (รอรวบรวมรายการจริง)",
+      "en": "University and external scholarships cyber students commonly apply for (list to be compiled)."
+    },
     "category": "scholarship",
     "year": "all",
     "semester": "all",
@@ -159,50 +237,74 @@
   },
   {
     "id": "res-resume-template",
-    "title": "เทมเพลต Resume / CV สายไซเบอร์",
-    "description": "โครงร่าง resume ที่เน้นทักษะ โปรเจกต์ การแข่งขัน และ certification สำหรับสมัครงาน/ฝึกงาน",
+    "title": {
+      "th": "เทมเพลต Resume / CV สายไซเบอร์",
+      "en": "Cybersecurity Resume / CV Template"
+    },
+    "description": {
+      "th": "โครงร่าง resume ที่เน้นทักษะ โปรเจกต์ การแข่งขัน และ certification สำหรับสมัครงาน/ฝึกงาน",
+      "en": "A resume outline emphasizing skills, projects, competitions, and certifications for jobs/internships."
+    },
     "category": "portfolio",
     "year": 3,
     "semester": "all",
     "fileType": "docx",
     "status": "recommended",
     "placeholder": true,
-    "tags": ["resume", "cv", "สมัครงาน", "เทมเพลต"]
+    "tags": ["resume", "cv", "job", "template"]
   },
   {
     "id": "res-portfolio-guide",
-    "title": "ไกด์สร้าง Portfolio & GitHub Profile",
-    "description": "แนวทางจัดระเบียบผลงาน เขียน README ที่ดี และทำ portfolio website ให้น่าสนใจ",
+    "title": {
+      "th": "ไกด์สร้าง Portfolio & GitHub Profile",
+      "en": "Portfolio & GitHub Profile Guide"
+    },
+    "description": {
+      "th": "แนวทางจัดระเบียบผลงาน เขียน README ที่ดี และทำ portfolio website ให้น่าสนใจ",
+      "en": "How to organize your work, write great READMEs, and build an appealing portfolio website."
+    },
     "category": "portfolio",
     "year": 2,
     "semester": "all",
     "fileType": "link",
     "status": "recommended",
     "placeholder": true,
-    "tags": ["portfolio", "github", "ผลงาน"]
+    "tags": ["portfolio", "github", "work"]
   },
   {
     "id": "res-cert-roadmap",
-    "title": "Certification Roadmap สำหรับนักศึกษา",
-    "description": "แนวทางเลือกใบรับรอง เช่น CompTIA Security+/Network+, eJPT และเส้นทางต่อยอดตามสาย",
+    "title": {
+      "th": "Certification Roadmap สำหรับนักศึกษา",
+      "en": "Certification Roadmap for Students"
+    },
+    "description": {
+      "th": "แนวทางเลือกใบรับรอง เช่น CompTIA Security+/Network+, eJPT และเส้นทางต่อยอดตามสาย",
+      "en": "How to choose certs like CompTIA Security+/Network+ and eJPT, with track-based next steps."
+    },
     "category": "certification",
     "year": 2,
     "semester": 2,
     "fileType": "link",
     "status": "recommended",
     "placeholder": true,
-    "tags": ["certification", "roadmap", "สอบใบรับรอง"]
+    "tags": ["certification", "roadmap", "exam"]
   },
   {
     "id": "res-faq",
-    "title": "FAQ คำถามที่พบบ่อยของนักศึกษาไซเบอร์",
-    "description": "รวมคำถามยอดฮิตเรื่องการเรียน วิชาเลือก สหกิจ และการเตรียมตัวทำงาน (กำลังรวบรวมเพิ่ม)",
+    "title": {
+      "th": "FAQ คำถามที่พบบ่อยของนักศึกษาไซเบอร์",
+      "en": "Cybersecurity Student FAQ"
+    },
+    "description": {
+      "th": "รวมคำถามยอดฮิตเรื่องการเรียน วิชาเลือก สหกิจ และการเตรียมตัวทำงาน (กำลังรวบรวมเพิ่ม)",
+      "en": "Common questions on studying, electives, co-op, and career prep (being expanded)."
+    },
     "category": "faq",
     "year": "all",
     "semester": "all",
     "fileType": "link",
     "status": "draft",
     "placeholder": true,
-    "tags": ["faq", "คำถามพบบ่อย"]
+    "tags": ["faq", "questions"]
   }
 ]

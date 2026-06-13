@@ -12,7 +12,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { useLang } from "@/components/LanguageProvider";
-import { ACCENT_STYLES, journeyTerms, type JourneyTerm, type Year } from "@/lib/journey";
+import { ACCENT_STYLES, journeyTerms, loc, termHeadline, type Year } from "@/lib/journey";
 import { JourneyTermCard } from "./JourneyTermCard";
 
 type ViewMode = "timeline" | "card" | "checklist" | "roadmap";
@@ -69,7 +69,7 @@ function YearHeading({ year }: { year: Year }) {
 
 // --------------------------------------------------------------- timeline
 function TimelineView() {
-  const { t } = useLang();
+  const { t, locale } = useLang();
   return (
     <div className="relative ml-2 border-l-2 border-slate-200 pl-6 dark:border-navy-700 sm:ml-3 sm:pl-8">
       {journeyTerms.map((term) => {
@@ -89,16 +89,17 @@ function TimelineView() {
                 <span className={`badge ${a.bgSoft} ${a.border} ${a.text}`}>
                   {t("journey.year")} {term.year} · {t("journey.term")} {term.semester}
                 </span>
-                <span className="text-xs text-slate-400">{term.theme}</span>
               </div>
-              <h3 className="mt-2 font-semibold text-navy-900 dark:text-white">{term.themeThai}</h3>
+              <h3 className="mt-2 font-semibold text-navy-900 dark:text-white">
+                {termHeadline(term, locale)}
+              </h3>
               <p className="mt-1.5 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                {term.shortDescription}
+                {loc(term.shortDescription, locale)}
               </p>
               <div className="mt-3 flex flex-wrap gap-1.5">
                 {term.skills.slice(0, 4).map((s) => (
                   <span key={s.id} className="chip surface-2 text-slate-600 dark:text-slate-300">
-                    {s.name}
+                    {loc(s.name, locale)}
                   </span>
                 ))}
               </div>
@@ -134,7 +135,7 @@ function CardView() {
 
 // --------------------------------------------------------------- checklist
 function ChecklistView() {
-  const { t } = useLang();
+  const { t, locale } = useLang();
   return (
     <div className="space-y-4">
       {journeyTerms.map((term) => {
@@ -145,7 +146,7 @@ function ChecklistView() {
               <div className="flex items-center gap-2">
                 <span className={`h-2.5 w-2.5 rounded-full ${a.dot}`} />
                 <h3 className="font-semibold text-navy-900 dark:text-white">
-                  {t("journey.year")} {term.year} · {t("journey.term")} {term.semester} — {term.themeThai}
+                  {t("journey.year")} {term.year} · {t("journey.term")} {term.semester} — {termHeadline(term, locale)}
                 </h3>
               </div>
               <Link href={`/journey/${term.id}`} className={`text-sm font-semibold ${a.text}`}>
@@ -157,7 +158,7 @@ function ChecklistView() {
                 <li key={c.id} className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-300">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-slate-300 dark:text-navy-600" />
                   <span>
-                    {c.text}
+                    {loc(c.text, locale)}
                     {c.required && (
                       <span className="ml-1.5 badge border-amber-300 bg-amber-50 text-amber-700 dark:text-amber-300">
                         {t("journey.required")}
@@ -176,7 +177,7 @@ function ChecklistView() {
 
 // ----------------------------------------------------------------- roadmap
 function RoadmapView() {
-  const { t } = useLang();
+  const { t, locale } = useLang();
   return (
     <div className="grid gap-4 lg:grid-cols-4">
       {YEARS.map((y) => (
@@ -194,16 +195,16 @@ function RoadmapView() {
                 className={`block rounded-xl border ${a.border} ${a.bgSoft} p-4 transition hover:-translate-y-0.5 hover:shadow-md`}
               >
                 <p className={`text-xs font-semibold ${a.text}`}>
-                  {t("journey.term")} {term.semester} · {term.theme}
+                  {t("journey.term")} {term.semester}
                 </p>
                 <p className="mt-1 text-sm font-semibold text-navy-900 dark:text-white">
-                  {term.themeThai}
+                  {termHeadline(term, locale)}
                 </p>
                 <ul className="mt-2 space-y-1">
                   {term.portfolioGoals.slice(0, 2).map((g, i) => (
                     <li key={i} className="flex items-start gap-1.5 text-xs text-slate-600 dark:text-slate-400">
                       <Target className="mt-0.5 h-3 w-3 shrink-0 text-cyan-500" />
-                      <span className="line-clamp-2">{g}</span>
+                      <span className="line-clamp-2">{loc(g, locale)}</span>
                     </li>
                   ))}
                 </ul>
