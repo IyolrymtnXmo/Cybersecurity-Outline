@@ -45,10 +45,11 @@ export function Footer() {
         <div>
           <p className="text-sm font-semibold text-white">{t("footer.nav")}</p>
           <ul className="mt-3 space-y-2 text-sm text-slate-300">
+            <li><Link href="/journey">{t("nav.journey")}</Link></li>
+            <li><Link href="/resources">{t("nav.resources")}</Link></li>
+            <li><Link href="/opportunities">{t("nav.opportunities")}</Link></li>
             <li><Link href="/curriculum">{t("nav.curriculum")}</Link></li>
             <li><Link href="/courses">{t("nav.courses")}</Link></li>
-            <li><Link href="/electives">{t("nav.electives")}</Link></li>
-            <li><Link href="/prerequisite">{t("nav.prerequisite")}</Link></li>
             <li><Link href="/study-plan">{t("nav.studyPlan")}</Link></li>
           </ul>
         </div>
