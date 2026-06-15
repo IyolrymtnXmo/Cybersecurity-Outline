@@ -114,62 +114,7 @@ export default function OneStopPage() {
         </div>
       </section>
 
-      {/* Readiness */}
-      <section className="container-page">
-        <div className="card overflow-hidden">
-          <div className="grid gap-6 p-6 md:grid-cols-[auto_1fr] md:p-8">
-            <div className="flex flex-col items-center justify-center gap-2 rounded-2xl bg-gradient-to-br from-navy-700 to-cyan-600 px-8 py-6 text-white">
-              <Sparkles className="h-5 w-5" />
-              <p className="text-4xl font-bold">~65%</p>
-              <p className="text-xs uppercase tracking-wider text-cyan-100">
-                {L("ความพร้อมต้นแบบ", "Prototype readiness")}
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-navy-900 dark:text-white">
-                {L(
-                  "พร้อมสำหรับการตรวจสอบภายในและการเตรียมโดเมน",
-                  "Ready for internal review and domain preparation",
-                )}
-              </h3>
-              <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                {L(
-                  "เว็บไซต์อยู่ในขั้นต้นแบบที่ใช้งานได้จริง รอข้อมูลทางการเพิ่มเติมเพื่อยืนยันก่อนเผยแพร่สู่สาธารณะ",
-                  "The site is a working prototype, pending additional official data to verify before public launch.",
-                )}
-              </p>
-              <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                <div>
-                  <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">
-                    {L("พร้อมแล้ว", "Ready")}
-                  </p>
-                  <ul className="space-y-1.5">
-                    {READY.map((r) => (
-                      <li key={r.en} className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
-                        <CircleCheck className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" />
-                        {L(r.th, r.en)}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-amber-600 dark:text-amber-400">
-                    {L("รอข้อมูลทางการ", "Pending official data")}
-                  </p>
-                  <ul className="space-y-1.5">
-                    {PENDING.map((r) => (
-                      <li key={r.en} className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
-                        <CircleDashed className="mt-0.5 h-4 w-4 shrink-0 text-amber-500" />
-                        {L(r.th, r.en)}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 }
@@ -355,17 +300,4 @@ const SCENARIOS: Scenario[] = [
   },
 ];
 
-const READY = [
-  { th: "หลักสูตร เครื่องมือวางแผน และรายวิชา", en: "Curriculum, planning tools, and courses" },
-  { th: "เส้นทาง 4 ปี เอกสาร และโอกาส", en: "4-year journey, resources, and opportunities" },
-  { th: "หน้าคณาจารย์จากข้อมูลวิทยาลัย", en: "Faculty page from college data" },
-  { th: "ทางลัดไปยังลิงก์ทางการของวิทยาลัย", en: "Gateways to the college's official links" },
-  { th: "รองรับสองภาษา (ไทย/อังกฤษ) และโหมดมืด", en: "Bilingual (TH/EN) and dark mode" },
-];
 
-const PENDING = [
-  { th: "ยืนยันข้อมูลคณาจารย์กับหลักสูตร", en: "Verify faculty data with the program" },
-  { th: "ช่องทางติดต่อเฉพาะของหลักสูตร", en: "Program-specific contact channels" },
-  { th: "ประกาศจริง (ตอนนี้เป็นตัวอย่าง)", en: "Real announcements (currently samples)" },
-  { th: "รายละเอียดการรับเข้าเฉพาะ Cybersecurity", en: "Cybersecurity-specific admissions details" },
-];

@@ -79,7 +79,7 @@ export const dict: Record<string, Entry> = {
   // -------------------------------------------------------------- home
   "home.heroBadge": { th: "หลักสูตรปริญญาตรี · 4 ปี", en: "Undergraduate Program · 4 years" },
   "home.heroSub": {
-    th: "ระบบนำทางหลักสูตรแบบ interactive — เข้าใจโครงสร้าง 4 ปี ตรวจสอบรายวิชาต่อ และจำลองผลกระทบเมื่อติด F พร้อมเส้นทาง Project / Co-op / WIL",
+    th: "ระบบนำทางหลักสูตรแบบ interactive — เข้าใจโครงสร้าง 4 ปี ตรวจสอบรายวิชาต่อ และจำลองผ\u2060ล\u2060ก\u2060ร\u2060ะ\u2060ท\u2060บเมื่อติด F พร้อมเส้นทาง Project / Co-op / WIL",
     en: "An interactive curriculum navigator — understand the 4-year structure, check prerequisites, simulate the impact of failing a course, and compare Project / Co-op / WIL tracks.",
   },
   "home.cta.outline": { th: "ดูแผนหลักสูตร", en: "View Curriculum Map" },

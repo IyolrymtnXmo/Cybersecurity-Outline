@@ -51,13 +51,27 @@ export default function HomePage() {
             </p>
             <h1 className="mt-5 text-3xl md:text-5xl font-semibold leading-tight">
               <span className="block">
-                {locale === "en" ? programInfo.englishName : programInfo.thaiName}
+                {locale === "en" ? programInfo.englishName : (
+                  <>
+                    {programInfo.thaiName.split(" สาขาวิชา")[0]} <br className="hidden md:block" />
+                    สาขาวิชา{programInfo.thaiName.split(" สาขาวิชา")[1]}
+                  </>
+                )}
               </span>
               <span className="mt-2 block text-cyan-300 text-lg md:text-2xl font-medium">
                 {locale === "en" ? programInfo.thaiName : programInfo.englishName}
               </span>
             </h1>
-            <p className="mt-5 max-w-2xl text-slate-300">{t("home.heroSub")}</p>
+            <p className="mt-5 max-w-2xl text-slate-300">
+              {locale === "th" ? (
+                <>
+                  {t("home.heroSub").split(" และจำลอง")[0]} <br className="hidden md:block" />
+                  และจำลอง{t("home.heroSub").split(" และจำลอง")[1]}
+                </>
+              ) : (
+                t("home.heroSub")
+              )}
+            </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/one-stop" className="btn-cyber">
                 <LayoutGrid className="h-4 w-4" /> {t("nav.oneStop")}
