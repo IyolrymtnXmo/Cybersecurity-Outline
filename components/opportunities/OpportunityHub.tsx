@@ -71,10 +71,29 @@ export function OpportunityHub() {
           <p className="text-sm text-slate-500">{t("opps.empty")}</p>
         </div>
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {results.map((o) => (
-            <OpportunityCard key={o.id} opportunity={o} />
-          ))}
+        <div className="space-y-10">
+          {OPPORTUNITY_TYPE_ORDER.map((type) => {
+            const typeResults = results.filter((o) => o.type === type);
+            if (typeResults.length === 0) return null;
+
+            return (
+              <section key={type} className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <div className="flex items-center gap-3 border-b border-slate-200 pb-2 dark:border-navy-700">
+                  <h2 className="text-xl font-bold text-navy-900 dark:text-white">
+                    {t(`opps.type.${type}`)}
+                  </h2>
+                  <span className="rounded-full bg-cyan-100 px-2.5 py-0.5 text-xs font-semibold text-cyan-800 dark:bg-cyan-900/50 dark:text-cyan-300">
+                    {typeResults.length}
+                  </span>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {typeResults.map((o) => (
+                    <OpportunityCard key={o.id} opportunity={o} />
+                  ))}
+                </div>
+              </section>
+            );
+          })}
         </div>
       )}
     </div>

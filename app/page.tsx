@@ -387,13 +387,13 @@ export default function HomePage() {
           {careers.slice(0, 6).map((c) => (
             <div key={c.id} className="card p-6 hover:shadow-xl hover:shadow-navy-900/5 dark:hover:shadow-black/50 transition-all duration-300 hover:-translate-y-1 group">
               <p className="text-xs font-medium text-cyan-600 dark:text-cyan-400 mb-2 uppercase tracking-wide">
-                {locale === "en" ? c.title : c.titleThai}
+                {locale === "en" ? c.titleThai : c.title}
               </p>
               <h3 className="text-lg font-bold text-navy-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
-                {locale === "en" ? c.titleThai : c.title}
+                {locale === "en" ? c.title : c.titleThai}
               </h3>
               <p className="mt-3 text-sm text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">
-                {c.description}
+                {(locale === "en" ? (c as any).descriptionEn : c.description) || c.description}
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {c.skills.slice(0, 3).map((s) => (
@@ -407,19 +407,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-page pb-20">
-        <div className="rounded-2xl border border-amber-200/60 bg-amber-50/50 dark:bg-amber-900/10 dark:border-amber-900/30 p-6 flex items-start gap-4 shadow-sm">
-          <div className="p-2 bg-amber-100 dark:bg-amber-900/50 rounded-lg text-amber-600 dark:text-amber-400 shrink-0">
-            <AlertTriangle className="h-5 w-5" />
-          </div>
-          <div>
-            <h4 className="text-sm font-semibold text-amber-900 dark:text-amber-300 mb-1">Disclaimer</h4>
-            <p className="text-sm text-amber-800/80 dark:text-amber-400/80 leading-relaxed">
-              {t("common.disclaimer")}
-            </p>
-          </div>
-        </div>
-      </section>
+
     </>
   );
 }

@@ -169,9 +169,9 @@ export const OFFERED_STYLES: Record<
   },
 };
 
-export const RISK_STYLES: Record<RiskLevel, { label: string; chip: string }> = {
-  low: { label: "ความเสี่ยงต่ำ", chip: "bg-emerald-50 text-emerald-700 border-emerald-200" },
-  medium: { label: "ควรระวัง", chip: "bg-amber-50 text-amber-700 border-amber-200" },
-  high: { label: "เสี่ยงสูง", chip: "bg-orange-50 text-orange-700 border-orange-300" },
-  critical: { label: "วิกฤต — กระทบแผนเรียน", chip: "bg-red-50 text-red-700 border-red-300" },
+export const RISK_STYLES: Record<RiskLevel, { labelTh: string; labelEn: string; chip: string }> = {
+  low: { labelTh: "ความเสี่ยงต่ำ", labelEn: "Low risk", chip: "bg-emerald-50 text-emerald-700 border-emerald-200" },
+  medium: { labelTh: "ควรระวัง", labelEn: "Medium risk", chip: "bg-amber-50 text-amber-700 border-amber-200" },
+  high: { labelTh: "เสี่ยงสูง", labelEn: "High risk", chip: "bg-orange-50 text-orange-700 border-orange-300" },
+  critical: { labelTh: "วิกฤต — กระทบแผนเรียน", labelEn: "Critical - Plan impact", chip: "bg-red-50 text-red-700 border-red-300" },
 };

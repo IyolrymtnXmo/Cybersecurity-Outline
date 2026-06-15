@@ -31,8 +31,9 @@ export function CreditBadge({ credits, structure }: { credits: number; structure
 }
 
 export function RiskBadge({ level }: { level: RiskLevel }) {
+  const { locale } = useLang();
   const s = RISK_STYLES[level];
-  return <span className={`badge ${s.chip}`}>{s.label}</span>;
+  return <span className={`badge ${s.chip}`}>{locale === "en" ? s.labelEn : s.labelTh}</span>;
 }
 
 export function PrereqBadge({ count }: { count: number }) {

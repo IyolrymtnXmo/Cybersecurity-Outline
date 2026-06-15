@@ -179,40 +179,74 @@ function ChecklistView() {
 function RoadmapView() {
   const { t, locale } = useLang();
   return (
-    <div className="grid gap-4 lg:grid-cols-4">
-      {YEARS.map((y) => (
-        <div key={y} className="space-y-3">
-          <div className="rounded-xl bg-navy-900 px-4 py-3 text-center text-white dark:bg-navy-800">
-            <p className="text-xs uppercase tracking-widest text-cyan-300">{t("journey.year")}</p>
-            <p className="text-2xl font-bold">{y}</p>
+    <div className="relative pt-6 pb-4">
+      {/* Horizontal connector line for desktop (connects years) */}
+      <div className="absolute top-[5.5rem] left-[12.5%] right-[12.5%] hidden h-0.5 bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-amber-400 opacity-30 lg:block dark:opacity-20" />
+      
+      <div className="grid gap-8 lg:gap-6 lg:grid-cols-4 relative z-10">
+        {YEARS.map((y) => (
+          <div key={y} className="relative flex flex-col gap-8">
+            {/* Year Header Card */}
+            <div className="relative group mx-auto w-full max-w-[220px] lg:max-w-none">
+              <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-500 opacity-20 blur-md transition-opacity duration-500 group-hover:opacity-60 dark:from-cyan-500 dark:to-blue-600" />
+              <div className="relative flex flex-col items-center justify-center rounded-2xl bg-white px-4 py-6 shadow-xl dark:bg-navy-900 border border-slate-100 dark:border-navy-700 overflow-hidden">
+                <div className="absolute -right-6 -top-6 w-20 h-20 rounded-full bg-cyan-400/10 blur-2xl" />
+                <div className="absolute -left-6 -bottom-6 w-20 h-20 rounded-full bg-blue-500/10 blur-2xl" />
+                
+                <p className="text-xs uppercase tracking-widest text-cyan-600 dark:text-cyan-400 font-bold z-10">
+                  {t("journey.year")}
+                </p>
+                <p className="text-5xl font-black mt-1 bg-gradient-to-br from-navy-900 to-slate-600 bg-clip-text text-transparent dark:from-white dark:to-slate-400 z-10">
+                  {y}
+                </p>
+              </div>
+            </div>
+
+            {/* Terms Timeline */}
+            <div className="space-y-6 relative pl-1 sm:pl-2">
+              {/* Vertical connector line for each year's terms */}
+              <div className="absolute left-[11px] sm:left-[15px] top-6 bottom-4 w-0.5 bg-gradient-to-b from-cyan-400/50 to-transparent dark:from-cyan-500/30 z-0" />
+              
+              {byYear(y).map((term) => {
+                const a = ACCENT_STYLES[term.accent];
+                return (
+                  <Link
+                    key={term.id}
+                    href={`/journey/${term.id}`}
+                    className="group relative flex gap-3 sm:gap-4 transition-all duration-300 hover:-translate-y-1"
+                  >
+                    {/* Node on the vertical line */}
+                    <div className="relative z-10 mt-1.5 flex h-4 w-4 sm:h-5 sm:w-5 shrink-0 items-center justify-center rounded-full bg-white dark:bg-navy-900 border-[2px] border-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.5)] group-hover:scale-125 group-hover:border-cyan-500 transition-all duration-300">
+                      <div className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-cyan-500" />
+                    </div>
+
+                    {/* Term Card Content */}
+                    <div className={`flex-1 overflow-hidden rounded-xl border ${a.border} bg-white dark:bg-navy-900/40 p-4 shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:border-cyan-400/60 dark:group-hover:border-cyan-400/50 relative`}>
+                      <div className={`absolute top-0 left-0 w-1 h-full ${a.bgSoft} opacity-60 group-hover:opacity-100 transition-opacity`} />
+                      <div className="pl-1">
+                        <p className={`text-[10px] sm:text-xs font-bold uppercase tracking-wider ${a.text}`}>
+                          {t("journey.term")} {term.semester}
+                        </p>
+                        <p className="mt-1.5 text-sm sm:text-base font-bold leading-snug text-navy-900 dark:text-white transition-colors group-hover:text-cyan-600 dark:group-hover:text-cyan-400">
+                          {termHeadline(term, locale)}
+                        </p>
+                        <ul className="mt-4 space-y-2.5">
+                          {term.portfolioGoals.slice(0, 2).map((g, i) => (
+                            <li key={i} className="flex items-start gap-2.5 text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                              <Target className="mt-0.5 h-3.5 w-3.5 shrink-0 text-cyan-500/70" />
+                              <span className="line-clamp-2">{loc(g, locale)}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
-          {byYear(y).map((term) => {
-            const a = ACCENT_STYLES[term.accent];
-            return (
-              <Link
-                key={term.id}
-                href={`/journey/${term.id}`}
-                className={`block rounded-xl border ${a.border} ${a.bgSoft} p-4 transition hover:-translate-y-0.5 hover:shadow-md`}
-              >
-                <p className={`text-xs font-semibold ${a.text}`}>
-                  {t("journey.term")} {term.semester}
-                </p>
-                <p className="mt-1 text-sm font-semibold text-navy-900 dark:text-white">
-                  {termHeadline(term, locale)}
-                </p>
-                <ul className="mt-2 space-y-1">
-                  {term.portfolioGoals.slice(0, 2).map((g, i) => (
-                    <li key={i} className="flex items-start gap-1.5 text-xs text-slate-600 dark:text-slate-400">
-                      <Target className="mt-0.5 h-3 w-3 shrink-0 text-cyan-500" />
-                      <span className="line-clamp-2">{loc(g, locale)}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Link>
-            );
-          })}
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

@@ -17,7 +17,7 @@ export const THEME_INIT_SCRIPT = `
   try {
     var stored = localStorage.getItem('cy-theme');
     var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    var theme = stored || (prefersDark ? 'dark' : 'light');
+    var theme = stored || 'light';
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
     } else {

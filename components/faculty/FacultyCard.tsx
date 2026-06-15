@@ -42,19 +42,6 @@ export function FacultyCard({ member }: { member: FacultyMember }) {
 
       {/* Right Content Section */}
       <div className="flex flex-col flex-1 p-5 md:p-6 relative min-w-0">
-        {/* Status Badges */}
-        <div className="absolute top-4 right-4 flex flex-col gap-2 z-10">
-          {member.status === "needs-verification" ? (
-            <span className="badge border-amber-300 bg-amber-50 text-amber-700 dark:bg-navy-900/90 dark:text-amber-300 shadow-sm backdrop-blur-sm px-2 py-0.5 text-[10px]">
-              <ShieldQuestion className="h-3 w-3" /> {t("common.needsVerification") || "รอตรวจสอบ"}
-            </span>
-          ) : member.status === "verified" ? (
-            <span className="badge border-emerald-300 bg-emerald-50 text-emerald-700 dark:bg-navy-900/90 dark:text-emerald-300 shadow-sm backdrop-blur-sm px-2 py-0.5 text-[10px]">
-              <BadgeCheck className="h-3 w-3" /> {t("common.official") || "ทางการ"}
-            </span>
-          ) : null}
-        </div>
-
         {/* Header Info (Role) */}
         {member.role && (
           <p className="text-[11px] md:text-xs text-slate-400 dark:text-slate-500 mb-1.5 pr-20">

@@ -97,6 +97,7 @@ type CourseNodeData = {
   isDimmed: boolean;
   isHoveredNode: boolean;
   courseName: (c: Course) => string;
+  t: (k: string) => string;
   onHoverEnter: (id: string) => void;
   onHoverLeave: () => void;
   onSelect: (course: Course) => void;
@@ -113,6 +114,7 @@ function CourseNode({ data }: NodeProps<Node<CourseNodeData>>) {
     isDimmed,
     isHoveredNode,
     courseName,
+    t,
     onHoverEnter,
     onHoverLeave,
     onSelect,
@@ -122,7 +124,13 @@ function CourseNode({ data }: NodeProps<Node<CourseNodeData>>) {
 
   let bgClass = style.color;
   let borderClass = style.border;
-  if (mode === "risk") {
+  let textClass = mode === "risk" ? "text-white" : style.text;
+
+  if (mode === "student") {
+    bgClass = "bg-white dark:bg-navy-800";
+    borderClass = `border-l-8 ${style.border} border-y border-r border-y-slate-200 border-r-slate-200 dark:border-y-navy-700 dark:border-r-navy-700`;
+    textClass = "text-slate-800 dark:text-slate-100";
+  } else if (mode === "risk") {
     bgClass =
       risk === "critical"
         ? "bg-red-500"
@@ -145,14 +153,12 @@ function CourseNode({ data }: NodeProps<Node<CourseNodeData>>) {
   }
 
   const dimOpacity = isDimmed ? 0.3 : 1;
-  const hoverBorder = isHoveredNode ? "border-cyan-400 border-[2px]" : "border-black/20 border-[1px]";
-
-  const textClass = mode === "risk" ? "text-white" : style.text;
+  const hoverBorder = isHoveredNode ? "ring-2 ring-cyan-400" : "shadow-sm";
   const isLR = layoutDir === "LR";
 
   return (
     <div
-      className={`relative rounded-xl shadow-md transition-all duration-200 ease-in-out cursor-pointer ${bgClass} ${textClass} ${hoverBorder} hover:-translate-y-1 hover:shadow-lg`}
+      className={`relative rounded-xl transition-all duration-200 ease-in-out cursor-pointer ${bgClass} ${textClass} ${borderClass} ${hoverBorder} hover:-translate-y-1 hover:shadow-lg`}
       style={{
         width: CARD_WIDTH,
         height: cfg.nodeHeight,
@@ -182,20 +188,37 @@ function CourseNode({ data }: NodeProps<Node<CourseNodeData>>) {
         </div>
       )}
 
-      <div className="px-3 pt-3">
-        <div
-          className="font-mono font-semibold"
-          style={{ fontSize: cfg.fontCode, marginLeft: mode === "risk" ? 24 : 0 }}
-        >
-          {course.code}
+      {mode === "student" ? (
+        <div className="px-3 pt-3 flex flex-col h-full" style={{ height: "calc(100% - 12px)" }}>
+          <div
+            className="font-bold leading-snug line-clamp-3 flex-1 flex items-center"
+            style={{ fontSize: cfg.fontTitle, paddingBottom: "4px" }}
+          >
+            {courseName(course)}
+          </div>
+          <div className="flex justify-between items-center pb-1">
+             <div className="text-[10px] font-mono opacity-80">{course.code}</div>
+             <div className="text-[11px] font-bold opacity-90 rounded-full bg-black/10 px-2 py-0.5">
+               {course.credits} {t("common.credits")}
+             </div>
+          </div>
         </div>
-        <div
-          className="mt-1 font-semibold leading-snug line-clamp-3"
-          style={{ fontSize: cfg.fontTitle, WebkitLineClamp: mode === "student" ? 4 : 3 }}
-        >
-          {courseName(course)}
+      ) : (
+        <div className="px-3 pt-3">
+          <div
+            className="font-mono font-semibold"
+            style={{ fontSize: cfg.fontCode, marginLeft: mode === "risk" ? 24 : 0 }}
+          >
+            {course.code}
+          </div>
+          <div
+            className="mt-1 font-semibold leading-snug line-clamp-3"
+            style={{ fontSize: cfg.fontTitle, WebkitLineClamp: 3 }}
+          >
+            {courseName(course)}
+          </div>
         </div>
-      </div>
+      )}
 
       <Handle
         type="source"
@@ -230,7 +253,7 @@ export function CurriculumFlowDiagram({
 }) {
   const [track, setTrack] = useState<TrackKey>("project");
   const [mode, setMode] = useState<Mode>("academic");
-  const [layoutDir, setLayoutDir] = useState<LayoutDir>("TB");
+  const [layoutDir, setLayoutDir] = useState<LayoutDir>("LR");
   const [hovered, setHovered] = useState<string | null>(null);
   const { t, courseName } = useLang();
   const { theme } = useTheme();
@@ -327,9 +350,9 @@ export function CurriculumFlowDiagram({
           type: "termHeader",
           position: { x: 0, y: yTop },
           data: {
-            label: `Year ${term.year} · Sem ${term.semester}`,
+            label: `${t("plan.year")} ${term.year} · ${t("plan.sem")} ${term.semester}`,
             subLabel: `${term.totalCredits} ${t("common.credits")}${
-              term.cumulative != null ? ` · รวมสะสม ${term.cumulative}` : ""
+              term.cumulative != null ? ` · ${t("curriculum.cumulative") || "cumulative"} ${term.cumulative}` : ""
             }`,
             width: innerW,
           },
@@ -368,6 +391,7 @@ export function CurriculumFlowDiagram({
               isDimmed,
               isHoveredNode: hovered === cid,
               courseName,
+              t,
               onHoverEnter: setHovered,
               onHoverLeave: () => setHovered(null),
               onSelect,
@@ -389,9 +413,9 @@ export function CurriculumFlowDiagram({
           type: "termHeader",
           position: { x: xLeft, y: 0 },
           data: {
-            label: `Year ${term.year} · Sem ${term.semester}`,
+            label: `${t("plan.year")} ${term.year} · ${t("plan.sem")} ${term.semester}`,
             subLabel: `${term.totalCredits} ${t("common.credits")}${
-              term.cumulative != null ? ` · รวมสะสม ${term.cumulative}` : ""
+              term.cumulative != null ? ` · ${t("curriculum.cumulative") || "cumulative"} ${term.cumulative}` : ""
             }`,
             width: CARD_WIDTH,
           },
@@ -430,6 +454,7 @@ export function CurriculumFlowDiagram({
               isDimmed,
               isHoveredNode: hovered === cid,
               courseName,
+              t,
               onHoverEnter: setHovered,
               onHoverLeave: () => setHovered(null),
               onSelect,
@@ -512,7 +537,7 @@ export function CurriculumFlowDiagram({
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
             <span className="text-sm font-semibold text-navy-900 dark:text-slate-100 hidden sm:inline">
-              Layout:
+              {t("curriculum.layout") || "Layout"}:
             </span>
             <div className="flex rounded-md bg-slate-100 p-1 dark:bg-navy-800">
               <button
@@ -524,7 +549,7 @@ export function CurriculumFlowDiagram({
                 }`}
               >
                 <ArrowDown size={14} />
-                แนวดิ่ง
+                {t("curriculum.layout.vertical") || "Vertical"}
               </button>
               <button
                 onClick={() => setLayoutDir("LR")}
@@ -535,7 +560,7 @@ export function CurriculumFlowDiagram({
                 }`}
               >
                 <ArrowRight size={14} />
-                แนวนอน
+                {t("curriculum.layout.horizontal") || "Horizontal"}
               </button>
             </div>
           </div>

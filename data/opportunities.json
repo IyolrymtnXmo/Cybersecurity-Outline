@@ -7,17 +7,36 @@
       "en": "A beginner CTF from Carnegie Mellon — great for newcomers, with year-round practice and an annual competition."
     },
     "type": "ctf",
-    "suitableYears": [1, 2],
+    "suitableYears": [
+      1,
+      2
+    ],
     "recommendedSemester": "both",
     "difficulty": "beginner",
     "status": "open",
-    "usualPeriod": { "th": "ฝึกได้ตลอดปี · รอบแข่งช่วงต้นปี", "en": "Practice year-round · contest early in the year" },
+    "usualPeriod": {
+      "th": "ฝึกได้ตลอดปี · รอบแข่งช่วงต้นปี",
+      "en": "Practice year-round · contest early in the year"
+    },
     "link": "https://picoctf.org",
-    "relatedCourses": ["CP421021", "CP422031"],
-    "relatedSkills": ["CTF", "Web", "Crypto", "Reverse Engineering"],
+    "relatedCourses": [
+      "CP421021",
+      "CP422031"
+    ],
+    "relatedSkills": [
+      "CTF",
+      "Web",
+      "Crypto",
+      "Reverse Engineering"
+    ],
     "teamRequired": false,
     "portfolioWorthy": true,
-    "tags": ["มือใหม่", "beginner", "free", "start here"]
+    "tags": [
+      "มือใหม่",
+      "beginner",
+      "free",
+      "start here"
+    ]
   },
   {
     "id": "opp-overthewire",
@@ -27,16 +46,31 @@
       "en": "Linux and security wargames over SSH (start with Bandit) — always available, great for command-line basics."
     },
     "type": "bootcamp",
-    "suitableYears": [1, 2],
+    "suitableYears": [
+      1,
+      2
+    ],
     "recommendedSemester": "both",
     "difficulty": "beginner",
     "status": "open",
-    "usualPeriod": { "th": "ฝึกได้ตลอดเวลา", "en": "Available anytime" },
+    "usualPeriod": {
+      "th": "ฝึกได้ตลอดเวลา",
+      "en": "Available anytime"
+    },
     "link": "https://overthewire.org/wargames/",
-    "relatedSkills": ["Linux", "Command Line", "Privilege Escalation"],
+    "relatedSkills": [
+      "Linux",
+      "Command Line",
+      "Privilege Escalation"
+    ],
     "teamRequired": false,
     "portfolioWorthy": false,
-    "tags": ["มือใหม่", "beginner", "Linux", "free"]
+    "tags": [
+      "มือใหม่",
+      "beginner",
+      "Linux",
+      "free"
+    ]
   },
   {
     "id": "opp-tryhackme",
@@ -46,16 +80,32 @@
       "en": "A hands-on, path-based learning platform with rooms from beginner to advanced, covering both offensive and defensive tracks."
     },
     "type": "bootcamp",
-    "suitableYears": [1, 2, 3],
+    "suitableYears": [
+      1,
+      2,
+      3
+    ],
     "recommendedSemester": "both",
     "difficulty": "mixed",
     "status": "open",
-    "usualPeriod": { "th": "เรียนได้ตลอดเวลา", "en": "Learn anytime" },
+    "usualPeriod": {
+      "th": "เรียนได้ตลอดเวลา",
+      "en": "Learn anytime"
+    },
     "link": "https://tryhackme.com",
-    "relatedSkills": ["Pentest", "Blue Team", "Networking", "Web Security"],
+    "relatedSkills": [
+      "Pentest",
+      "Blue Team",
+      "Networking",
+      "Web Security"
+    ],
     "teamRequired": false,
     "portfolioWorthy": true,
-    "tags": ["learning", "learning path", "hands-on"]
+    "tags": [
+      "learning",
+      "learning path",
+      "hands-on"
+    ]
   },
   {
     "id": "opp-htb",
@@ -65,17 +115,35 @@
       "en": "A pentesting platform with realistic target machines, in both practice and competitive modes — for offensive learners who want a challenge."
     },
     "type": "bootcamp",
-    "suitableYears": [2, 3, 4],
+    "suitableYears": [
+      2,
+      3,
+      4
+    ],
     "recommendedSemester": "both",
     "difficulty": "intermediate",
     "status": "open",
-    "usualPeriod": { "th": "ฝึกได้ตลอดเวลา", "en": "Practice anytime" },
+    "usualPeriod": {
+      "th": "ฝึกได้ตลอดเวลา",
+      "en": "Practice anytime"
+    },
     "link": "https://www.hackthebox.com",
-    "relatedCourses": ["CP423433", "CP423431"],
-    "relatedSkills": ["Penetration Testing", "Privilege Escalation", "Enumeration"],
+    "relatedCourses": [
+      "CP423433",
+      "CP423431"
+    ],
+    "relatedSkills": [
+      "Penetration Testing",
+      "Privilege Escalation",
+      "Enumeration"
+    ],
     "teamRequired": false,
     "portfolioWorthy": true,
-    "tags": ["pentest", "intermediate", "challenge"]
+    "tags": [
+      "pentest",
+      "intermediate",
+      "challenge"
+    ]
   },
   {
     "id": "opp-portswigger",
@@ -85,17 +153,34 @@
       "en": "Free web-security courses and labs from the makers of Burp Suite, covering key web vulnerabilities with hands-on labs."
     },
     "type": "bootcamp",
-    "suitableYears": [2, 3],
+    "suitableYears": [
+      2,
+      3
+    ],
     "recommendedSemester": "both",
     "difficulty": "intermediate",
     "status": "open",
-    "usualPeriod": { "th": "เรียนได้ตลอดเวลา", "en": "Learn anytime" },
+    "usualPeriod": {
+      "th": "เรียนได้ตลอดเวลา",
+      "en": "Learn anytime"
+    },
     "link": "https://portswigger.net/web-security",
-    "relatedCourses": ["CP422021", "CP423324"],
-    "relatedSkills": ["Web Security", "Burp Suite", "OWASP"],
+    "relatedCourses": [
+      "CP422021",
+      "CP423324"
+    ],
+    "relatedSkills": [
+      "Web Security",
+      "Burp Suite",
+      "OWASP"
+    ],
     "teamRequired": false,
     "portfolioWorthy": true,
-    "tags": ["web", "free", "OWASP"]
+    "tags": [
+      "web",
+      "free",
+      "OWASP"
+    ]
   },
   {
     "id": "opp-codeforces",
@@ -105,17 +190,32 @@
       "en": "A regular online competitive-programming arena that sharpens algorithms and timed problem solving."
     },
     "type": "programming",
-    "suitableYears": [1, 2],
+    "suitableYears": [
+      1,
+      2
+    ],
     "recommendedSemester": "both",
     "difficulty": "mixed",
     "status": "open",
-    "usualPeriod": { "th": "มี contest ออนไลน์ทุกสัปดาห์", "en": "Online contests every week" },
+    "usualPeriod": {
+      "th": "มี contest ออนไลน์ทุกสัปดาห์",
+      "en": "Online contests every week"
+    },
     "link": "https://codeforces.com",
-    "relatedCourses": ["CP421023"],
-    "relatedSkills": ["Algorithm", "Data Structure", "Problem Solving"],
+    "relatedCourses": [
+      "CP421023"
+    ],
+    "relatedSkills": [
+      "Algorithm",
+      "Data Structure",
+      "Problem Solving"
+    ],
     "teamRequired": false,
     "portfolioWorthy": false,
-    "tags": ["algorithm", "programming"]
+    "tags": [
+      "algorithm",
+      "programming"
+    ]
   },
   {
     "id": "opp-icpc",
@@ -125,17 +225,32 @@
       "en": "The world's most prestigious university programming contest, in teams of three, with regional rounds in Thailand."
     },
     "type": "programming",
-    "suitableYears": [2, 3, 4],
+    "suitableYears": [
+      2,
+      3,
+      4
+    ],
     "recommendedSemester": 1,
     "difficulty": "advanced",
     "status": "annual",
-    "usualPeriod": { "th": "รอบภูมิภาคช่วงปลายปี", "en": "Regionals late in the year" },
+    "usualPeriod": {
+      "th": "รอบภูมิภาคช่วงปลายปี",
+      "en": "Regionals late in the year"
+    },
     "link": "https://icpc.global",
-    "relatedSkills": ["Algorithm", "Teamwork", "Problem Solving"],
+    "relatedSkills": [
+      "Algorithm",
+      "Teamwork",
+      "Problem Solving"
+    ],
     "teamRequired": true,
     "portfolioWorthy": true,
     "placeholder": true,
-    "tags": ["team", "world-class", "algorithm"]
+    "tags": [
+      "team",
+      "world-class",
+      "algorithm"
+    ]
   },
   {
     "id": "opp-googlectf",
@@ -145,17 +260,32 @@
       "en": "A world-class CTF from Google with tough challenges — for experienced players testing themselves against international teams."
     },
     "type": "ctf",
-    "suitableYears": [3, 4],
+    "suitableYears": [
+      3,
+      4
+    ],
     "recommendedSemester": "both",
     "difficulty": "advanced",
     "status": "annual",
-    "usualPeriod": { "th": "ช่วงกลางปี (ติดตามประกาศ)", "en": "Mid-year (watch for announcements)" },
+    "usualPeriod": {
+      "th": "ช่วงกลางปี (ติดตามประกาศ)",
+      "en": "Mid-year (watch for announcements)"
+    },
     "link": "https://capturetheflag.withgoogle.com",
-    "relatedSkills": ["Reverse Engineering", "Pwn", "Crypto", "Web"],
+    "relatedSkills": [
+      "Reverse Engineering",
+      "Pwn",
+      "Crypto",
+      "Web"
+    ],
     "teamRequired": true,
     "portfolioWorthy": true,
     "placeholder": true,
-    "tags": ["advanced", "world-class", "team"]
+    "tags": [
+      "advanced",
+      "world-class",
+      "team"
+    ]
   },
   {
     "id": "opp-thailand-top-talent",
@@ -165,18 +295,35 @@
       "en": "A national CTF held annually by Thailand's national cybersecurity agency, open to students."
     },
     "type": "competition",
-    "suitableYears": [2, 3, 4],
+    "suitableYears": [
+      2,
+      3,
+      4
+    ],
     "recommendedSemester": "both",
     "difficulty": "mixed",
     "status": "annual",
-    "usualPeriod": { "th": "จัดประจำทุกปี (ตรวจสอบประกาศจากผู้จัด)", "en": "Held annually (check the organizer's announcements)" },
+    "usualPeriod": {
+      "th": "จัดประจำทุกปี (ตรวจสอบประกาศจากผู้จัด)",
+      "en": "Held annually (check the organizer's announcements)"
+    },
     "link": "https://www.ncsa.or.th",
-    "relatedCourses": ["CP422031", "CP423433"],
-    "relatedSkills": ["CTF", "Cybersecurity"],
+    "relatedCourses": [
+      "CP422031",
+      "CP423433"
+    ],
+    "relatedSkills": [
+      "CTF",
+      "Cybersecurity"
+    ],
     "teamRequired": true,
     "portfolioWorthy": true,
     "placeholder": true,
-    "tags": ["national", "team", "CTF"]
+    "tags": [
+      "national",
+      "team",
+      "CTF"
+    ]
   },
   {
     "id": "opp-nsc",
@@ -189,16 +336,31 @@
       "en": "National software and innovation competitions — great for turning projects into showcased work and development grants."
     },
     "type": "research",
-    "suitableYears": [2, 3, 4],
+    "suitableYears": [
+      2,
+      3,
+      4
+    ],
     "recommendedSemester": "both",
     "difficulty": "mixed",
     "status": "annual",
-    "usualPeriod": { "th": "เปิดรับสมัครช่วงปลายปี–ต้นปี (ตรวจสอบประกาศ)", "en": "Applications late–early year (check announcements)" },
-    "relatedSkills": ["Project", "Innovation", "Research"],
+    "usualPeriod": {
+      "th": "เปิดรับสมัครช่วงปลายปี–ต้นปี (ตรวจสอบประกาศ)",
+      "en": "Applications late–early year (check announcements)"
+    },
+    "relatedSkills": [
+      "Project",
+      "Innovation",
+      "Research"
+    ],
     "teamRequired": true,
     "portfolioWorthy": true,
     "placeholder": true,
-    "tags": ["innovation", "showcase", "grant"]
+    "tags": [
+      "innovation",
+      "showcase",
+      "grant"
+    ]
   },
   {
     "id": "opp-hackathon",
@@ -211,16 +373,31 @@
       "en": "Time-boxed build competitions that train teamwork, pitching, and rapid prototyping."
     },
     "type": "hackathon",
-    "suitableYears": [2, 3, 4],
+    "suitableYears": [
+      2,
+      3,
+      4
+    ],
     "recommendedSemester": "both",
     "difficulty": "mixed",
     "status": "annual",
-    "usualPeriod": { "th": "จัดกระจายตลอดปีโดยหลายหน่วยงาน", "en": "Held throughout the year by many organizers" },
-    "relatedSkills": ["Teamwork", "Pitching", "Rapid Prototyping"],
+    "usualPeriod": {
+      "th": "จัดกระจายตลอดปีโดยหลายหน่วยงาน",
+      "en": "Held throughout the year by many organizers"
+    },
+    "relatedSkills": [
+      "Teamwork",
+      "Pitching",
+      "Rapid Prototyping"
+    ],
     "teamRequired": true,
     "portfolioWorthy": true,
     "placeholder": true,
-    "tags": ["team", "pitching", "prototype"]
+    "tags": [
+      "team",
+      "pitching",
+      "prototype"
+    ]
   },
   {
     "id": "opp-ict-competition",
@@ -233,17 +410,31 @@
       "en": "Networking and tech competitions from IT companies (e.g. network-vendor programs), often offering training scholarships and certifications."
     },
     "type": "network",
-    "suitableYears": [2, 3],
+    "suitableYears": [
+      2,
+      3
+    ],
     "recommendedSemester": "both",
     "difficulty": "intermediate",
     "status": "annual",
-    "usualPeriod": { "th": "จัดประจำปี (ตรวจสอบประกาศจากผู้จัด)", "en": "Held annually (check the organizer's announcements)" },
-    "relatedCourses": ["CP422011"],
-    "relatedSkills": ["Networking", "Routing & Switching"],
+    "usualPeriod": {
+      "th": "จัดประจำปี (ตรวจสอบประกาศจากผู้จัด)",
+      "en": "Held annually (check the organizer's announcements)"
+    },
+    "relatedCourses": [
+      "CP422011"
+    ],
+    "relatedSkills": [
+      "Networking",
+      "Routing & Switching"
+    ],
     "teamRequired": false,
     "portfolioWorthy": true,
     "placeholder": true,
-    "tags": ["network", "training scholarship"]
+    "tags": [
+      "network",
+      "training scholarship"
+    ]
   },
   {
     "id": "opp-aws-educate",
@@ -253,17 +444,33 @@
       "en": "Cloud learning programs and prep for cloud certifications that lead toward cloud security."
     },
     "type": "cloud",
-    "suitableYears": [2, 3],
+    "suitableYears": [
+      2,
+      3
+    ],
     "recommendedSemester": "both",
     "difficulty": "beginner",
     "status": "open",
-    "usualPeriod": { "th": "เรียนได้ตลอดเวลา", "en": "Learn anytime" },
+    "usualPeriod": {
+      "th": "เรียนได้ตลอดเวลา",
+      "en": "Learn anytime"
+    },
     "link": "https://aws.amazon.com/training/awsacademy/",
-    "relatedCourses": ["CP422032", "CP423326"],
-    "relatedSkills": ["Cloud", "AWS"],
+    "relatedCourses": [
+      "CP422032",
+      "CP423326"
+    ],
+    "relatedSkills": [
+      "Cloud",
+      "AWS"
+    ],
     "teamRequired": false,
     "portfolioWorthy": true,
-    "tags": ["cloud", "certification", "learning"]
+    "tags": [
+      "cloud",
+      "certification",
+      "learning"
+    ]
   },
   {
     "id": "opp-security-plus",
@@ -273,17 +480,31 @@
       "en": "A widely recognized entry-level security certification — a good target to sit in years 2-3."
     },
     "type": "certification",
-    "suitableYears": [2, 3],
+    "suitableYears": [
+      2,
+      3
+    ],
     "recommendedSemester": "both",
     "difficulty": "intermediate",
     "status": "open",
-    "usualPeriod": { "th": "สมัครสอบได้ตลอดปี", "en": "Register to sit year-round" },
+    "usualPeriod": {
+      "th": "สมัครสอบได้ตลอดปี",
+      "en": "Register to sit year-round"
+    },
     "link": "https://www.comptia.org/certifications/security",
-    "relatedCourses": ["CP422031"],
-    "relatedSkills": ["Security Fundamentals", "Certification"],
+    "relatedCourses": [
+      "CP422031"
+    ],
+    "relatedSkills": [
+      "Security Fundamentals",
+      "Certification"
+    ],
     "teamRequired": false,
     "portfolioWorthy": true,
-    "tags": ["certification", "job"]
+    "tags": [
+      "certification",
+      "job"
+    ]
   },
   {
     "id": "opp-internship",
@@ -296,16 +517,27 @@
       "en": "Real work experience at IT/security companies over the break — a key step before co-op and job applications."
     },
     "type": "internship",
-    "suitableYears": [3],
+    "suitableYears": [
+      3
+    ],
     "recommendedSemester": "both",
     "difficulty": "mixed",
     "status": "annual",
-    "usualPeriod": { "th": "สมัครล่วงหน้าก่อนปิดเทอมใหญ่", "en": "Apply ahead of the long break" },
-    "relatedSkills": ["Work Experience", "Professional Skills"],
+    "usualPeriod": {
+      "th": "สมัครล่วงหน้าก่อนปิดเทอมใหญ่",
+      "en": "Apply ahead of the long break"
+    },
+    "relatedSkills": [
+      "Work Experience",
+      "Professional Skills"
+    ],
     "teamRequired": false,
     "portfolioWorthy": true,
     "placeholder": true,
-    "tags": ["internship", "experience"]
+    "tags": [
+      "internship",
+      "experience"
+    ]
   },
   {
     "id": "opp-owasp-meetup",
@@ -318,16 +550,239 @@
       "en": "Seminars, talks, and community meetups (e.g. OWASP, Thai cyber groups) to stay current and build a network."
     },
     "type": "seminar",
-    "suitableYears": [1, 2, 3, 4],
+    "suitableYears": [
+      1,
+      2,
+      3,
+      4
+    ],
     "recommendedSemester": "both",
     "difficulty": "beginner",
     "status": "annual",
-    "usualPeriod": { "th": "จัดกระจายตลอดปี", "en": "Held throughout the year" },
+    "usualPeriod": {
+      "th": "จัดกระจายตลอดปี",
+      "en": "Held throughout the year"
+    },
     "link": "https://owasp.org/chapters/",
-    "relatedSkills": ["Networking", "Industry Trends"],
+    "relatedSkills": [
+      "Networking",
+      "Industry Trends"
+    ],
     "teamRequired": false,
     "portfolioWorthy": false,
     "placeholder": true,
-    "tags": ["seminar", "community", "network"]
+    "tags": [
+      "seminar",
+      "community",
+      "network"
+    ]
+  },
+  {
+    "id": "opp-defcon",
+    "title": "DEF CON CTF",
+    "description": {
+      "th": "สุดยอดการแข่งขัน CTF ระดับโลกที่ลาสเวกัส (มีรอบคัดเลือกออนไลน์) ถือเป็นงานที่ท้าทายที่สุดของสาย Cybersecurity",
+      "en": "The ultimate world-class CTF held in Las Vegas (with online qualifiers). It is considered the pinnacle of Cybersecurity competitions."
+    },
+    "type": "ctf",
+    "suitableYears": [
+      3,
+      4
+    ],
+    "recommendedSemester": "both",
+    "difficulty": "advanced",
+    "status": "annual",
+    "usualPeriod": {
+      "th": "รอบคัดเลือกช่วงต้นปี · รอบชิง ส.ค.",
+      "en": "Qualifiers early year · Finals in Aug"
+    },
+    "link": "https://defcon.org/",
+    "relatedSkills": [
+      "Reverse Engineering",
+      "Pwn",
+      "Cryptography",
+      "Advanced Exploitation"
+    ],
+    "teamRequired": true,
+    "portfolioWorthy": true,
+    "tags": [
+      "world-class",
+      "advanced",
+      "hacker",
+      "DEFCON"
+    ]
+  },
+  {
+    "id": "opp-cyber-sea-game",
+    "title": "Cyber SEA Game",
+    "description": {
+      "th": "การแข่งขัน CTF ระดับภูมิภาคอาเซียน (ASEAN) โดยตัวแทนแต่ละประเทศ (มักจะเป็นแชมป์จากงานระดับประเทศ) เข้าแข่งขันชิงแชมป์",
+      "en": "ASEAN regional CTF competition where national representatives compete for the championship."
+    },
+    "type": "competition",
+    "suitableYears": [
+      2,
+      3,
+      4
+    ],
+    "recommendedSemester": "both",
+    "difficulty": "advanced",
+    "status": "annual",
+    "usualPeriod": {
+      "th": "ช่วงปลายปี",
+      "en": "Late year"
+    },
+    "link": "https://www.ncsa.or.th",
+    "relatedSkills": [
+      "CTF",
+      "Forensics",
+      "Web Security",
+      "Pentest"
+    ],
+    "teamRequired": true,
+    "portfolioWorthy": true,
+    "tags": [
+      "ASEAN",
+      "national team",
+      "CTF"
+    ]
+  },
+  {
+    "id": "opp-ncsa-cisco-ctf",
+    "title": "NCSA x CISCO CTF / NCSA AI CTF",
+    "description": {
+      "th": "งานแข่ง CTF เฉพาะกิจที่จัดโดย สกมช. ร่วมกับพันธมิตร (เช่น Cisco, AI/Prompt Engineering) เพื่อส่งเสริมทักษะเฉพาะด้าน",
+      "en": "Specialized CTFs organized by NCSA and partners (e.g., Cisco, AI) to promote specific cybersecurity skills."
+    },
+    "type": "ctf",
+    "suitableYears": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "recommendedSemester": "both",
+    "difficulty": "mixed",
+    "status": "annual",
+    "usualPeriod": {
+      "th": "ติดตามประกาศจาก สกมช.",
+      "en": "Watch for NCSA announcements"
+    },
+    "link": "https://www.ncsa.or.th",
+    "relatedSkills": [
+      "Network Security",
+      "AI Security",
+      "CTF"
+    ],
+    "teamRequired": true,
+    "portfolioWorthy": true,
+    "tags": [
+      "national",
+      "networking",
+      "AI"
+    ]
+  },
+  {
+    "id": "opp-trend-micro-ctf",
+    "title": "Trend Micro CTF (Raimund Genes Cup)",
+    "description": {
+      "th": "งานแข่งขันระดับนานาชาติจากบริษัทความปลอดภัยไซเบอร์ชั้นนำ โจทย์เน้นสถานการณ์จริงทางธุรกิจและการวิเคราะห์ภัยคุกคาม",
+      "en": "International competition by a leading cybersecurity company, focusing on real-world business scenarios and threat analysis."
+    },
+    "type": "ctf",
+    "suitableYears": [
+      3,
+      4
+    ],
+    "recommendedSemester": "both",
+    "difficulty": "advanced",
+    "status": "annual",
+    "usualPeriod": {
+      "th": "รอบคัดเลือกช่วงกลาง/ปลายปี",
+      "en": "Qualifiers mid/late year"
+    },
+    "link": "https://www.trendmicro.com",
+    "relatedSkills": [
+      "Threat Analysis",
+      "Forensics",
+      "Incident Response"
+    ],
+    "teamRequired": true,
+    "portfolioWorthy": true,
+    "tags": [
+      "corporate",
+      "enterprise",
+      "global"
+    ]
+  },
+  {
+    "id": "opp-ctftime",
+    "title": "CTFtime.org",
+    "description": {
+      "th": "ศูนย์รวมปฏิทินงานแข่ง CTF ทั่วโลกที่จัดขึ้นทุกๆ สัปดาห์! สามารถรวมทีมเข้าไปลุยเก็บคะแนน Global Ranking ได้เลย",
+      "en": "The global directory of CTF events happening every week. Form a team and earn points for Global Ranking!"
+    },
+    "type": "ctf",
+    "suitableYears": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "recommendedSemester": "both",
+    "difficulty": "mixed",
+    "status": "open",
+    "usualPeriod": {
+      "th": "มีงานแข่งใหม่ทุกสุดสัปดาห์",
+      "en": "New contests every weekend"
+    },
+    "link": "https://ctftime.org/",
+    "relatedSkills": [
+      "All Cybersecurity Domains",
+      "Teamwork",
+      "Consistency"
+    ],
+    "teamRequired": true,
+    "portfolioWorthy": true,
+    "tags": [
+      "directory",
+      "global",
+      "every week"
+    ]
+  },
+  {
+    "id": "opp-seccon",
+    "title": "SECCON CTF",
+    "description": {
+      "th": "งานแข่ง CTF ชื่อดังจากประเทศญี่ปุ่นที่มีมาตรฐานระดับสูงและเป็นที่นิยมของแฮกเกอร์ฝั่งเอเชีย",
+      "en": "A highly reputed CTF competition from Japan, very popular among Asian cybersecurity enthusiasts."
+    },
+    "type": "ctf",
+    "suitableYears": [
+      2,
+      3,
+      4
+    ],
+    "recommendedSemester": "both",
+    "difficulty": "advanced",
+    "status": "annual",
+    "usualPeriod": {
+      "th": "รอบคัดเลือกเดือน ส.ค. / ก.ย.",
+      "en": "Qualifiers around Aug/Sep"
+    },
+    "link": "https://www.seccon.jp/",
+    "relatedSkills": [
+      "Crypto",
+      "Pwn",
+      "Web",
+      "Reverse"
+    ],
+    "teamRequired": true,
+    "portfolioWorthy": true,
+    "tags": [
+      "japan",
+      "advanced",
+      "asian"
+    ]
   }
 ]

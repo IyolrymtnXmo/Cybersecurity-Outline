@@ -110,9 +110,9 @@ DEPLOY_TARGET=github-pages NEXT_PUBLIC_BASE_PATH="" npm run build
 
 ## 6. Official data verification checklist (with the program)
 
-- [ ] **Faculty** (`data/faculty.json`) — names, positions, expertise, emails,
+- [x] **Faculty** (`data/faculty.json`) — names, positions, expertise, emails,
       and profile links confirmed; flip `status` to `verified` once approved
-- [ ] **Contact** (`data/contact.json`) — program-specific office / coordinator
+- [x] **Contact** (`data/contact.json`) — program-specific office / coordinator
       filled in (currently "To be confirmed")
 - [ ] **Announcements** (`data/announcements.json`) — replace the SAMPLE entries
       with real announcements (or hide the page until ready)

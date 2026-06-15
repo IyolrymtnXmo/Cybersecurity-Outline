@@ -42,16 +42,6 @@ export default function ContactPage() {
         </p>
       </header>
 
-      <div className="flex items-start gap-3 rounded-xl border border-amber-200/70 bg-amber-50/60 px-4 py-3 text-sm text-amber-800 dark:border-amber-900/30 dark:bg-amber-900/10 dark:text-amber-300/90">
-        <ShieldQuestion className="mt-0.5 h-4 w-4 shrink-0" />
-        <p className="leading-relaxed">
-          {L(
-            "ข้อมูลติดต่อด้านล่างเป็นช่องทางของวิทยาลัยการคอมพิวเตอร์ ส่วนช่องทางเฉพาะของหลักสูตร Cybersecurity ที่ระบุว่า “รอตรวจสอบข้อมูล” อยู่ระหว่างยืนยันกับหลักสูตร",
-            "The details below are the College of Computing's channels. Cybersecurity-program-specific channels marked “To be confirmed” are pending verification with the program.",
-          )}
-        </p>
-      </div>
-
       <div className="grid gap-4 sm:grid-cols-2">
         {contact.cards.map((c) => {
           const Icon = KIND_ICON[c.kind] ?? Mail;
