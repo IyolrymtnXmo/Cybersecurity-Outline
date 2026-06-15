@@ -1,0 +1,157 @@
+[
+  {
+    "id": "chakchai-so-in",
+    "nameThai": "ศ.ดร.จักรชัย โสอินทร์",
+    "nameEnglish": "Prof. Chakchai So-In, Ph.D.",
+    "academicPosition": { "th": "ศาสตราจารย์", "en": "Professor" },
+    "role": null,
+    "email": "chakso@kku.ac.th",
+    "imageUrl": "https://api.computing.kku.ac.th//storage/images/1661876169-chakchaiSo-In1_1.png",
+    "expertise": [
+      "Mobile Computing",
+      "Internet of Things",
+      "Wireless Sensor Networks and Ad Hoc Networks",
+      "Computer Networks and Internet",
+      "Wireless and Cellular Networks",
+      "Parallel/Distributed Systems and Cloud Computing",
+      "Computer, System, Management, Modelling, and Security",
+      "Intelligent Systems",
+      "Smart X (Smart Farm, Home, Health-care, Car, Building, Device)"
+    ],
+    "bio": null,
+    "office": null,
+    "profileUrl": "https://computing.kku.ac.th/chakchai.so-in",
+    "status": "needs-verification"
+  },
+  {
+    "id": "satit-kravenkit",
+    "nameThai": "ผศ.ดร.สาธิต กระเวนกิจ",
+    "nameEnglish": "Asst. Prof. Satit Kravenkit, Ph.D.",
+    "academicPosition": { "th": "ผู้ช่วยศาสตราจารย์", "en": "Assistant Professor" },
+    "role": null,
+    "email": "satikr@kku.ac.th",
+    "imageUrl": "https://api.computing.kku.ac.th//storage/images/1675663623-sathit.jpeg",
+    "expertise": [
+      "Traceability System in Supply Chain",
+      "Internet of Things",
+      "Blockchain Technology",
+      "Cloud Computing",
+      "Computer Security"
+    ],
+    "bio": null,
+    "office": null,
+    "profileUrl": "https://computing.kku.ac.th/satit.kravenkit",
+    "status": "needs-verification"
+  },
+  {
+    "id": "phet-aimtongkham",
+    "nameThai": "ผศ.ดร.เพชร อิ่มทองคำ",
+    "nameEnglish": "Asst. Prof. Phet Aimtongkham, Ph.D.",
+    "academicPosition": { "th": "ผู้ช่วยศาสตราจารย์", "en": "Assistant Professor" },
+    "role": null,
+    "email": "phetim@kku.ac.th",
+    "imageUrl": "https://api.computing.kku.ac.th//storage/images/1661876198-phet-imtongkhum1_1.png",
+    "expertise": [
+      "Cloud Computing",
+      "Wireless Sensor Networks",
+      "Network Simulation",
+      "Systems Engineering",
+      "Internet of Things",
+      "Fuzzy Logic",
+      "Computer Security"
+    ],
+    "bio": null,
+    "office": null,
+    "profileUrl": "https://computing.kku.ac.th/phet.aimtongkham",
+    "status": "needs-verification"
+  },
+  {
+    "id": "jakkrit-kaewyotha",
+    "nameThai": "อ.ดร.จักรกฤษณ์ แก้วโยธา",
+    "nameEnglish": "Lecturer Jakkrit Kaewyotha, Ph.D.",
+    "academicPosition": { "th": "อาจารย์", "en": "Lecturer" },
+    "role": null,
+    "email": "jakkritk@kku.ac.th",
+    "imageUrl": "https://api.computing.kku.ac.th//storage/images/2025-11-1-1763315782-1.jpeg",
+    "expertise": [
+      "Applied Software Testing in Optimization Algorithms",
+      "Metaheuristic Algorithms",
+      "Optimization Algorithms",
+      "Image Processing",
+      "Machine Learning"
+    ],
+    "bio": null,
+    "office": null,
+    "profileUrl": "https://computing.kku.ac.th/jakkrit.kaewyotha",
+    "status": "needs-verification"
+  },
+  {
+    "id": "pongsathon-janyoi",
+    "nameThai": "อ.ดร.พงษ์ศธร จันทร์ยอย",
+    "nameEnglish": "Pongsathon Janyoi, Ph.D.",
+    "academicPosition": { "th": "อาจารย์", "en": "Lecturer" },
+    "role": null,
+    "email": "pongsathon@kku.ac.th",
+    "imageUrl": "https://api.computing.kku.ac.th//storage/images/1671073009-photo.jpeg",
+    "expertise": [
+      "Natural Language Processing",
+      "Speech Synthesis",
+      "Deep Learning"
+    ],
+    "bio": null,
+    "office": null,
+    "profileUrl": "https://computing.kku.ac.th/pongsathon.janyoi",
+    "status": "needs-verification"
+  },
+  {
+    "id": "isoon-kanjanasurat",
+    "nameThai": "ผศ.ดร.ไอศูรย์ กาญจนสุรัตน์",
+    "nameEnglish": "Asst. Prof. Isoon Kanjanasurat, Ph.D.",
+    "academicPosition": { "th": "ผู้ช่วยศาสตราจารย์", "en": "Assistant Professor" },
+    "role": null,
+    "email": "isoonkan@kku.ac.th",
+    "imageUrl": "https://api.computing.kku.ac.th//storage/images/1672027623-pic_io_Crop.jpeg",
+    "expertise": [
+      "Machine Learning and Intelligent Systems",
+      "Internet of Things",
+      "Embedded Systems",
+      "Computer Vision"
+    ],
+    "bio": null,
+    "office": null,
+    "profileUrl": "https://computing.kku.ac.th/isoon.kanjanasurat",
+    "status": "needs-verification"
+  },
+  {
+    "id": "chatchai-punriboon",
+    "nameThai": "อ.ดร.ชาติชาย ปุณริบูรณ์",
+    "nameEnglish": "Lecturer Chatchai Punriboon, Ph.D.",
+    "academicPosition": { "th": "อาจารย์", "en": "Lecturer" },
+    "role": null,
+    "email": "chatpu@kku.ac.th",
+    "imageUrl": "https://api.computing.kku.ac.th//storage/images/2025-11-4-1764130215-1.jpeg",
+    "expertise": ["Fuzzy Logic"],
+    "bio": null,
+    "office": null,
+    "profileUrl": "https://computing.kku.ac.th/chatchai.punriboon",
+    "status": "needs-verification"
+  },
+  {
+    "id": "jedsada-thongkanluang",
+    "nameThai": "อ.เจษฎา ทองก้านเหลือง",
+    "nameEnglish": "Lecturer Jedsada Thongkanluang",
+    "academicPosition": { "th": "อาจารย์", "en": "Lecturer" },
+    "role": null,
+    "email": "jedtho@kku.ac.th",
+    "imageUrl": "https://api.computing.kku.ac.th//storage/images/2025-11-5-1764209328-1.jpeg",
+    "expertise": [
+      "Penetration Testing (Ethical Hacking)",
+      "Digital Forensics (Blue Team / Defensive Security)",
+      "Incident Response & Cyber Defense"
+    ],
+    "bio": null,
+    "office": null,
+    "profileUrl": "https://computing.kku.ac.th/jedsada.thongkanluang",
+    "status": "needs-verification"
+  }
+]

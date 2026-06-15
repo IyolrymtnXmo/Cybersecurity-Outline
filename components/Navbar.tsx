@@ -12,28 +12,51 @@ import { asset } from "@/lib/asset";
 
 // Flagship items shown directly in the bar.
 const PRIMARY = [
-  { href: "/", k: "nav.home" },
+  { href: "/one-stop", k: "nav.oneStop" },
   { href: "/journey", k: "nav.journey" },
   { href: "/curriculum", k: "nav.curriculum" },
   { href: "/courses", k: "nav.courses" },
   { href: "/resources", k: "nav.resources" },
   { href: "/opportunities", k: "nav.opportunities" },
+  { href: "/faculty", k: "nav.faculty" },
 ];
 
-// Planning tools + program info, grouped under a "More" dropdown.
-const MORE = [
-  { href: "/electives", k: "nav.electives" },
-  { href: "/prerequisite", k: "nav.prerequisite" },
-  { href: "/study-plan", k: "nav.studyPlan" },
-  { href: "/grade-calculator", k: "nav.gradeCalculator" },
-  { href: "/schedule-planner", k: "nav.schedule" },
-  { href: "/pathways", k: "nav.pathways" },
-  { href: "/outcomes", k: "nav.outcomes" },
-  { href: "/careers", k: "nav.careers" },
-  { href: "/advisor", k: "nav.advisor" },
+// Grouped under a "More" dropdown.
+const MORE_GROUPS: { labelKey: string; items: { href: string; k: string }[] }[] = [
+  {
+    labelKey: "nav.group.tools",
+    items: [
+      { href: "/electives", k: "nav.electives" },
+      { href: "/prerequisite", k: "nav.prerequisite" },
+      { href: "/study-plan", k: "nav.studyPlan" },
+      { href: "/grade-calculator", k: "nav.gradeCalculator" },
+      { href: "/schedule-planner", k: "nav.schedule" },
+    ],
+  },
+  {
+    labelKey: "nav.group.services",
+    items: [
+      { href: "/admissions", k: "nav.admissions" },
+      { href: "/digital-services", k: "nav.digitalServices" },
+      { href: "/announcements", k: "nav.announcements" },
+      { href: "/faq", k: "nav.faq" },
+      { href: "/contact", k: "nav.contact" },
+    ],
+  },
+  {
+    labelKey: "nav.group.program",
+    items: [
+      { href: "/pathways", k: "nav.pathways" },
+      { href: "/outcomes", k: "nav.outcomes" },
+      { href: "/careers", k: "nav.careers" },
+      { href: "/advisor", k: "nav.advisor" },
+    ],
+  },
 ];
 
-const ALL = [...PRIMARY, ...MORE];
+const MORE = MORE_GROUPS.flatMap((g) => g.items);
+
+const ALL = [{ href: "/", k: "nav.home" }, ...PRIMARY, ...MORE];
 
 function isActive(pathname: string, href: string) {
   return pathname === href || (href !== "/" && pathname.startsWith(href));
@@ -88,7 +111,7 @@ export function Navbar() {
           </div>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden xl:flex items-center gap-1">
           {PRIMARY.map((item) => {
             const active = isActive(pathname, item.href);
             return (
@@ -122,23 +145,25 @@ export function Navbar() {
               <ChevronDown className={`h-4 w-4 transition-transform ${moreOpen ? "rotate-180" : ""}`} />
             </button>
             {moreOpen && (
-              <div className="absolute right-0 mt-2 w-60 overflow-hidden rounded-xl border border-slate-200 bg-white py-1.5 shadow-xl dark:border-navy-700 dark:bg-navy-900">
-                <p className="px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-slate-400">
-                  {t("nav.group.tools")}
-                </p>
-                {MORE.slice(0, 5).map((item) => (
-                  <DropdownLink key={item.href} href={item.href} active={isActive(pathname, item.href)}>
-                    {t(item.k)}
-                  </DropdownLink>
-                ))}
-                <div className="my-1 border-t border-slate-100 dark:border-navy-800" />
-                <p className="px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-slate-400">
-                  {t("nav.group.program")}
-                </p>
-                {MORE.slice(5).map((item) => (
-                  <DropdownLink key={item.href} href={item.href} active={isActive(pathname, item.href)}>
-                    {t(item.k)}
-                  </DropdownLink>
+              <div className="absolute right-0 mt-2 max-h-[70vh] w-60 overflow-y-auto rounded-xl border border-slate-200 bg-white py-1.5 shadow-xl dark:border-navy-700 dark:bg-navy-900">
+                {MORE_GROUPS.map((group, gi) => (
+                  <div key={group.labelKey}>
+                    {gi > 0 && (
+                      <div className="my-1 border-t border-slate-100 dark:border-navy-800" />
+                    )}
+                    <p className="px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+                      {t(group.labelKey)}
+                    </p>
+                    {group.items.map((item) => (
+                      <DropdownLink
+                        key={item.href}
+                        href={item.href}
+                        active={isActive(pathname, item.href)}
+                      >
+                        {t(item.k)}
+                      </DropdownLink>
+                    ))}
+                  </div>
                 ))}
               </div>
             )}
@@ -150,7 +175,7 @@ export function Navbar() {
           <ThemeToggle />
           <button
             aria-label={t("common.menu")}
-            className="lg:hidden rounded-lg p-2 hover:bg-slate-100 dark:hover:bg-navy-800"
+            className="xl:hidden rounded-lg p-2 hover:bg-slate-100 dark:hover:bg-navy-800"
             onClick={() => setOpen((s) => !s)}
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -159,7 +184,7 @@ export function Navbar() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-slate-200 bg-white dark:border-navy-700 dark:bg-navy-900 max-h-[70vh] overflow-y-auto">
+        <div className="xl:hidden border-t border-slate-200 bg-white dark:border-navy-700 dark:bg-navy-900 max-h-[70vh] overflow-y-auto">
           <div className="container-page py-2 flex flex-col">
             {ALL.map((item) => (
               <Link
