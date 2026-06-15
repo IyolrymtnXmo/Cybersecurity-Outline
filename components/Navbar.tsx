@@ -50,6 +50,7 @@ const MORE_GROUPS: { labelKey: string; items: { href: string; k: string }[] }[] 
       { href: "/outcomes", k: "nav.outcomes" },
       { href: "/careers", k: "nav.careers" },
       { href: "/advisor", k: "nav.advisor" },
+      { href: "/about", k: "nav.about" },
     ],
   },
 ];

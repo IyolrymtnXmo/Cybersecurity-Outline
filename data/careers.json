@@ -4,54 +4,333 @@
     "title": "Cybersecurity Engineer",
     "titleThai": "วิศวกรความมั่นคงปลอดภัยไซเบอร์",
     "description": "ออกแบบ ติดตั้ง และดูแลระบบป้องกันภัยคุกคามขององค์กร เช่น Firewall, IDS/IPS, SIEM",
-    "skills": ["Network Security", "System Hardening", "SIEM", "Incident Response"],
-    "relatedCourses": ["CP422011", "CP422031", "CP422052", "CP422013"],
-    "electiveHint": "เลือกวิชา/ชุดวิชาแนวเครือข่ายและการป้องกันระบบ"
+    "descriptionEn": "Design, deploy, and maintain organizational threat defense systems such as Firewall, IDS/IPS, and SIEM.",
+    "skills": [
+      "Network Security",
+      "System Hardening",
+      "SIEM",
+      "Incident Response"
+    ],
+    "relatedCourses": [
+      "CP422011",
+      "CP422031",
+      "CP422052",
+      "CP422013"
+    ],
+    "electiveHint": "เลือกวิชา/ชุดวิชาแนวเครือข่ายและการป้องกันระบบ",
+    "referenceUrlEn": "https://www.coursera.org/articles/cybersecurity-engineer",
+    "referenceUrlTh": "https://blog.skooldio.com/cyber-security-career-path/"
   },
   {
     "id": "penetration-tester",
     "title": "Penetration Tester",
     "titleThai": "ผู้ทดสอบเจาะระบบ",
     "description": "ทำการทดสอบเจาะระบบเพื่อค้นหาช่องโหว่ก่อนผู้ไม่หวังดี โดยจัดทำรายงานและข้อเสนอแนะการแก้ไข",
-    "skills": ["Offensive Security", "Web/Network Pentesting", "Scripting", "Vulnerability Analysis"],
-    "relatedCourses": ["CP422031", "CP422011", "CP421024"],
-    "electiveHint": "ควรเลือกวิชาเลือกที่เน้น Offensive Security, Web Security, Reverse Engineering"
+    "descriptionEn": "Perform penetration testing to discover vulnerabilities before malicious actors do, providing reports and remediation recommendations.",
+    "skills": [
+      "Offensive Security",
+      "Web/Network Pentesting",
+      "Scripting",
+      "Vulnerability Analysis"
+    ],
+    "relatedCourses": [
+      "CP422031",
+      "CP422011",
+      "CP421024"
+    ],
+    "electiveHint": "ควรเลือกวิชาเลือกที่เน้น Offensive Security, Web Security, Reverse Engineering",
+    "referenceUrlEn": "https://www.coursera.org/articles/penetration-tester",
+    "referenceUrlTh": "https://www.techtalkthai.com/what-is-penetration-testing/"
   },
   {
     "id": "cybersecurity-analyst",
     "title": "Cybersecurity System Analyst",
     "titleThai": "นักวิเคราะห์ระบบความมั่นคงปลอดภัยไซเบอร์",
     "description": "วิเคราะห์เหตุการณ์/ความเสี่ยงด้านความมั่นคง และจัดทำมาตรการเชิงนโยบายและเทคนิค",
-    "skills": ["Risk Analysis", "Threat Intelligence", "Compliance"],
-    "relatedCourses": ["CP422031", "CP422001", "CP422641"],
-    "electiveHint": "เลือกชุดวิชาด้าน Governance, Risk, Compliance"
+    "descriptionEn": "Analyze security events and risks, and formulate policy and technical countermeasures.",
+    "skills": [
+      "Risk Analysis",
+      "Threat Intelligence",
+      "Compliance"
+    ],
+    "relatedCourses": [
+      "CP422031",
+      "CP422001",
+      "CP422641"
+    ],
+    "electiveHint": "เลือกชุดวิชาด้าน Governance, Risk, Compliance",
+    "referenceUrlEn": "https://www.coursera.org/articles/cybersecurity-analyst-salary-guide-and-career-paths",
+    "referenceUrlTh": "https://www.techtalkthai.com/how-to-become-a-cybersecurity-analyst/"
   },
   {
     "id": "cybersecurity-architect",
     "title": "Cybersecurity System Architect",
     "titleThai": "สถาปนิกระบบความมั่นคงปลอดภัยไซเบอร์",
     "description": "ออกแบบสถาปัตยกรรมความปลอดภัยขององค์กรในระดับ Enterprise",
-    "skills": ["Security Architecture", "Cloud Security", "Zero Trust"],
-    "relatedCourses": ["CP422032", "CP422021", "CP421025"],
-    "electiveHint": "เลือกวิชา Cloud / Enterprise Security / Software Architecture"
+    "descriptionEn": "Design enterprise-level security architecture for organizations.",
+    "skills": [
+      "Security Architecture",
+      "Cloud Security",
+      "Zero Trust"
+    ],
+    "relatedCourses": [
+      "CP422032",
+      "CP422021",
+      "CP421025"
+    ],
+    "electiveHint": "เลือกวิชา Cloud / Enterprise Security / Software Architecture",
+    "referenceUrlEn": "https://www.coursera.org/articles/security-architect",
+    "referenceUrlTh": "https://www.aware.co.th/it-security-architect/"
   },
   {
     "id": "cybersecurity-consultant",
     "title": "Cybersecurity Consultant",
     "titleThai": "ที่ปรึกษาความมั่นคงปลอดภัยไซเบอร์",
     "description": "ให้คำปรึกษาด้านการประเมินความเสี่ยง ระบบควบคุม และมาตรฐานสากล (ISO 27001, NIST)",
-    "skills": ["Consulting", "Audit", "Standards & Frameworks"],
-    "relatedCourses": ["CP422001", "CP423131", "CP423132"],
-    "electiveHint": "เน้นชุดวิชา Governance/Audit และ Certification ที่เกี่ยวข้อง"
+    "descriptionEn": "Provide advisory services on risk assessment, control systems, and international standards (ISO 27001, NIST).",
+    "skills": [
+      "Consulting",
+      "Audit",
+      "Standards & Frameworks"
+    ],
+    "relatedCourses": [
+      "CP422001",
+      "CP423131",
+      "CP423132"
+    ],
+    "electiveHint": "เน้นชุดวิชา Governance/Audit และ Certification ที่เกี่ยวข้อง",
+    "referenceUrlEn": "https://www.coursera.org/articles/security-consultant",
+    "referenceUrlTh": "https://www.techtalkthai.com/security-consultant-career-path/"
   },
   {
     "id": "cybersecurity-manager",
     "title": "Cybersecurity System Manager / CISO",
     "titleThai": "ผู้จัดการ / ผู้บริหารด้านความมั่นคงปลอดภัยไซเบอร์",
     "description": "บริหารทีมและกลยุทธ์ Cybersecurity ขององค์กร เชื่อมโยงกับกลยุทธ์ธุรกิจ",
-    "skills": ["Leadership", "Strategy", "Risk Governance"],
-    "relatedCourses": ["CP422001", "CP423132", "CP423741"],
+    "descriptionEn": "Manage the organization's Cybersecurity team and strategy, aligning it with business goals.",
+    "skills": [
+      "Leadership",
+      "Strategy",
+      "Risk Governance"
+    ],
+    "relatedCourses": [
+      "CP422001",
+      "CP423132",
+      "CP423741"
+    ],
     "electiveHint": "เพิ่มทักษะด้านบริหาร, communication และ business",
-    "note": "ตำแหน่ง CISO ปกติต้องการประสบการณ์ทำงานหลายปี ข้อมูลนี้เป็นคำแนะนำเส้นทางอาชีพระยะยาว"
+    "note": "ตำแหน่ง CISO ปกติต้องการประสบการณ์ทำงานหลายปี ข้อมูลนี้เป็นคำแนะนำเส้นทางอาชีพระยะยาว",
+    "referenceUrlEn": "https://www.coursera.org/articles/chief-information-security-officer",
+    "referenceUrlTh": "https://www.techtalkthai.com/5-skills-to-be-ciso/"
+  },
+  {
+    "id": "incident-responder",
+    "title": "Incident Responder",
+    "titleThai": "ผู้ตอบสนองและจัดการเหตุการณ์ละเมิดความมั่นคงปลอดภัย",
+    "description": "ตอบสนองต่อเหตุการณ์การโจมตีทางไซเบอร์โดยทันที เพื่อระงับความเสียหาย ควบคุมสถานการณ์ และฟื้นฟูระบบ",
+    "descriptionEn": "Rapidly respond to cyberattacks and security breaches to mitigate damage, contain the situation, and restore systems.",
+    "skills": [
+      "Incident Handling",
+      "Threat Hunting",
+      "Log Analysis",
+      "Crisis Management"
+    ],
+    "relatedCourses": [
+      "CP422031",
+      "CP422013",
+      "CP421025"
+    ],
+    "electiveHint": "เลือกวิชาด้าน Defensive Security, Blue Team Operations และ Digital Forensics",
+    "referenceUrlEn": "https://www.coursera.org/articles/incident-responder",
+    "referenceUrlTh": "https://www.thaicert.or.th/papers/general/2018/pa2018ge001.html"
+  },
+  {
+    "id": "digital-forensics-investigator",
+    "title": "Digital Forensics Investigator",
+    "titleThai": "นักนิติวิทยาศาสตร์ดิจิทัล / ผู้สืบสวนอาชญากรรมไซเบอร์",
+    "description": "สืบสวนและรวบรวมพยานหลักฐานทางดิจิทัลจากอุปกรณ์และระบบเครือข่าย เพื่อหาต้นตอของการโจมตีหรือการกระทำผิด",
+    "descriptionEn": "Investigate and collect digital evidence from devices and networks to trace the origin of attacks or cybercrimes.",
+    "skills": [
+      "Digital Forensics",
+      "Evidence Recovery",
+      "Data Analysis",
+      "Legal Procedures"
+    ],
+    "relatedCourses": [
+      "CP422031",
+      "CP421025",
+      "CP422011"
+    ],
+    "electiveHint": "เน้นวิชาการตรวจสอบหลักฐานทางดิจิทัล และกฎหมายไซเบอร์",
+    "referenceUrlEn": "https://www.coursera.org/articles/computer-forensics-investigator",
+    "referenceUrlTh": "https://www.techtalkthai.com/what-is-digital-forensics/"
+  },
+  {
+    "id": "appsec-devsecops",
+    "title": "Application Security / DevSecOps Engineer",
+    "titleThai": "วิศวกรความมั่นคงปลอดภัยแอปพลิเคชัน (DevSecOps)",
+    "description": "ออกแบบและบูรณาการความมั่นคงปลอดภัยเข้าสู่กระบวนการพัฒนาซอฟต์แวร์ (SDLC) ตรวจสอบโค้ด และสร้างระบบอัตโนมัติ",
+    "descriptionEn": "Design and integrate security into the Software Development Life Cycle (SDLC), review code, and automate security testing.",
+    "skills": [
+      "DevSecOps",
+      "Secure Coding",
+      "CI/CD Security",
+      "SAST/DAST"
+    ],
+    "relatedCourses": [
+      "CP422032",
+      "CP421024",
+      "CP422021"
+    ],
+    "electiveHint": "ควรมีพื้นฐานด้าน Software Engineering และการเขียนโปรแกรมอย่างแข็งแกร่ง",
+    "referenceUrlEn": "https://www.coursera.org/articles/application-security-engineer",
+    "referenceUrlTh": "https://www.techtalkthai.com/devsecops-concept-and-implementation/"
+  },
+  {
+    "id": "malware-analyst",
+    "title": "Malware Analyst / Reverse Engineer",
+    "titleThai": "นักวิเคราะห์มัลแวร์ / วิศวกรย้อนรอย",
+    "description": "วิเคราะห์และแยกส่วนประกอบของโปรแกรมประสงค์ร้าย (Malware) เพื่อทำความเข้าใจพฤติกรรม รูปแบบ และวิธีการรับมือ",
+    "descriptionEn": "Dissect and analyze malicious software (Malware) to understand its behavior, patterns, and develop countermeasures.",
+    "skills": [
+      "Reverse Engineering",
+      "Assembly/C/C++",
+      "Malware Analysis",
+      "Sandbox Testing"
+    ],
+    "relatedCourses": [
+      "CP422031",
+      "CP421024",
+      "CP422013"
+    ],
+    "electiveHint": "แนะนำให้เรียนวิชาด้าน Systems Programming, Reverse Engineering และ Offensive Security",
+    "referenceUrlEn": "https://www.giac.org/certifications/reverse-engineering-malware-grem/",
+    "referenceUrlTh": "https://www.techtalkthai.com/basic-malware-analysis/"
+  },
+  {
+    "id": "cloud-security-engineer",
+    "title": "Cloud Security Engineer",
+    "titleThai": "วิศวกรความมั่นคงปลอดภัยคลาวด์",
+    "description": "ปกป้องโครงสร้างพื้นฐานบนคลาวด์ (AWS, Azure, GCP) และออกแบบมาตรการความปลอดภัยในสภาพแวดล้อมเสมือน",
+    "descriptionEn": "Protect cloud infrastructure (AWS, Azure, GCP) and design security measures for virtualized environments.",
+    "skills": [
+      "Cloud Architecture",
+      "Container Security",
+      "IAM",
+      "Infrastructure as Code"
+    ],
+    "relatedCourses": [
+      "CP422032",
+      "CP422021",
+      "CP421024"
+    ],
+    "electiveHint": "เน้นชุดวิชาด้าน Cloud Computing และ Enterprise Architecture",
+    "referenceUrlEn": "https://www.coursera.org/articles/cloud-security-engineer",
+    "referenceUrlTh": "https://www.techtalkthai.com/cloud-security-best-practices/"
+  },
+  {
+    "id": "iam-engineer",
+    "title": "Identity and Access Management (IAM) Engineer",
+    "titleThai": "วิศวกรระบบบริหารจัดการสิทธิ์และการเข้าถึง",
+    "description": "พัฒนาและดูแลระบบการยืนยันตัวตน การจัดการสิทธิ์ (SSO, MFA) เพื่อให้มั่นใจว่าผู้ใช้ที่ถูกต้องเท่านั้นที่เข้าถึงระบบได้",
+    "descriptionEn": "Develop and manage authentication and authorization systems (SSO, MFA) to ensure only authorized users access resources.",
+    "skills": [
+      "Access Control",
+      "OAuth/SAML",
+      "Active Directory",
+      "Zero Trust"
+    ],
+    "relatedCourses": [
+      "CP422011",
+      "CP422031",
+      "CP421025"
+    ],
+    "electiveHint": "เลือกวิชาด้าน Network Security และ System Administration",
+    "referenceUrlEn": "https://www.cyberark.com/what-is/identity-and-access-management/",
+    "referenceUrlTh": "https://www.techtalkthai.com/what-is-iam-identity-and-access-management/"
+  },
+  {
+    "id": "soc-analyst",
+    "title": "Security Operations Center (SOC) Analyst",
+    "titleThai": "นักวิเคราะห์ศูนย์ปฏิบัติการความมั่นคงปลอดภัย",
+    "description": "เฝ้าระวังเหตุการณ์ที่ผิดปกติแบบ 24/7 คัดกรองและวิเคราะห์การแจ้งเตือน (Alerts) เพื่อรับมือกับการโจมตีในระดับแรก",
+    "descriptionEn": "Monitor security events 24/7, triage and analyze alerts to provide first-line defense against attacks.",
+    "skills": [
+      "Log Monitoring",
+      "SIEM (Splunk, Elastic)",
+      "Triage",
+      "Network Traffic Analysis"
+    ],
+    "relatedCourses": [
+      "CP422011",
+      "CP422031",
+      "CP422013"
+    ],
+    "electiveHint": "ควรมีพื้นฐานเครือข่ายที่แม่นยำและเรียนรู้วิชาด้าน Defensive Security",
+    "referenceUrlEn": "https://www.coursera.org/articles/soc-analyst",
+    "referenceUrlTh": "https://www.techtalkthai.com/what-is-soc-security-operations-center/"
+  },
+  {
+    "id": "threat-intelligence-analyst",
+    "title": "Threat Intelligence Analyst",
+    "titleThai": "นักวิเคราะห์ภัยคุกคามทางไซเบอร์",
+    "description": "รวบรวมและวิเคราะห์ข้อมูลเกี่ยวกับกลุ่มแฮกเกอร์ เทคนิค และเครื่องมือใหม่ๆ เพื่อเตรียมการป้องกันล่วงหน้า",
+    "descriptionEn": "Gather and analyze information about threat actors, techniques, and tools to proactively prepare defenses.",
+    "skills": [
+      "OSINT",
+      "Threat Modeling",
+      "Data Analysis",
+      "Cyber Kill Chain"
+    ],
+    "relatedCourses": [
+      "CP422031",
+      "CP422001",
+      "CP422641"
+    ],
+    "electiveHint": "เน้นวิชาการวิเคราะห์ความเสี่ยงและ Defensive Security",
+    "referenceUrlEn": "https://www.crowdstrike.com/cybersecurity-101/threat-intelligence/",
+    "referenceUrlTh": "https://www.techtalkthai.com/what-is-cyber-threat-intelligence/"
+  },
+  {
+    "id": "privacy-engineer",
+    "title": "Data Privacy Engineer / DPO",
+    "titleThai": "วิศวกรความเป็นส่วนตัวของข้อมูล",
+    "description": "ออกแบบระบบให้สอดคล้องกับกฎหมายคุ้มครองข้อมูลส่วนบุคคล (PDPA/GDPR) และประยุกต์ใช้ Privacy by Design",
+    "descriptionEn": "Design systems to comply with data protection laws (PDPA/GDPR) and apply Privacy by Design principles.",
+    "skills": [
+      "Data Privacy Laws",
+      "Cryptography",
+      "Compliance",
+      "Data Masking"
+    ],
+    "relatedCourses": [
+      "CP422001",
+      "CP423131",
+      "CP423132"
+    ],
+    "electiveHint": "ควรเรียนวิชาด้าน กฎหมายไซเบอร์ นโยบายไอที และวิทยาการรหัสลับ",
+    "referenceUrlEn": "https://iapp.org/certifications/cipt/",
+    "referenceUrlTh": "https://www.techtalkthai.com/pdpa-for-it-and-cybersecurity/"
+  },
+  {
+    "id": "iot-ot-security",
+    "title": "IoT/OT Security Specialist",
+    "titleThai": "ผู้เชี่ยวชาญด้านความมั่นคงปลอดภัย IoT/OT",
+    "description": "รักษาความปลอดภัยให้กับระบบควบคุมทางอุตสาหกรรม (SCADA/ICS) และอุปกรณ์อินเทอร์เน็ตของสรรพสิ่ง (IoT)",
+    "descriptionEn": "Secure Industrial Control Systems (SCADA/ICS) and Internet of Things (IoT) devices from cyber threats.",
+    "skills": [
+      "Embedded Systems",
+      "SCADA/ICS",
+      "Hardware Security",
+      "Network Protocols"
+    ],
+    "relatedCourses": [
+      "CP422011",
+      "CP422013",
+      "CP421025"
+    ],
+    "electiveHint": "เลือกวิชาด้าน Hardware, Embedded Systems หรือ IoT Security",
+    "referenceUrlEn": "https://www.sans.org/cyber-security-courses/ics-scada-cyber-security-essentials/",
+    "referenceUrlTh": "https://www.techtalkthai.com/what-is-ot-security/"
   }
 ]

@@ -25,16 +25,6 @@ export default function FacultyPage() {
         </p>
       </header>
 
-      <div className="flex items-start gap-3 rounded-xl border border-amber-200/70 bg-amber-50/60 px-4 py-3 text-sm text-amber-800 dark:border-amber-900/30 dark:bg-amber-900/10 dark:text-amber-300/90">
-        <Info className="mt-0.5 h-4 w-4 shrink-0" />
-        <p className="leading-relaxed">
-          {L(
-            "ข้อมูลคณาจารย์ในหน้านี้รวบรวมจากเว็บไซต์วิทยาลัย และควรได้รับการตรวจสอบกับหลักสูตรก่อนเผยแพร่จริง ความเชี่ยวชาญแสดงตามต้นฉบับ (ภาษาอังกฤษ)",
-            "Faculty information here is compiled from the college website and should be verified by the program before public launch. Areas of expertise are shown as provided (in English).",
-          )}
-        </p>
-      </div>
-
       <FacultyDirectory />
     </div>
   );

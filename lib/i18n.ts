@@ -7,7 +7,7 @@ type Entry = { th: string; en: string };
 export const dict: Record<string, Entry> = {
   // ---------------------------------------------------------------- nav
   "nav.home": { th: "หน้าแรก", en: "Home" },
-  "nav.curriculum": { th: "Curriculum Outline", en: "Curriculum Outline" },
+  "nav.curriculum": { th: "โครงสร้างหลักสูตร", en: "Curriculum Outline" },
   "nav.courses": { th: "รายวิชา", en: "Courses" },
   "nav.prerequisite": { th: "ตรวจวิชาต่อ", en: "Prereq Check" },
   "nav.studyPlan": { th: "แผนการเรียน", en: "Study Plan" },
@@ -54,11 +54,12 @@ export const dict: Record<string, Entry> = {
   "common.lang.switchToTh": { th: "สลับเป็นภาษาไทย", en: "Switch to Thai" },
   "common.theme.toDark": { th: "สลับเป็นธีมมืด", en: "Switch to dark theme" },
   "common.theme.toLight": { th: "สลับเป็นธีมสว่าง", en: "Switch to light theme" },
+  "common.expertise": { th: "ความเชี่ยวชาญ", en: "COMMON EXPERTISE" },
 
   // -------------------------------------------------------------- footer
   "footer.intro": {
-    th: "เว็บไซต์นี้จัดทำเพื่อช่วยวางแผนการเรียนเบื้องต้นในหลักสูตร วท.บ. ความมั่นคงปลอดภัยไซเบอร์ ข้อมูลอ้างอิงจากเอกสารตัวอย่างแผนการศึกษาของวิทยาลัยการคอมพิวเตอร์",
-    en: "An unofficial student navigator for the B.Sc. Cybersecurity program, built from the College of Computing's sample study plan.",
+    th: "เว็บไซต์นี้จัดทำขึ้นเพื่อสนับสนุนการสื่อสารข้อมูลหลักสูตรและช่วยวางแผนการเรียนในหลักสูตร วท.บ. ความมั่นคงปลอดภัยไซเบอร์ วิทยาลัยการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น ข้อมูลที่มีผลทางการควรตรวจสอบจากประกาศของวิทยาลัย/มหาวิทยาลัย",
+    en: "This site supports program communication and academic planning for the B.Sc. Cybersecurity program at the College of Computing, Khon Kaen University. Always verify official matters with college/university announcements.",
   },
   "footer.disclaimer": {
     th: "ข้อมูลในเว็บไซต์เป็นแนวทางเบื้องต้น นักศึกษาควรตรวจสอบกับประกาศของมหาวิทยาลัย หลักสูตร และอาจารย์ที่ปรึกษาก่อนลงทะเบียนจริง",
@@ -72,8 +73,8 @@ export const dict: Record<string, Entry> = {
     en: "Created by Nansaphat Termsub (CY01)",
   },
   "footer.copy": {
-    th: "CY Curriculum Outline · Unofficial student navigator",
-    en: "CY Curriculum Outline · Unofficial student navigator",
+    th: "หลักสูตร วท.บ. ความมั่นคงปลอดภัยไซเบอร์ · วิทยาลัยการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น",
+    en: "B.Sc. Cybersecurity · College of Computing, KKU",
   },
 
   // -------------------------------------------------------------- home
@@ -144,8 +145,8 @@ export const dict: Record<string, Entry> = {
   "home.careers.title": { th: "อาชีพที่รออยู่", en: "Careers waiting for you" },
 
   // ---------------------------------------------------------- curriculum
-  "curriculum.kicker": { th: "Interactive Curriculum Map", en: "Interactive Curriculum Map" },
-  "curriculum.title": { th: "CY Curriculum Outline", en: "CY Curriculum Outline" },
+  "curriculum.kicker": { th: "แผนผังหลักสูตรแบบอินเทอร์แอกทีฟ", en: "Interactive Curriculum Map" },
+  "curriculum.title": { th: "โครงสร้างหลักสูตร", en: "CY Curriculum Outline" },
   "curriculum.desc": {
     th: "ภาพรวมหลักสูตรแบบ interactive — hover เพื่อดูเส้นทาง prerequisite, คลิกเพื่อดูรายละเอียดวิชา และสลับ View ตามมุมมองที่ต้องการ",
     en: "An interactive curriculum overview — hover to trace prerequisites, click to open course details, and switch views below.",
@@ -154,12 +155,16 @@ export const dict: Record<string, Entry> = {
     th: "บนหน้าจอเล็ก เราแสดงเป็น Accordion Timeline เพื่อให้อ่านง่าย กรุณาใช้หน้าจอที่กว้างขึ้นเพื่อดู Flow Diagram แบบเต็ม",
     en: "On small screens we show an accordion timeline — use a wider screen to view the full flow diagram.",
   },
-  "curriculum.track": { th: "Track", en: "Track" },
-  "curriculum.view": { th: "View", en: "View" },
-  "curriculum.view.academic": { th: "Academic Plan", en: "Academic Plan" },
-  "curriculum.view.prereq": { th: "Prerequisite Network", en: "Prerequisite Network" },
-  "curriculum.view.risk": { th: "Risk Map", en: "Risk Map" },
-  "curriculum.view.student": { th: "Student Friendly", en: "Student Friendly" },
+  "curriculum.layout": { th: "เค้าโครง", en: "Layout" },
+  "curriculum.layout.vertical": { th: "แนวดิ่ง", en: "Vertical" },
+  "curriculum.layout.horizontal": { th: "แนวนอน", en: "Horizontal" },
+  "curriculum.track": { th: "เส้นทาง", en: "Track" },
+  "curriculum.cumulative": { th: "รวมสะสม", en: "cumulative" },
+  "curriculum.view": { th: "มุมมอง", en: "View" },
+  "curriculum.view.academic": { th: "แผนการเรียน", en: "Academic Plan" },
+  "curriculum.view.prereq": { th: "โครงข่ายวิชาบังคับก่อน", en: "Prerequisite Network" },
+  "curriculum.view.risk": { th: "ระดับความเสี่ยง", en: "Risk Map" },
+  "curriculum.view.student": { th: "สำหรับนักศึกษา", en: "Student Friendly" },
   "curriculum.view.academic.desc": {
     th: "ดูแผนตามหมวดวิชา (สีตามประเภท)",
     en: "Standard plan view, colored by category",
@@ -191,6 +196,10 @@ export const dict: Record<string, Entry> = {
   },
   "catalog.found": { th: "พบ", en: "Found" },
   "catalog.coursesCount": { th: "วิชา", en: "courses" },
+  "catalog.placeholder": { th: "ค้นหารหัสวิชา หรือชื่อวิชา...", en: "Search course code or name..." },
+  "catalog.categories": { th: "หมวดหมู่วิชา", en: "Categories" },
+  "catalog.noResultsSub": { th: "ลองค้นหาด้วยคำอื่น หรือยกเลิกตัวกรองบางตัว", en: "Try searching with a different term or clearing some filters." },
+  "catalog.drawer.close": { th: "ปิด", en: "Close" },
   "catalog.total": { th: "วิชาในระบบ", en: "courses in the catalog" },
   "catalog.showing": { th: "แสดง", en: "Showing" },
 
@@ -241,6 +250,13 @@ export const dict: Record<string, Entry> = {
   "plan.col.name": { th: "ชื่อวิชา", en: "Course" },
   "plan.col.credits": { th: "หน่วยกิต", en: "Credits" },
   "plan.col.category": { th: "หมวด", en: "Category" },
+  "common.nonCredit": { th: "ไม่นับหน่วยกิต", en: "non-credit" },
+  "plan.year": { th: "ปีที่", en: "Year" },
+  "plan.semester": { th: "ภาคการศึกษาที่", en: "Semester" },
+  "plan.sem": { th: "เทอม", en: "Sem" },
+  "plan.view.card": { th: "การ์ด", en: "Cards" },
+  "plan.view.timeline": { th: "ไทม์ไลน์", en: "Timeline" },
+  "plan.view.table": { th: "ตาราง", en: "Table" },
 
   // ---------------------------------------------------------- grade calc
   "gpa.kicker": { th: "Grade Calculator", en: "Grade Calculator" },

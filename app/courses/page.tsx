@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Fuse from "fuse.js";
-import { Search, Filter, BookOpen, Layers, CheckSquare, AlertTriangle } from "lucide-react";
+import { Search, Filter, BookOpen, Layers, CheckSquare, AlertTriangle, ChevronDown } from "lucide-react";
 import { courses } from "@/lib/data";
 import type { Course, CourseCategory } from "@/lib/types";
 import { CourseCard } from "@/components/CourseCard";
@@ -142,7 +142,7 @@ export default function CoursesPage() {
         <div className="mt-5 border-t border-slate-100 pt-5 dark:border-navy-700">
           <div className="flex items-center gap-2 mb-2">
             <Filter className="h-4 w-4 text-slate-400" />
-            <span className="text-sm font-medium text-slate-600 dark:text-slate-300">หมวดหมู่วิชา</span>
+            <span className="text-sm font-medium text-slate-600 dark:text-slate-300">{t("catalog.categories")}</span>
           </div>
           <div className="flex flex-wrap gap-2">
             {CATS.map((c) => {
@@ -157,7 +157,7 @@ export default function CoursesPage() {
                       : "bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-navy-800 dark:text-slate-300 dark:hover:bg-navy-700"
                   }`}
                 >
-                  {c.label}
+                  {c.id === "all" ? t("common.allCategories") : c.label}
                 </button>
               );
             })}
@@ -171,22 +171,13 @@ export default function CoursesPage() {
           if (!items || items.length === 0) return null;
 
           return (
-            <section key={c.id} className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <div className="mb-4 flex items-center gap-3 border-b border-slate-200 pb-2 dark:border-navy-700">
-                <Layers className="h-5 w-5 text-cyan-600 dark:text-cyan-400" />
-                <h2 className="text-xl font-semibold text-navy-900 dark:text-slate-100">
-                  {c.label}
-                </h2>
-                <span className="flex h-6 items-center justify-center rounded-full bg-slate-100 px-2.5 text-xs font-medium text-slate-600 dark:bg-navy-800 dark:text-slate-300">
-                  {items.length}
-                </span>
-              </div>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {items.map((course) => (
-                  <CourseCard key={course.id} course={course} onClick={(co) => setSelected(co)} />
-                ))}
-              </div>
-            </section>
+            <CollapsibleCategory 
+              key={c.id} 
+              c={c} 
+              items={items} 
+              onSelect={(co) => setSelected(co)} 
+              defaultOpen={cat === c.id} 
+            />
           );
         })}
 
@@ -196,7 +187,7 @@ export default function CoursesPage() {
               <Search className="h-6 w-6 text-slate-400" />
             </div>
             <p className="text-lg font-medium">{t("common.noResults")}</p>
-            <p className="mt-1 text-sm">ลองค้นหาด้วยคำอื่น หรือยกเลิกตัวกรองบางตัว</p>
+            <p className="mt-1 text-sm">{t("catalog.noResultsSub")}</p>
           </div>
         )}
       </div>
@@ -210,5 +201,35 @@ export default function CoursesPage() {
         }}
       />
     </div>
+  );
+}
+
+function CollapsibleCategory({ c, items, onSelect, defaultOpen }: { c: any, items: Course[], onSelect: (c: Course) => void, defaultOpen: boolean }) {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+  return (
+    <section className="animate-in fade-in slide-in-from-bottom-4 duration-500 card p-0 overflow-hidden border border-slate-200 dark:border-navy-700 mb-6">
+      <button 
+        className="w-full flex items-center justify-between p-4 bg-slate-50 dark:bg-navy-900/50 hover:bg-slate-100 dark:hover:bg-navy-800 transition-colors focus:outline-none"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <div className="flex items-center gap-3">
+          <Layers className="h-5 w-5 text-cyan-600 dark:text-cyan-400" />
+          <h2 className="text-xl font-semibold text-navy-900 dark:text-slate-100">
+            {c.label}
+          </h2>
+          <span className="flex h-6 items-center justify-center rounded-full bg-white px-2.5 text-xs font-medium text-slate-600 dark:bg-navy-800 dark:text-slate-300 border border-slate-200 dark:border-navy-700">
+            {items.length}
+          </span>
+        </div>
+        <ChevronDown className={`h-5 w-5 text-slate-400 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+      </button>
+      {isOpen && (
+        <div className="p-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 bg-white dark:bg-navy-950 border-t border-slate-100 dark:border-navy-800">
+          {items.map((course) => (
+            <CourseCard key={course.id} course={course} onClick={onSelect} />
+          ))}
+        </div>
+      )}
+    </section>
   );
 }

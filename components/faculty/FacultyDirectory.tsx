@@ -130,7 +130,7 @@ export function FacultyDirectory() {
           </p>
         </div>
       ) : (
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
           {results.map((m) => (
             <FacultyCard key={m.id} member={m} />
           ))}

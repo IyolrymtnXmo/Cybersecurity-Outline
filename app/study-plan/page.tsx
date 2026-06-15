@@ -12,7 +12,7 @@ type View = "card" | "timeline" | "table";
 
 export default function StudyPlanPage() {
   const [track, setTrack] = useState<TrackKey>("project");
-  const [view, setView] = useState<View>("card");
+  const [view, setView] = useState<View>("timeline");
   const [selected, setSelected] = useState<Course | null>(null);
   const { t, courseName, courseSub } = useLang();
 
@@ -63,7 +63,7 @@ export default function StudyPlanPage() {
                 : "text-slate-600 hover:text-navy-900 hover:bg-slate-200/50 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:bg-navy-900/50"
             }`}
           >
-            <LayoutGrid className="w-4 h-4" /> <span className="hidden md:inline">การ์ด</span>
+            <LayoutGrid className="w-4 h-4" /> <span className="hidden md:inline">{t("plan.view.card")}</span>
           </button>
           <button
             onClick={() => setView("timeline")}
@@ -73,7 +73,7 @@ export default function StudyPlanPage() {
                 : "text-slate-600 hover:text-navy-900 hover:bg-slate-200/50 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:bg-navy-900/50"
             }`}
           >
-            <List className="w-4 h-4" /> <span className="hidden md:inline">ไทม์ไลน์</span>
+            <List className="w-4 h-4" /> <span className="hidden md:inline">{t("plan.view.timeline")}</span>
           </button>
           <button
             onClick={() => setView("table")}
@@ -83,7 +83,7 @@ export default function StudyPlanPage() {
                 : "text-slate-600 hover:text-navy-900 hover:bg-slate-200/50 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:bg-navy-900/50"
             }`}
           >
-            <TableIcon className="w-4 h-4" /> <span className="hidden md:inline">ตาราง</span>
+            <TableIcon className="w-4 h-4" /> <span className="hidden md:inline">{t("plan.view.table")}</span>
           </button>
         </div>
       </div>
@@ -110,14 +110,14 @@ export default function StudyPlanPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 dark:divide-navy-800">
-                {allTerms.map((t) =>
-                  t.courses.map((cid, i) => {
+                {allTerms.map((term) =>
+                  term.courses.map((cid, i) => {
                     const c = getCourse(cid);
                     if (!c) return null;
                     const isFirstInTerm = i === 0;
                     return (
                       <tr
-                        key={`${t.year}-${t.semester}-${cid}-${i}`}
+                        key={`${term.year}-${term.semester}-${cid}-${i}`}
                         className={`hover:bg-cyan-50/50 dark:hover:bg-cyan-900/10 cursor-pointer transition-colors ${
                           isFirstInTerm ? "border-t-2 border-slate-200 dark:border-navy-700" : ""
                         }`}
@@ -126,7 +126,7 @@ export default function StudyPlanPage() {
                         <td className="px-5 py-3 whitespace-nowrap align-top pt-4">
                           {isFirstInTerm && (
                             <span className="inline-flex font-semibold text-navy-900 dark:text-slate-200">
-                              {t.label}
+                            {t("plan.year")} {term.year} {t("plan.semester")} {term.semester}
                             </span>
                           )}
                         </td>
@@ -137,8 +137,8 @@ export default function StudyPlanPage() {
                           <p className="font-medium text-navy-900 dark:text-slate-200">{courseName(c)}</p>
                           <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{courseSub(c)}</p>
                         </td>
-                        <td className="px-5 py-3 font-mono text-xs text-slate-600 dark:text-slate-300 align-top pt-4">
-                          {c.creditStructure ?? c.credits}
+                        <td className="px-5 py-3 font-mono text-xs text-slate-600 dark:text-slate-300 align-top pt-4 whitespace-nowrap">
+                          {String(c.creditStructure ?? c.credits).replace("ไม่นับหน่วยกิต", t("common.nonCredit") || "non-credit").replace("หน่วยกิต", t("common.credits")).trim()}
                         </td>
                         <td className="px-5 py-3 align-top pt-3">
                           <span className="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-[10px] font-medium text-slate-700 dark:bg-navy-800 dark:text-slate-300">
@@ -164,10 +164,10 @@ export default function StudyPlanPage() {
                 <div>
                   <h3 className="font-bold text-lg text-navy-900 dark:text-white flex items-center gap-2">
                     <BookOpen className="w-5 h-5 text-cyan-600 dark:text-cyan-400" />
-                    {term.label}
+                    {t("plan.year")} {term.year} {t("plan.semester")} {term.semester}
                   </h3>
                   <p className="text-xs font-medium text-slate-500 dark:text-slate-400 mt-1">
-                    {term.totalCredits} หน่วยกิต {term.cumulative ? `· สะสม ${term.cumulative}` : ""}
+                    {term.totalCredits} {t("common.credits")} {term.cumulative ? `· ${t("curriculum.cumulative")} ${term.cumulative}` : ""}
                   </p>
                 </div>
               </div>
@@ -188,8 +188,8 @@ export default function StudyPlanPage() {
                           <span className="font-mono text-[10px] font-bold text-slate-400 dark:text-slate-500 tracking-wider">
                             {c.code}
                           </span>
-                          <span className="font-mono text-[10px] text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-navy-950 px-1.5 py-0.5 rounded">
-                            {c.creditStructure ?? c.credits}
+                          <span className="font-mono text-[10px] text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-navy-950 px-1.5 py-0.5 rounded whitespace-nowrap">
+                            {String(c.creditStructure ?? c.credits).replace("ไม่นับหน่วยกิต", t("common.nonCredit") || "non-credit").replace("หน่วยกิต", t("common.credits")).trim()}
                           </span>
                         </div>
                         <p className="text-sm font-semibold text-navy-900 dark:text-slate-200 leading-snug group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors">
@@ -222,14 +222,14 @@ export default function StudyPlanPage() {
                 {/* Term Header */}
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-navy-900 dark:text-slate-100 flex items-center gap-2">
-                    {term.label}
+                    {t("plan.year")} {term.year} {t("plan.semester")} {term.semester}
                   </h3>
                   <div className="flex items-center gap-3 mt-1 text-xs font-medium text-slate-500 dark:text-slate-400">
-                    <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> {term.totalCredits} หน่วยกิต</span>
+                    <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> {term.totalCredits} {t("common.credits")}</span>
                     {term.cumulative && (
                       <>
                         <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600" />
-                        <span className="flex items-center gap-1"><Bookmark className="w-3.5 h-3.5" /> สะสม {term.cumulative}</span>
+                        <span className="flex items-center gap-1"><Bookmark className="w-3.5 h-3.5" /> {t("curriculum.cumulative")} {term.cumulative}</span>
                       </>
                     )}
                   </div>
@@ -251,8 +251,8 @@ export default function StudyPlanPage() {
                           <span className={`px-2 py-0.5 rounded text-[10px] font-bold text-white ${s.color} shadow-sm`}>
                             {c.code}
                           </span>
-                          <span className="font-mono text-[10px] text-slate-400 dark:text-slate-500">
-                            {c.creditStructure ?? c.credits}
+                          <span className="font-mono text-[10px] text-slate-400 dark:text-slate-500 whitespace-nowrap">
+                            {String(c.creditStructure ?? c.credits).replace("ไม่นับหน่วยกิต", t("common.nonCredit") || "non-credit").replace("หน่วยกิต", t("common.credits")).trim()}
                           </span>
                         </div>
                         <p className="text-sm font-semibold text-navy-900 dark:text-slate-200 leading-snug group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors">
