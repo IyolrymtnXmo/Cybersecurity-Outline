@@ -31,7 +31,7 @@
     "category": "curriculum",
     "year": "all",
     "semester": "all",
-    "externalUrl": "https://computing.kku.ac.th/cs/cybersecurity#courses",
+    "externalUrl": "https://computing.kku.ac.th/content/branch/65",
     "fileType": "link",
     "status": "official",
     "owner": "วิทยาลัยการคอมพิวเตอร์",
@@ -68,7 +68,7 @@
     "category": "registration",
     "year": "all",
     "semester": "all",
-    "externalUrl": "https://reg.kku.ac.th",
+    "externalUrl": "https://reg-mirror.kku.ac.th/registrar/enrollguide.asp?avs36689688=1",
     "fileType": "link",
     "status": "recommended",
     "tags": ["ลงทะเบียน", "registration", "reg", "calendar"]

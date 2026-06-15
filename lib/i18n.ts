@@ -54,6 +54,7 @@ export const dict: Record<string, Entry> = {
   "common.lang.switchToTh": { th: "สลับเป็นภาษาไทย", en: "Switch to Thai" },
   "common.theme.toDark": { th: "สลับเป็นธีมมืด", en: "Switch to dark theme" },
   "common.theme.toLight": { th: "สลับเป็นธีมสว่าง", en: "Switch to light theme" },
+  "common.expertise": { th: "ความเชี่ยวชาญ", en: "COMMON EXPERTISE" },
 
   // -------------------------------------------------------------- footer
   "footer.intro": {

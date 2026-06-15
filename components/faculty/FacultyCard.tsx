@@ -21,8 +21,9 @@ export function FacultyCard({ member }: { member: FacultyMember }) {
   const showImage = member.imageUrl && !imgFailed;
 
   return (
-    <article className="card flex flex-col gap-4 p-5 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-navy-900/5 dark:hover:shadow-black/40">
-      <div className="flex items-start gap-4">
+    <article className="card relative flex flex-col md:flex-row p-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-black/40 overflow-hidden group bg-white dark:bg-navy-900">
+      {/* Left Image Section */}
+      <div className="relative w-full md:w-[42%] shrink-0 bg-[#e2e2e2] dark:bg-navy-800 h-[300px] md:h-auto overflow-hidden">
         {showImage ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -30,70 +31,103 @@ export function FacultyCard({ member }: { member: FacultyMember }) {
             alt={name}
             loading="lazy"
             onError={() => setImgFailed(true)}
-            className="h-20 w-20 shrink-0 rounded-2xl object-cover ring-1 ring-slate-200 dark:ring-navy-700"
+            className="w-full h-full object-cover object-top"
           />
         ) : (
-          <div className="grid h-20 w-20 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-navy-700 to-cyan-600 text-xl font-semibold text-white">
+          <div className="grid h-full w-full place-items-center bg-gradient-to-br from-navy-700 to-cyan-600 text-3xl font-bold text-white">
             {facultyInitials(member)}
           </div>
         )}
-
-        <div className="min-w-0 flex-1">
-          {member.status === "needs-verification" ? (
-            <span className="badge border-amber-300 bg-amber-50 text-amber-700 dark:text-amber-300">
-              <ShieldQuestion className="h-3 w-3" /> {t("common.needsVerification")}
-            </span>
-          ) : member.status === "verified" ? (
-            <span className="badge border-emerald-300 bg-emerald-50 text-emerald-700 dark:text-emerald-300">
-              <BadgeCheck className="h-3 w-3" /> {t("common.official")}
-            </span>
-          ) : null}
-
-          <h3 className="mt-1.5 font-semibold leading-snug text-navy-900 dark:text-white">
-            {name}
-          </h3>
-          {subName && (
-            <p className="text-sm text-slate-500 dark:text-slate-400">{subName}</p>
-          )}
-          {position && (
-            <p className="mt-1 text-xs font-medium text-cyan-700 dark:text-cyan-400">
-              {position}
-            </p>
-          )}
-        </div>
       </div>
 
-      {member.role && (
-        <p className="text-sm text-slate-600 dark:text-slate-400">
-          {member.role[locale] || member.role.th}
-        </p>
-      )}
-
-      {member.expertise.length > 0 && (
-        <div className="flex flex-wrap gap-1.5">
-          {member.expertise.map((e) => (
-            <span key={e} className="chip surface-2 text-muted">
-              {e}
+      {/* Right Content Section */}
+      <div className="flex flex-col flex-1 p-5 md:p-6 relative min-w-0">
+        {/* Status Badges */}
+        <div className="absolute top-4 right-4 flex flex-col gap-2 z-10">
+          {member.status === "needs-verification" ? (
+            <span className="badge border-amber-300 bg-amber-50 text-amber-700 dark:bg-navy-900/90 dark:text-amber-300 shadow-sm backdrop-blur-sm px-2 py-0.5 text-[10px]">
+              <ShieldQuestion className="h-3 w-3" /> {t("common.needsVerification") || "รอตรวจสอบ"}
             </span>
-          ))}
+          ) : member.status === "verified" ? (
+            <span className="badge border-emerald-300 bg-emerald-50 text-emerald-700 dark:bg-navy-900/90 dark:text-emerald-300 shadow-sm backdrop-blur-sm px-2 py-0.5 text-[10px]">
+              <BadgeCheck className="h-3 w-3" /> {t("common.official") || "ทางการ"}
+            </span>
+          ) : null}
         </div>
-      )}
 
-      <div className="mt-auto flex flex-wrap items-center gap-2 pt-1">
-        {member.email && (
-          <a href={`mailto:${member.email}`} className="btn-outline flex-1 text-sm">
-            <Mail className="h-4 w-4" /> {t("common.email")}
-          </a>
+        {/* Header Info (Role) */}
+        {member.role && (
+          <p className="text-[11px] md:text-xs text-slate-400 dark:text-slate-500 mb-1.5 pr-20">
+            {member.role[locale] || member.role.th}
+          </p>
         )}
+
+        {/* Name */}
+        <h3 className="text-base md:text-lg font-bold leading-snug text-navy-900 dark:text-white pr-16 truncate">
+          {locale === "en" ? member.nameEnglish : member.nameThai}
+        </h3>
+        <p className="mt-0.5 text-sm md:text-base font-bold text-slate-700 dark:text-slate-300 truncate">
+          {locale === "en" ? member.nameThai : member.nameEnglish}
+        </p>
+
+        <div className="mt-4 mb-2 border-t border-slate-100 dark:border-navy-800/50 w-8" />
+
+        {/* Details */}
+        <div className="space-y-0.5 text-[11px] md:text-xs text-slate-500 dark:text-slate-400">
+          <p>
+            {locale === "en" 
+              ? "B.Sc. Program in Cybersecurity" 
+              : "หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาความมั่นคงปลอดภัยไซเบอร์"}
+          </p>
+          {member.academicPosition && (
+            <>
+              <p>{member.academicPosition.th}</p>
+              <p>{member.academicPosition.en}</p>
+            </>
+          )}
+          
+          {member.email && (
+            <div className="pt-1.5">
+              <a href={`mailto:${member.email}`} className="inline-flex items-center gap-1.5 text-slate-500 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-cyan-400 font-medium transition-colors">
+                <Mail className="h-3.5 w-3.5" /> {member.email}
+              </a>
+            </div>
+          )}
+        </div>
+
+        {/* Expertise Tags */}
+        {member.expertise.length > 0 && (
+          <div className="mt-4 pt-3 border-t border-slate-100 dark:border-navy-800/50">
+            <p className="text-[10px] md:text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">
+              {t("common.expertise") || "ความเชี่ยวชาญ"}
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              {member.expertise.map((e) => (
+                <span
+                  key={e}
+                  className="px-2 py-0.5 text-[10px] font-medium rounded bg-slate-50 text-slate-600 dark:bg-navy-800 dark:text-slate-300 border border-slate-200/60 dark:border-navy-700"
+                >
+                  {e}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="flex-1 min-h-[1rem]" />
+
+        {/* Profile Button at bottom right */}
         {member.profileUrl && (
-          <a
-            href={member.profileUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="btn-outline flex-1 text-sm"
-          >
-            <ExternalLink className="h-4 w-4" /> {t("common.viewProfile")}
-          </a>
+          <div className="flex justify-end mt-2">
+            <a
+              href={member.profileUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-outline flex items-center gap-1.5 text-xs px-3 py-1.5 bg-white dark:bg-navy-900 text-cyan-700 dark:text-cyan-400 border-slate-200 dark:border-navy-700 hover:bg-slate-50 dark:hover:bg-navy-800 transition-colors"
+            >
+              <ExternalLink className="h-3 w-3" /> {t("common.viewProfile") || "โปรไฟล์"}
+            </a>
+          </div>
         )}
       </div>
     </article>
