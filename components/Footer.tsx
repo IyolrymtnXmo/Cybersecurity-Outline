@@ -11,7 +11,7 @@ export function Footer() {
   const { t } = useLang();
   return (
     <footer className="mt-16 border-t border-slate-200 bg-navy-900 text-slate-200 no-print">
-      <div className="container-page py-10 grid gap-8 md:grid-cols-4">
+      <div className="container-page py-10 grid gap-8 md:grid-cols-5">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2">
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 p-1.5 shadow-sm ring-1 ring-slate-200 dark:ring-navy-700">
@@ -45,11 +45,22 @@ export function Footer() {
         <div>
           <p className="text-sm font-semibold text-white">{t("footer.nav")}</p>
           <ul className="mt-3 space-y-2 text-sm text-slate-300">
+            <li><Link href="/one-stop">{t("nav.oneStop")}</Link></li>
+            <li><Link href="/journey">{t("nav.journey")}</Link></li>
             <li><Link href="/curriculum">{t("nav.curriculum")}</Link></li>
             <li><Link href="/courses">{t("nav.courses")}</Link></li>
-            <li><Link href="/electives">{t("nav.electives")}</Link></li>
-            <li><Link href="/prerequisite">{t("nav.prerequisite")}</Link></li>
-            <li><Link href="/study-plan">{t("nav.studyPlan")}</Link></li>
+            <li><Link href="/resources">{t("nav.resources")}</Link></li>
+            <li><Link href="/faculty">{t("nav.faculty")}</Link></li>
+          </ul>
+        </div>
+        <div>
+          <p className="text-sm font-semibold text-white">{t("footer.services")}</p>
+          <ul className="mt-3 space-y-2 text-sm text-slate-300">
+            <li><Link href="/admissions">{t("nav.admissions")}</Link></li>
+            <li><Link href="/digital-services">{t("nav.digitalServices")}</Link></li>
+            <li><Link href="/announcements">{t("nav.announcements")}</Link></li>
+            <li><Link href="/faq">{t("nav.faq")}</Link></li>
+            <li><Link href="/contact">{t("nav.contact")}</Link></li>
           </ul>
         </div>
         <div>
@@ -63,8 +74,12 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/5">
-        <div className="container-page py-4 text-xs text-slate-400">
-          © {new Date().getFullYear()} {t("footer.copy")}
+        <div className="container-page flex flex-col gap-2 py-4 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+          <span>© {new Date().getFullYear()} {t("footer.copy")}</span>
+          <div className="flex items-center gap-4">
+            <Link href="/about" className="hover:text-slate-200">{t("nav.about")}</Link>
+            <span className="text-slate-500">{t("footer.credit")}</span>
+          </div>
         </div>
       </div>
     </footer>

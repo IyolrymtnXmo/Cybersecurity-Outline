@@ -1,0 +1,62 @@
+[
+  {
+    "id": "anc-sample-registration",
+    "category": "registration",
+    "priority": "high",
+    "status": "sample",
+    "date": "2026-05-01",
+    "title": {
+      "th": "ตัวอย่าง: เปิดลงทะเบียนเรียนภาคต้น ปีการศึกษา 2569",
+      "en": "Sample: Course registration opens for Semester 1, 2026"
+    },
+    "body": {
+      "th": "นี่คือประกาศตัวอย่างสำหรับสาธิตหน้าจอ ก่อนเปิดใช้งานจริงควรแทนที่ด้วยประกาศจริงจากวิทยาลัยและมหาวิทยาลัย",
+      "en": "This is a sample announcement for demonstration. Replace it with real college/university announcements before public launch."
+    }
+  },
+  {
+    "id": "anc-sample-ctf",
+    "category": "activity",
+    "priority": "normal",
+    "status": "sample",
+    "date": "2026-04-20",
+    "title": {
+      "th": "ตัวอย่าง: กิจกรรม CTF เตรียมความพร้อมสำหรับนักศึกษาปี 1–2",
+      "en": "Sample: CTF warm-up activity for Year 1–2 students"
+    },
+    "body": {
+      "th": "ประกาศตัวอย่างสำหรับกิจกรรมงานแข่ง สามารถดูโอกาสและงานแข่งที่คัดสรรไว้ได้ที่หน้าศูนย์รวมโอกาส",
+      "en": "A sample activity announcement. Browse curated competitions on the Opportunity Hub page."
+    }
+  },
+  {
+    "id": "anc-sample-document",
+    "category": "document",
+    "priority": "normal",
+    "status": "sample",
+    "date": "2026-03-15",
+    "title": {
+      "th": "ตัวอย่าง: ปรับปรุงแบบฟอร์มคำร้องสำหรับนักศึกษา",
+      "en": "Sample: Updated student request forms"
+    },
+    "body": {
+      "th": "ประกาศตัวอย่างเรื่องเอกสาร เอกสารฉบับล่าสุดให้ตรวจสอบจากหน้านักศึกษาของวิทยาลัย",
+      "en": "A sample document notice. Always get the latest files from the college's student page."
+    }
+  },
+  {
+    "id": "anc-sample-scholarship",
+    "category": "scholarship",
+    "priority": "low",
+    "status": "sample",
+    "date": "2026-02-10",
+    "title": {
+      "th": "ตัวอย่าง: ทุนการศึกษาและโอกาสฝึกงานสำหรับนักศึกษา",
+      "en": "Sample: Scholarships and internship opportunities"
+    },
+    "body": {
+      "th": "ประกาศตัวอย่างเรื่องทุน/ฝึกงาน รายละเอียดจริงจะประกาศผ่านช่องทางทางการของวิทยาลัย",
+      "en": "A sample scholarship/internship notice. Real details will be announced through official college channels."
+    }
+  }
+]

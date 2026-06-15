@@ -1,7 +1,7 @@
 "use client";
 
 import { careers, getCourse } from "@/lib/data";
-import { Briefcase, Award } from "lucide-react";
+import { Briefcase, Award, ExternalLink } from "lucide-react";
 import { useLang } from "@/components/LanguageProvider";
 
 export default function CareersPage() {

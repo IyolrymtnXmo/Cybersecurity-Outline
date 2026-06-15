@@ -16,18 +16,28 @@ import {
   ChevronRight,
   Terminal,
   Activity,
-  Briefcase
+  Briefcase,
+  FolderOpen,
+  Trophy,
+  Rocket,
+  ShieldCheck,
+  LayoutGrid,
 } from "lucide-react";
 import {
   programInfo,
   courses,
   careers,
 } from "@/lib/data";
+import { journeyTerms } from "@/lib/journey";
 import { useLang } from "@/components/LanguageProvider";
 
 export default function HomePage() {
   const { t, locale } = useLang();
   const coreCount = courses.filter((c) => c.category === "core").length;
+  const journeyYears = [1, 2, 3, 4].map((y) => {
+    const first = journeyTerms.find((tm) => tm.year === y && tm.semester === 1);
+    return { year: y, theme: first?.theme ?? "", themeThai: first?.themeThai ?? "" };
+  });
 
   return (
     <>
@@ -41,15 +51,41 @@ export default function HomePage() {
             </p>
             <h1 className="mt-5 text-3xl md:text-5xl font-semibold leading-tight">
               <span className="block">
-                {locale === "en" ? programInfo.englishName : programInfo.thaiName}
+                {locale === "en" ? programInfo.englishName : (
+                  <>
+                    {programInfo.thaiName.split(" สาขาวิชา")[0]} <br className="hidden md:block" />
+                    สาขาวิชา{programInfo.thaiName.split(" สาขาวิชา")[1]}
+                  </>
+                )}
               </span>
               <span className="mt-2 block text-cyan-300 text-lg md:text-2xl font-medium">
                 {locale === "en" ? programInfo.thaiName : programInfo.englishName}
               </span>
             </h1>
-            <p className="mt-5 max-w-2xl text-slate-300">{t("home.heroSub")}</p>
+            <p className="mt-5 max-w-2xl text-slate-300">
+              {locale === "th" ? (
+                <>
+                  {t("home.heroSub").split(" และจำลอง")[0]} <br className="hidden md:block" />
+                  และจำลอง{t("home.heroSub").split(" และจำลอง")[1]}
+                </>
+              ) : (
+                t("home.heroSub")
+              )}
+            </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link href="/curriculum" className="btn-cyber">
+              <Link href="/one-stop" className="btn-cyber">
+                <LayoutGrid className="h-4 w-4" /> {t("nav.oneStop")}
+              </Link>
+              <Link
+                href="/journey"
+                className="btn-outline bg-white/10 border-white/20 text-white hover:bg-white/15"
+              >
+                <Compass className="h-4 w-4" /> {t("home.cta.journey")}
+              </Link>
+              <Link
+                href="/curriculum"
+                className="btn-outline bg-white/10 border-white/20 text-white hover:bg-white/15"
+              >
                 <Network className="h-4 w-4" /> {t("home.cta.outline")}
               </Link>
               <Link
@@ -59,22 +95,16 @@ export default function HomePage() {
                 <Search className="h-4 w-4" /> {t("home.cta.courses")}
               </Link>
               <Link
-                href="/prerequisite"
+                href="/resources"
                 className="btn-outline bg-white/10 border-white/20 text-white hover:bg-white/15"
               >
-                <GitFork className="h-4 w-4" /> {t("home.cta.prereq")}
+                <FolderOpen className="h-4 w-4" /> {t("nav.resources")}
               </Link>
               <Link
-                href="/pathways"
-                className="btn-outline bg-white/10 border-white/20 text-white hover:bg-white/15"
-              >
-                <Compass className="h-4 w-4" /> {t("home.cta.pathways")}
-              </Link>
-              <Link
-                href="/electives"
+                href="/opportunities"
                 className="btn-outline bg-emerald-500/15 border-emerald-300/30 text-emerald-100 hover:bg-emerald-500/25"
               >
-                <GraduationCap className="h-4 w-4" /> {t("nav.electives")}
+                <Trophy className="h-4 w-4" /> {t("nav.opportunities")}
               </Link>
             </div>
           </div>
@@ -107,6 +137,82 @@ export default function HomePage() {
             sub={locale === "en" ? programInfo.universityEnglish : "มหาวิทยาลัยขอนแก่น"}
             accent="bg-orange-500"
           />
+      </section>
+
+      {/* 4-Year Journey promo */}
+      <section className="container-page pt-24 pb-8">
+        <div className="relative overflow-hidden rounded-3xl border border-navy-700/60 bg-gradient-to-br from-navy-900 to-navy-950 p-8 text-white md:p-12">
+          <div className="hero-grid absolute inset-0 opacity-20" />
+          <div className="relative">
+            <div className="mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-300">
+              <Compass className="h-4 w-4" /> {t("home.journey.kicker")}
+            </div>
+            <h2 className="max-w-2xl text-3xl font-bold md:text-4xl">{t("home.journey.title")}</h2>
+            <p className="mt-4 max-w-2xl text-slate-300">{t("home.journey.desc")}</p>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {journeyYears.map((jy) => (
+                <Link
+                  key={jy.year}
+                  href="/journey"
+                  className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:-translate-y-1 hover:bg-white/10"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-medium text-cyan-300">
+                      {t("home.journey.yearN").replace("{n}", String(jy.year))}
+                    </span>
+                    <span className="grid h-8 w-8 place-items-center rounded-full bg-white/10 text-sm font-bold">
+                      {jy.year}
+                    </span>
+                  </div>
+                  <p className="mt-3 text-sm font-medium leading-snug">
+                    {locale === "en" ? jy.theme : jy.themeThai}
+                  </p>
+                  {locale !== "en" && (
+                    <p className="mt-1 text-xs text-slate-400">{jy.theme}</p>
+                  )}
+                </Link>
+              ))}
+            </div>
+
+            <div className="mt-8">
+              <Link href="/journey" className="btn-cyber group">
+                {t("home.journey.cta")}
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Cybersecurity at KKU */}
+      <section className="container-page py-16">
+        <div className="mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-600 dark:text-cyan-400">
+          <ShieldCheck className="h-4 w-4" /> {t("home.why.kicker")}
+        </div>
+        <h2 className="max-w-2xl text-3xl font-bold text-navy-900 dark:text-white md:text-4xl">
+          {t("home.why.title")}
+        </h2>
+        <div className="mt-10 grid gap-6 sm:grid-cols-3">
+          <Pillar
+            icon={<Terminal className="h-6 w-6" />}
+            title={t("home.why.handsOn.title")}
+            desc={t("home.why.handsOn.desc")}
+            delay="delay-[0ms]"
+          />
+          <Pillar
+            icon={<Compass className="h-6 w-6" />}
+            title={t("home.why.pathways.title")}
+            desc={t("home.why.pathways.desc")}
+            delay="delay-[100ms]"
+          />
+          <Pillar
+            icon={<Rocket className="h-6 w-6" />}
+            title={t("home.why.career.title")}
+            desc={t("home.why.career.desc")}
+            delay="delay-[200ms]"
+          />
+        </div>
       </section>
 
       {/* What you learn */}
@@ -231,6 +337,34 @@ export default function HomePage() {
         />
       </section>
 
+      {/* Resource & Opportunity Hub */}
+      <section className="container-page py-16 border-t border-slate-200 dark:border-navy-800">
+        <div className="mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-600 dark:text-cyan-400">
+          <FolderOpen className="h-4 w-4" /> {t("home.hub.kicker")}
+        </div>
+        <h2 className="max-w-2xl text-3xl font-bold text-navy-900 dark:text-white md:text-4xl">
+          {t("home.hub.title")}
+        </h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <FeatureCard
+            icon={<FolderOpen className="h-6 w-6" />}
+            title={t("home.hub.resources.title")}
+            desc={t("home.hub.resources.desc")}
+            href="/resources"
+            accent="from-cyan-400 to-blue-600"
+            openLabel={t("home.feature.open")}
+          />
+          <FeatureCard
+            icon={<Trophy className="h-6 w-6" />}
+            title={t("home.hub.opps.title")}
+            desc={t("home.hub.opps.desc")}
+            href="/opportunities"
+            accent="from-fuchsia-400 to-purple-600"
+            openLabel={t("home.feature.open")}
+          />
+        </div>
+      </section>
+
       {/* Careers */}
       <section className="container-page py-20 border-t border-slate-200 dark:border-navy-800">
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
@@ -253,13 +387,13 @@ export default function HomePage() {
           {careers.slice(0, 6).map((c) => (
             <div key={c.id} className="card p-6 hover:shadow-xl hover:shadow-navy-900/5 dark:hover:shadow-black/50 transition-all duration-300 hover:-translate-y-1 group">
               <p className="text-xs font-medium text-cyan-600 dark:text-cyan-400 mb-2 uppercase tracking-wide">
-                {locale === "en" ? c.title : c.titleThai}
+                {locale === "en" ? c.titleThai : c.title}
               </p>
               <h3 className="text-lg font-bold text-navy-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
-                {locale === "en" ? c.titleThai : c.title}
+                {locale === "en" ? c.title : c.titleThai}
               </h3>
               <p className="mt-3 text-sm text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">
-                {c.description}
+                {(locale === "en" ? (c as any).descriptionEn : c.description) || c.description}
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {c.skills.slice(0, 3).map((s) => (
@@ -273,19 +407,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-page pb-20">
-        <div className="rounded-2xl border border-amber-200/60 bg-amber-50/50 dark:bg-amber-900/10 dark:border-amber-900/30 p-6 flex items-start gap-4 shadow-sm">
-          <div className="p-2 bg-amber-100 dark:bg-amber-900/50 rounded-lg text-amber-600 dark:text-amber-400 shrink-0">
-            <AlertTriangle className="h-5 w-5" />
-          </div>
-          <div>
-            <h4 className="text-sm font-semibold text-amber-900 dark:text-amber-300 mb-1">Disclaimer</h4>
-            <p className="text-sm text-amber-800/80 dark:text-amber-400/80 leading-relaxed">
-              {t("common.disclaimer")}
-            </p>
-          </div>
-        </div>
-      </section>
+
     </>
   );
 }

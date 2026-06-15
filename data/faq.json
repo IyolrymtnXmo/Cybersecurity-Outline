@@ -1,0 +1,142 @@
+[
+  {
+    "id": "faq-what-is-program",
+    "category": "program",
+    "status": "recommended",
+    "question": {
+      "th": "หลักสูตร Cybersecurity ของ มข. คืออะไร?",
+      "en": "What is the KKU Cybersecurity program?"
+    },
+    "answer": {
+      "th": "หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาความมั่นคงปลอดภัยไซเบอร์ ของวิทยาลัยการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น เป็นหลักสูตรระดับปริญญาตรี 4 ปี เน้นการเรียนรู้แบบลงมือทำ ครอบคลุมเครือข่าย ระบบ ความปลอดภัย และการป้องกันภัยไซเบอร์",
+      "en": "The Bachelor of Science in Cybersecurity at the College of Computing, Khon Kaen University, is a 4-year hands-on undergraduate program covering networks, systems, security, and cyber defense."
+    },
+    "relatedRoute": "/curriculum"
+  },
+  {
+    "id": "faq-credits",
+    "category": "program",
+    "status": "recommended",
+    "question": {
+      "th": "ต้องเรียนกี่หน่วยกิตจึงจะจบ?",
+      "en": "How many credits are required to graduate?"
+    },
+    "answer": {
+      "th": "หลักสูตรกำหนดหน่วยกิตขั้นต่ำรวม 124 หน่วยกิต ตลอด 8 ภาคการศึกษา ทั้งนี้ควรตรวจสอบเงื่อนไขล่าสุดจากเอกสารหลักสูตร (มคอ.2) และเว็บไซต์วิทยาลัย",
+      "en": "The program requires a minimum of 124 credits across 8 semesters. Always confirm the latest conditions in the curriculum document (TQF2) and on the college website."
+    },
+    "relatedRoute": "/study-plan"
+  },
+  {
+    "id": "faq-how-to-apply",
+    "category": "admissions",
+    "status": "needs-verification",
+    "question": {
+      "th": "สมัครเข้าเรียนหลักสูตร Cybersecurity ได้อย่างไร?",
+      "en": "How do I apply to the Cybersecurity program?"
+    },
+    "answer": {
+      "th": "การรับเข้าศึกษาเป็นไปตามระบบ TCAS และประกาศของวิทยาลัย กรุณาตรวจสอบรอบรับสมัคร คุณสมบัติ และกำหนดการล่าสุดจากหน้าการรับเข้าศึกษาของวิทยาลัย",
+      "en": "Admission follows the TCAS system and the college's announcements. Please check the application rounds, qualifications, and dates on the college's admissions page."
+    },
+    "relatedRoute": "/admissions"
+  },
+  {
+    "id": "faq-registration",
+    "category": "registration",
+    "status": "recommended",
+    "question": {
+      "th": "ลงทะเบียนเรียนและวางแผนเทอมหน้าอย่างไร?",
+      "en": "How do I register and plan next semester?"
+    },
+    "answer": {
+      "th": "ใช้หน้าแผนการเรียนเพื่อดูลำดับวิชาที่แนะนำในแต่ละเทอม และใช้ตัวจัดตารางเรียนเพื่อจัดคาบไม่ให้ชนกัน ตรวจสอบประกาศการลงทะเบียนจริงจากสำนักบริหารและพัฒนาวิชาการ มข. ทุกครั้ง",
+      "en": "Use the Study Plan to see the recommended course sequence per semester, and the Schedule Planner to avoid time clashes. Always confirm real registration windows with KKU's academic affairs announcements."
+    },
+    "relatedRoute": "/schedule-planner"
+  },
+  {
+    "id": "faq-prerequisite",
+    "category": "registration",
+    "status": "recommended",
+    "question": {
+      "th": "ถ้าติด F หรือยังไม่ผ่านวิชาก่อนหน้า จะกระทบวิชาต่ออย่างไร?",
+      "en": "How does failing a course affect later (prerequisite) courses?"
+    },
+    "answer": {
+      "th": "บางรายวิชามีเงื่อนไขวิชาก่อนหน้า (prerequisite) ที่ต้องผ่านก่อน ใช้ตัวตรวจวิชาต่อเพื่อจำลองผลกระทบต่อแผนการเรียนเมื่อยังไม่ผ่านวิชาใดวิชาหนึ่ง",
+      "en": "Some courses have prerequisites you must pass first. Use the Prerequisite Checker to simulate how not passing a course affects your plan."
+    },
+    "relatedRoute": "/prerequisite"
+  },
+  {
+    "id": "faq-documents",
+    "category": "documents",
+    "status": "needs-verification",
+    "question": {
+      "th": "หาเอกสารคำร้องและแบบฟอร์มสำหรับนักศึกษาได้ที่ไหน?",
+      "en": "Where can I find student request forms and documents?"
+    },
+    "answer": {
+      "th": "เอกสารและแบบฟอร์มฉบับล่าสุดเผยแพร่ที่หน้านักศึกษาของวิทยาลัยการคอมพิวเตอร์ เว็บนี้ทำหน้าที่เป็นทางลัดไปยังหน้าทางการ โปรดยึดเอกสารจากเว็บไซต์วิทยาลัยเป็นหลัก",
+      "en": "The latest documents and forms are published on the College of Computing's student page. This site links you there — always rely on the college website for official files."
+    },
+    "relatedRoute": "/resources"
+  },
+  {
+    "id": "faq-digital-services",
+    "category": "services",
+    "status": "needs-verification",
+    "question": {
+      "th": "บริการดิจิทัล เช่น บัญชีผู้ใช้ อีเมล และเครือข่าย ขอใช้ได้อย่างไร?",
+      "en": "How do I access digital services like accounts, email, and the network?"
+    },
+    "answer": {
+      "th": "บริการดิจิทัลสำหรับนักศึกษาดูแลโดยวิทยาลัยและมหาวิทยาลัย ตรวจสอบรายการบริการและเงื่อนไขการขอใช้จากหน้าบริการดิจิทัลของวิทยาลัย",
+      "en": "Digital services for students are managed by the college and university. Check the service list and request conditions on the college's digital-services page."
+    },
+    "relatedRoute": "/digital-services"
+  },
+  {
+    "id": "faq-pathways",
+    "category": "program",
+    "status": "recommended",
+    "question": {
+      "th": "Project, Co-op และ WIL ต่างกันอย่างไร?",
+      "en": "What's the difference between Project, Co-op, and WIL?"
+    },
+    "answer": {
+      "th": "ทั้งสามเป็นเส้นทางในช่วงปลายของหลักสูตร: Project เน้นทำโครงงาน, Co-op เน้นสหกิจศึกษาในสถานประกอบการ และ WIL เน้นการเรียนรู้ควบคู่การทำงาน ดูรายละเอียดและการเปรียบเทียบที่หน้าเส้นทาง",
+      "en": "These are late-program tracks: Project focuses on a capstone project, Co-op on cooperative work in industry, and WIL on work-integrated learning. See the Pathways page to compare them."
+    },
+    "relatedRoute": "/pathways"
+  },
+  {
+    "id": "faq-competitions",
+    "category": "opportunities",
+    "status": "recommended",
+    "question": {
+      "th": "อยากลงแข่ง CTF หรือหาโอกาส/ทุน เริ่มที่ไหน?",
+      "en": "I want to join CTFs or find opportunities/scholarships — where do I start?"
+    },
+    "answer": {
+      "th": "ดูที่ศูนย์รวมโอกาส ซึ่งคัดสรรงานแข่ง CTF แฮกกาธอน ทุน ฝึกงาน และ certification ที่เหมาะกับแต่ละชั้นปี",
+      "en": "Check the Opportunity Hub, which curates CTFs, hackathons, scholarships, internships, and certifications suitable for each year."
+    },
+    "relatedRoute": "/opportunities"
+  },
+  {
+    "id": "faq-contact",
+    "category": "contact",
+    "status": "needs-verification",
+    "question": {
+      "th": "ติดต่อหลักสูตรหรือสำนักงานหลักสูตรได้อย่างไร?",
+      "en": "How do I contact the program office?"
+    },
+    "answer": {
+      "th": "ดูช่องทางติดต่อที่หน้าติดต่อ ซึ่งรวมข้อมูลติดต่อของวิทยาลัยการคอมพิวเตอร์ ส่วนช่องทางเฉพาะของหลักสูตรอยู่ระหว่างการยืนยันข้อมูล",
+      "en": "See the Contact page, which includes the College of Computing's contact channels. Program-specific channels are pending confirmation."
+    },
+    "relatedRoute": "/contact"
+  }
+]
