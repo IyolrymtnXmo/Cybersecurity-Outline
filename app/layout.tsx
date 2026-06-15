@@ -5,6 +5,9 @@ import { Footer } from "@/components/Footer";
 import { ThemeProvider, THEME_INIT_SCRIPT } from "@/components/ThemeProvider";
 import { LanguageProvider, LANG_INIT_SCRIPT } from "@/components/LanguageProvider";
 
+// Inlined at build time; "" for the root domain, "/Cybersecurity-Outline" for GH Pages.
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const metadata: Metadata = {
   title: {
     default: "CY Curriculum — หลักสูตรความมั่นคงปลอดภัยไซเบอร์",
@@ -26,8 +29,8 @@ export const metadata: Metadata = {
       "ระบบนำทางหลักสูตร Cybersecurity แบบ interactive: outline, prerequisite checker, study plan และเส้นทาง Project/Co-op/WIL",
     type: "website",
   },
-    icons: {
-    icon: "/Cyber.png",
+  icons: {
+    icon: `${BASE_PATH}/Cyber.png`,
   },
 };
 

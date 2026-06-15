@@ -74,9 +74,12 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/5">
-        <div className="container-page flex flex-col gap-1 py-4 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+        <div className="container-page flex flex-col gap-2 py-4 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
           <span>© {new Date().getFullYear()} {t("footer.copy")}</span>
-          <span className="text-slate-500">{t("footer.credit")}</span>
+          <div className="flex items-center gap-4">
+            <Link href="/about" className="hover:text-slate-200">{t("nav.about")}</Link>
+            <span className="text-slate-500">{t("footer.credit")}</span>
+          </div>
         </div>
       </div>
     </footer>

@@ -9,6 +9,19 @@ into source/data files, or shown on the website.
 
 ---
 
+## 0. Project overview
+
+- **What:** A static, bilingual (TH/EN) website for the B.Sc. Cybersecurity
+  program, College of Computing, Khon Kaen University.
+- **Stack:** Next.js 14 (App Router) + TypeScript + Tailwind CSS. Almost all
+  content is editable JSON under `data/`.
+- **Output:** A fully static site (`out/`) — no server-side runtime and no
+  database, so it can be served by any static web server.
+- **Readiness:** Development readiness 100%; official publication readiness is
+  **pending program verification** (see `OFFICIAL_HANDOFF.md` and `/about`).
+
+---
+
 ## 1. Build modes
 
 The app is a Next.js 14 (App Router) project and supports two build targets:
@@ -114,4 +127,70 @@ DEPLOY_TARGET=github-pages NEXT_PUBLIC_BASE_PATH="" npm run build
   `git checkout <previous-tag>` and rebuild.
 - Because the static target has no database or server state, rollback is simply
   swapping the served files back to the prior version.
+
+---
+
+## 8. Nginx static hosting example (illustrative)
+
+The static build uses `trailingSlash: true`, so each route is emitted as a
+directory containing `index.html`. A minimal nginx server block:
+
+```nginx
+server {
+    listen 80;
+    server_name cy.computing.kku.ac.th;
+    # Redirect to HTTPS once the certificate is installed.
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name cy.computing.kku.ac.th;
+
+    # ssl_certificate / ssl_certificate_key managed by the server operator.
+
+    root /var/www/cy;        # contents of the built ./out directory
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ $uri/index.html /404.html;
+    }
+}
 ```
+
+Deploy by copying `out/` to the web root (see §4 for the credential policy):
+
+```bash
+rsync -avz --delete ./out/ [SERVER_USER]@[SERVER_IP]:/var/www/cy/
+```
+
+---
+
+## 9. Post-launch validation
+
+After deploying to `cy.computing.kku.ac.th`:
+
+- [ ] Home page and all primary routes load over **HTTPS** with a valid
+      certificate (no mixed-content warnings)
+- [ ] Language toggle (TH/EN) and dark/light theme persist across navigation
+- [ ] Faculty images load, or fall back to initials avatars
+- [ ] External official links (College of Computing) open in a new tab
+- [ ] `/404` (an unknown path) shows the custom not-found page
+- [ ] `favicon`/logo renders; page titles are correct in the browser tab
+- [ ] Mobile layout verified on a real device or emulator
+
+---
+
+## 10. Ownership & contacts
+
+Fill these in with the program before public launch (placeholders only — no
+personal data is committed here):
+
+| Role | Placeholder |
+| --- | --- |
+| Program data owner | `[PROGRAM_DATA_OWNER]` |
+| Technical maintainer | `[TECHNICAL_MAINTAINER]` |
+| Server operator | `[SERVER_OPERATOR]` |
+
+See `MAINTENANCE.md` for how to edit content and `OFFICIAL_HANDOFF.md` for the
+program-facing review guide.

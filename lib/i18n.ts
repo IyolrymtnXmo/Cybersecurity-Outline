@@ -57,8 +57,8 @@ export const dict: Record<string, Entry> = {
 
   // -------------------------------------------------------------- footer
   "footer.intro": {
-    th: "เว็บไซต์นี้จัดทำเพื่อช่วยวางแผนการเรียนเบื้องต้นในหลักสูตร วท.บ. ความมั่นคงปลอดภัยไซเบอร์ ข้อมูลอ้างอิงจากเอกสารตัวอย่างแผนการศึกษาของวิทยาลัยการคอมพิวเตอร์",
-    en: "An unofficial student navigator for the B.Sc. Cybersecurity program, built from the College of Computing's sample study plan.",
+    th: "เว็บไซต์นี้จัดทำขึ้นเพื่อสนับสนุนการสื่อสารข้อมูลหลักสูตรและช่วยวางแผนการเรียนในหลักสูตร วท.บ. ความมั่นคงปลอดภัยไซเบอร์ วิทยาลัยการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น ข้อมูลที่มีผลทางการควรตรวจสอบจากประกาศของวิทยาลัย/มหาวิทยาลัย",
+    en: "This site supports program communication and academic planning for the B.Sc. Cybersecurity program at the College of Computing, Khon Kaen University. Always verify official matters with college/university announcements.",
   },
   "footer.disclaimer": {
     th: "ข้อมูลในเว็บไซต์เป็นแนวทางเบื้องต้น นักศึกษาควรตรวจสอบกับประกาศของมหาวิทยาลัย หลักสูตร และอาจารย์ที่ปรึกษาก่อนลงทะเบียนจริง",
@@ -72,8 +72,8 @@ export const dict: Record<string, Entry> = {
     en: "Created by Nansaphat Termsub (CY01)",
   },
   "footer.copy": {
-    th: "CY Curriculum Outline · Unofficial student navigator",
-    en: "CY Curriculum Outline · Unofficial student navigator",
+    th: "หลักสูตร วท.บ. ความมั่นคงปลอดภัยไซเบอร์ · วิทยาลัยการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น",
+    en: "B.Sc. Cybersecurity · College of Computing, KKU",
   },
 
   // -------------------------------------------------------------- home
