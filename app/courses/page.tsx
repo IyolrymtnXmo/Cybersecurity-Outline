@@ -102,11 +102,11 @@ export default function CoursesPage() {
                 }
                 className="bg-transparent pl-1 pr-6 py-1.5 focus:outline-none dark:text-white cursor-pointer"
               >
-                <option value="all">{t("common.allYears")}</option>
-                <option value={1}>{t("common.year")} 1</option>
-                <option value={2}>{t("common.year")} 2</option>
-                <option value={3}>{t("common.year")} 3</option>
-                <option value={4}>{t("common.year")} 4</option>
+                <option value="all" className="dark:bg-navy-900">{t("common.allYears")}</option>
+                <option value={1} className="dark:bg-navy-900">{t("common.year")} 1</option>
+                <option value={2} className="dark:bg-navy-900">{t("common.year")} 2</option>
+                <option value={3} className="dark:bg-navy-900">{t("common.year")} 3</option>
+                <option value={4} className="dark:bg-navy-900">{t("common.year")} 4</option>
               </select>
             </div>
 

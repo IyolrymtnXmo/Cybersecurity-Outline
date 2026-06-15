@@ -49,17 +49,17 @@ const TYPE_ICON: Record<OpportunityType, React.ComponentType<{ className?: strin
 };
 
 const STATUS_STYLE: Record<OpportunityStatus, string> = {
-  upcoming: "bg-sky-50 text-sky-700 border-sky-300 dark:text-sky-300",
-  open: "bg-emerald-50 text-emerald-700 border-emerald-300 dark:text-emerald-300",
-  closed: "bg-slate-100 text-slate-500 border-slate-300 dark:text-slate-400",
-  annual: "bg-violet-50 text-violet-700 border-violet-300 dark:text-violet-300",
-  archived: "bg-slate-100 text-slate-400 border-slate-200 dark:text-slate-500",
+  upcoming: "bg-sky-50 text-sky-700 border-sky-300 dark:bg-sky-900/30 dark:border-sky-800 dark:text-sky-300",
+  open: "bg-emerald-50 text-emerald-700 border-emerald-300 dark:bg-emerald-900/30 dark:border-emerald-800 dark:text-emerald-300",
+  closed: "bg-slate-100 text-slate-500 border-slate-300 dark:bg-slate-800/50 dark:border-slate-700 dark:text-slate-400",
+  annual: "bg-violet-50 text-violet-700 border-violet-300 dark:bg-violet-900/30 dark:border-violet-800 dark:text-violet-300",
+  archived: "bg-slate-100 text-slate-400 border-slate-200 dark:bg-slate-800/30 dark:border-slate-700 dark:text-slate-500",
 };
 
 const DIFFICULTY_STYLE: Record<OpportunityDifficulty, string> = {
-  beginner: "bg-emerald-50 text-emerald-700 border-emerald-300 dark:text-emerald-300",
-  intermediate: "bg-amber-50 text-amber-700 border-amber-300 dark:text-amber-300",
-  advanced: "bg-orange-50 text-orange-700 border-orange-300 dark:text-orange-300",
+  beginner: "bg-emerald-50 text-emerald-700 border-emerald-300 dark:bg-emerald-900/30 dark:border-emerald-800 dark:text-emerald-300",
+  intermediate: "bg-amber-50 text-amber-700 border-amber-300 dark:bg-amber-900/30 dark:border-amber-800 dark:text-amber-300",
+  advanced: "bg-orange-50 text-orange-700 border-orange-300 dark:bg-orange-900/30 dark:border-orange-800 dark:text-orange-300",
   mixed: "surface-2 text-slate-600 dark:text-slate-300",
 };
 
@@ -113,17 +113,17 @@ export function OpportunityCard({ opportunity: o }: { opportunity: OpportunityIt
       {/* feature badges */}
       <div className="flex flex-wrap gap-1.5">
         {o.teamRequired && (
-          <span className="badge bg-fuchsia-50 text-fuchsia-700 border-fuchsia-200 dark:text-fuchsia-300">
+          <span className="badge bg-fuchsia-50 text-fuchsia-700 border-fuchsia-200 dark:bg-fuchsia-900/30 dark:border-fuchsia-800 dark:text-fuchsia-300">
             <Users className="h-3 w-3" /> {t("opps.badge.team")}
           </span>
         )}
         {o.portfolioWorthy && (
-          <span className="badge bg-cyan-50 text-cyan-700 border-cyan-200 dark:text-cyan-300">
+          <span className="badge bg-cyan-50 text-cyan-700 border-cyan-200 dark:bg-cyan-900/30 dark:border-cyan-800 dark:text-cyan-300">
             <Star className="h-3 w-3" /> {t("opps.badge.portfolio")}
           </span>
         )}
         {o.difficulty === "beginner" && (
-          <span className="badge bg-emerald-50 text-emerald-700 border-emerald-200 dark:text-emerald-300">
+          <span className="badge bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-900/30 dark:border-emerald-800 dark:text-emerald-300">
             {t("opps.badge.beginner")}
           </span>
         )}
