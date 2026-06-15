@@ -1,0 +1,72 @@
+{
+  "program": {
+    "nameThai": "หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาความมั่นคงปลอดภัยไซเบอร์",
+    "nameEnglish": "B.Sc. Program in Cybersecurity",
+    "facultyThai": "วิทยาลัยการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น",
+    "facultyEnglish": "College of Computing, Khon Kaen University"
+  },
+  "cards": [
+    {
+      "id": "college-office",
+      "kind": "office",
+      "verified": true,
+      "label": {
+        "th": "สำนักงานวิทยาลัยการคอมพิวเตอร์",
+        "en": "College of Computing Office"
+      },
+      "value": {
+        "th": "วิทยาลัยการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น 123 หมู่ 16 ถ.มิตรภาพ ต.ในเมือง อ.เมือง จ.ขอนแก่น 40002",
+        "en": "College of Computing, Khon Kaen University, 123 Mu 16, Mittraphap Rd., Nai Mueang, Mueang, Khon Kaen 40002"
+      },
+      "href": null
+    },
+    {
+      "id": "college-phone",
+      "kind": "phone",
+      "verified": true,
+      "label": { "th": "โทรศัพท์", "en": "Phone" },
+      "value": { "th": "043 009 700 (ต่อ 44463, 50525)", "en": "043 009 700 (ext. 44463, 50525)" },
+      "href": "tel:043009700"
+    },
+    {
+      "id": "college-hotline",
+      "kind": "phone",
+      "verified": true,
+      "label": { "th": "สายด่วน", "en": "Hotline" },
+      "value": { "th": "089 710 2651", "en": "089 710 2651" },
+      "href": "tel:0897102651"
+    },
+    {
+      "id": "college-email",
+      "kind": "email",
+      "verified": true,
+      "label": { "th": "อีเมล", "en": "Email" },
+      "value": { "th": "computing.kku@kku.ac.th", "en": "computing.kku@kku.ac.th" },
+      "href": "mailto:computing.kku@kku.ac.th"
+    },
+    {
+      "id": "college-website",
+      "kind": "website",
+      "verified": true,
+      "label": { "th": "เว็บไซต์วิทยาลัย", "en": "College website" },
+      "value": { "th": "computing.kku.ac.th", "en": "computing.kku.ac.th" },
+      "href": "https://computing.kku.ac.th"
+    },
+    {
+      "id": "program-office",
+      "kind": "office",
+      "verified": false,
+      "label": { "th": "สำนักงานหลักสูตร Cybersecurity", "en": "Cybersecurity Program Office" },
+      "value": { "th": "รอตรวจสอบข้อมูล", "en": "To be confirmed" },
+      "href": null
+    },
+    {
+      "id": "program-advisor",
+      "kind": "person",
+      "verified": false,
+      "label": { "th": "อาจารย์ผู้ประสานงาน/ที่ปรึกษาหลักสูตร", "en": "Program coordinator / advisor" },
+      "value": { "th": "รอตรวจสอบข้อมูล", "en": "To be confirmed" },
+      "href": null
+    }
+  ]
+}

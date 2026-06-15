@@ -66,6 +66,11 @@ export const dict: Record<string, Entry> = {
   },
   "footer.nav": { th: "นำทาง", en: "Navigate" },
   "footer.paths": { th: "เส้นทาง", en: "Pathways" },
+  "footer.services": { th: "บริการนักศึกษา", en: "Student services" },
+  "footer.credit": {
+    th: "จัดทำโดย ณันสพัทธ์ เติมทรัพย์ (CY01)",
+    en: "Created by Nansaphat Termsub (CY01)",
+  },
   "footer.copy": {
     th: "CY Curriculum Outline · Unofficial student navigator",
     en: "CY Curriculum Outline · Unofficial student navigator",
@@ -74,7 +79,7 @@ export const dict: Record<string, Entry> = {
   // -------------------------------------------------------------- home
   "home.heroBadge": { th: "หลักสูตรปริญญาตรี · 4 ปี", en: "Undergraduate Program · 4 years" },
   "home.heroSub": {
-    th: "ระบบนำทางหลักสูตรแบบ interactive — เข้าใจโครงสร้าง 4 ปี ตรวจสอบรายวิชาต่อ และจำลองผลกระทบเมื่อติด F พร้อมเส้นทาง Project / Co-op / WIL",
+    th: "ระบบนำทางหลักสูตรแบบ interactive — เข้าใจโครงสร้าง 4 ปี ตรวจสอบรายวิชาต่อ และจำลองผ\u2060ล\u2060ก\u2060ร\u2060ะ\u2060ท\u2060บเมื่อติด F พร้อมเส้นทาง Project / Co-op / WIL",
     en: "An interactive curriculum navigator — understand the 4-year structure, check prerequisites, simulate the impact of failing a course, and compare Project / Co-op / WIL tracks.",
   },
   "home.cta.outline": { th: "ดูแผนหลักสูตร", en: "View Curriculum Map" },
@@ -475,8 +480,18 @@ export const dict: Record<string, Entry> = {
   "nav.resources": { th: "เอกสาร", en: "Resources" },
   "nav.opportunities": { th: "งานแข่ง/โอกาส", en: "Opportunities" },
   "nav.more": { th: "เพิ่มเติม", en: "More" },
+  "nav.oneStop": { th: "ศูนย์รวมบริการ", en: "One Stop" },
+  "nav.faculty": { th: "คณาจารย์", en: "Faculty" },
+  "nav.admissions": { th: "การรับเข้าศึกษา", en: "Admissions" },
+  "nav.digitalServices": { th: "บริการดิจิทัล", en: "Digital Services" },
+  "nav.faq": { th: "คำถามที่พบบ่อย", en: "FAQ" },
+  "nav.contact": { th: "ติดต่อ", en: "Contact" },
+  "nav.announcements": { th: "ประกาศ", en: "Announcements" },
+  "nav.about": { th: "เกี่ยวกับเว็บไซต์", en: "About" },
   "nav.group.tools": { th: "เครื่องมือวางแผน", en: "Planning tools" },
   "nav.group.program": { th: "เกี่ยวกับหลักสูตร", en: "About the program" },
+  "nav.group.services": { th: "บริการนักศึกษา", en: "Student services" },
+  "nav.group.official": { th: "ลิงก์ทางการ", en: "Official links" },
 
   // ----------------------------------------------------- shared (new bits)
   "common.viewDetail": { th: "ดูรายละเอียด", en: "View details" },
@@ -491,6 +506,18 @@ export const dict: Record<string, Entry> = {
   "common.year3": { th: "ปี 3", en: "Year 3" },
   "common.year4": { th: "ปี 4", en: "Year 4" },
   "common.placeholder": { th: "ตัวอย่าง — ยังไม่มีไฟล์จริง", en: "Placeholder — no file yet" },
+  "common.official": { th: "ทางการ", en: "Official" },
+  "common.officialExternal": { th: "ลิงก์เว็บไซต์วิทยาลัย", en: "College website link" },
+  "common.toBeConfirmed": { th: "รอตรวจสอบข้อมูล", en: "To be confirmed" },
+  "common.needsVerification": { th: "รอตรวจสอบข้อมูล", en: "Needs verification" },
+  "common.recommended": { th: "แนะนำ", en: "Recommended" },
+  "common.sample": { th: "ตัวอย่าง", en: "Sample" },
+  "common.checkLatest": {
+    th: "ข้อมูลล่าสุดให้ตรวจสอบจากเว็บไซต์วิทยาลัย",
+    en: "Check the college website for the latest information.",
+  },
+  "common.email": { th: "อีเมล", en: "Email" },
+  "common.viewProfile": { th: "ดูโปรไฟล์", en: "View profile" },
   "common.verifyAnnouncement": {
     th: "ควรตรวจสอบประกาศล่าสุดจากผู้จัด",
     en: "Verify the latest announcement from the organizer",

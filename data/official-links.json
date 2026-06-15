@@ -1,0 +1,72 @@
+[
+  {
+    "id": "program-info",
+    "title": {
+      "th": "ข้อมูลหลักสูตร (วิทยาลัยการคอมพิวเตอร์)",
+      "en": "Program Information (College of Computing)"
+    },
+    "description": {
+      "th": "หน้าข้อมูลสาขาของวิทยาลัยการคอมพิวเตอร์ ใช้อ้างอิงรายละเอียดหลักสูตรอย่างเป็นทางการ",
+      "en": "The College of Computing's program/branch page — the official reference for program details."
+    },
+    "url": "https://computing.kku.ac.th/content/branch/65",
+    "category": "program",
+    "audience": ["prospective", "student", "parent"]
+  },
+  {
+    "id": "admissions",
+    "title": {
+      "th": "การรับเข้าศึกษาระดับปริญญาตรี",
+      "en": "Undergraduate Admissions"
+    },
+    "description": {
+      "th": "หน้าการรับเข้าศึกษาระดับปริญญาตรีของวิทยาลัย ตรวจสอบรอบรับสมัคร คุณสมบัติ และวิธีสมัครของหลักสูตร Cybersecurity",
+      "en": "The college's undergraduate admissions page — check application rounds, qualifications, and how to apply for the Cybersecurity program."
+    },
+    "url": "https://computing.kku.ac.th/bsc-entrance",
+    "category": "admissions",
+    "audience": ["prospective", "parent"]
+  },
+  {
+    "id": "student-documents",
+    "title": {
+      "th": "เอกสารและบริการสำหรับนักศึกษา",
+      "en": "Student Documents & Services"
+    },
+    "description": {
+      "th": "หน้ารวมเอกสาร แบบฟอร์มคำร้อง และข้อมูลสำหรับนักศึกษาปัจจุบันของวิทยาลัย",
+      "en": "The college's hub of documents, request forms, and information for current students."
+    },
+    "url": "https://computing.kku.ac.th/students",
+    "category": "documents",
+    "audience": ["student"]
+  },
+  {
+    "id": "digital-services",
+    "title": {
+      "th": "บริการดิจิทัล",
+      "en": "Digital Services"
+    },
+    "description": {
+      "th": "หน้าบริการดิจิทัลของวิทยาลัย เช่น บัญชีผู้ใช้ เครือข่าย ซอฟต์แวร์ และระบบสารสนเทศ",
+      "en": "The college's digital-services page — accounts, network, software, and information systems."
+    },
+    "url": "https://computing.kku.ac.th/digital-services",
+    "category": "digital",
+    "audience": ["student"]
+  },
+  {
+    "id": "college-website",
+    "title": {
+      "th": "เว็บไซต์วิทยาลัยการคอมพิวเตอร์",
+      "en": "College of Computing Website"
+    },
+    "description": {
+      "th": "เว็บไซต์หลักของวิทยาลัยการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น แหล่งข้อมูลและประกาศอย่างเป็นทางการ",
+      "en": "The main website of the College of Computing, Khon Kaen University — the source for official information and announcements."
+    },
+    "url": "https://computing.kku.ac.th",
+    "category": "program",
+    "audience": ["prospective", "student", "parent", "external"]
+  }
+]
