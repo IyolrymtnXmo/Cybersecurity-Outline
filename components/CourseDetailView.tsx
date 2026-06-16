@@ -10,7 +10,7 @@ import { useLang } from "./LanguageProvider";
 import { OfferedBadge } from "./CourseBadge";
 
 export function CourseDetailView({ course }: { course: Course }) {
-  const { t, courseName, courseSub } = useLang();
+  const { t, courseName, courseSub, locale } = useLang();
   const style = CATEGORY_STYLES[course.category];
   const risk = computeRiskLevel(course.id);
   const dependents = getDependents(course.id);
@@ -112,7 +112,7 @@ export function CourseDetailView({ course }: { course: Course }) {
           <section className="card p-5">
             <h3 className="text-sm font-semibold text-navy-900">{t("prereq.riskLevel")}</h3>
             <div className="mt-2">
-              <span className={`badge ${RISK_STYLES[risk].chip}`}>{RISK_STYLES[risk].label}</span>
+              <span className={`badge ${RISK_STYLES[risk].chip}`}>{locale === 'th' ? RISK_STYLES[risk].labelTh : RISK_STYLES[risk].labelEn}</span>
             </div>
             {course.riskReason && (
               <p className="mt-2 text-sm text-slate-600">{course.riskReason}</p>
