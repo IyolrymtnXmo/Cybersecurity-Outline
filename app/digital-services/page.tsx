@@ -108,6 +108,8 @@ export default function DigitalServicesPage() {
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {g.links.map(link => {
                   const pseudoLink = {
+                    id: link.url,
+                    audience: ["student" as const],
                     category: "digital" as const,
                     title: { th: link.title, en: link.title },
                     description: { th: link.descTh, en: link.descEn },

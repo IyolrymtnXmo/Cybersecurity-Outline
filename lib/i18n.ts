@@ -196,7 +196,6 @@ export const dict: Record<string, Entry> = {
   },
   "catalog.found": { th: "พบ", en: "Found" },
   "catalog.coursesCount": { th: "วิชา", en: "courses" },
-  "catalog.placeholder": { th: "ค้นหารหัสวิชา หรือชื่อวิชา...", en: "Search course code or name..." },
   "catalog.categories": { th: "หมวดหมู่วิชา", en: "Categories" },
   "catalog.noResultsSub": { th: "ลองค้นหาด้วยคำอื่น หรือยกเลิกตัวกรองบางตัว", en: "Try searching with a different term or clearing some filters." },
   "catalog.drawer.close": { th: "ปิด", en: "Close" },

@@ -18,7 +18,7 @@ export function CourseDetailDrawer({
   onClose: () => void;
   onSelect?: (id: string) => void;
 }) {
-  const { t, courseName, courseSub } = useLang();
+  const { t, courseName, courseSub, locale } = useLang();
 
   useEffect(() => {
     if (!course) return;
@@ -81,7 +81,7 @@ export function CourseDetailDrawer({
               {t("drawer.risk")}
             </h3>
             <div className="mt-2 flex items-center gap-3">
-              <span className={`badge ${RISK_STYLES[risk].chip}`}>{RISK_STYLES[risk].label}</span>
+              <span className={`badge ${RISK_STYLES[risk].chip}`}>{locale === 'th' ? RISK_STYLES[risk].labelTh : RISK_STYLES[risk].labelEn}</span>
               {course.needsVerification && (
                 <span className="badge border-amber-300 bg-amber-50 text-amber-700">
                   {t("common.needsVerify")}
